@@ -49,7 +49,7 @@ body {
 }
 
 .icons-social i {
-	font-size: 3em;
+	font-size: 2.3em;
 }
 
 /* Custom Styles */
@@ -64,7 +64,8 @@ main {
 }
 
 main>.intro {
-	font-family: 'Reem Kufi', sans-serif;
+	font-family: 'Roboto',
+		sans-serif;
 	font-size: 3.75em;
 	font-weight: 600;
 }
