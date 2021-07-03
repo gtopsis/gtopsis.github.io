@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/home/gt0p/gtopsis.github.io/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_7514e3ff"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/gt0p/gtopsis.github.io/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_5a4b5d37"
+  }
+]
