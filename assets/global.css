@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Vision";
+  src: url("./fonts/Vision/WEB/Vision-Black.eot");
+  src: url("./fonts/Vision/WEB/Vision-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/Vision/WEB/Vision-Black.woff2") format("woff2"),
+    url("./fonts/Vision/WEB/Vision-Black.woff") format("woff"),
+    url("./fonts/Vision/TTF/Vision-Black.ttf") format("truetype");
+}
+
+.v-application {
+  font-family: "Vision, Helvetica" !important;
+}

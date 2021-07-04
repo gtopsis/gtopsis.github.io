@@ -7,13 +7,12 @@ module.exports = {
     extends: [
         "plugin:vue/recommended",
         "eslint:recommended",
-        "plugin:prettier/recommended",
+        "plugin:nuxt/recommended",
+        // "plugin:prettier/recommended",
         "prettier",
     ],
     rules: {
-        "vue/component-name-in-template-casing": [ "error", "PascalCase" ],
-        "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-        "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+        "vue/component-name-in-template-casing": [ "error", "PascalCase" ]
     },
     globals: {
         $nuxt: true,
