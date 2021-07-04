@@ -1,11 +1,8 @@
 {
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
+  "Hero": {
+    "description": "Auto imported from components/Hero.vue"
   },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
-  },
-  "VuetifyLogo": {
-    "description": "Auto imported from components/VuetifyLogo.vue"
+  "Timeline": {
+    "description": "Auto imported from components/Timeline.vue"
   }
 }

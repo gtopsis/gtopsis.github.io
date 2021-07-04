@@ -1,3 +1,8 @@
 {
-    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName} ${separator} [Branch: wip/portfolio-redesign-1]"
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName} ${separator} [Branch: wip/portfolio-redesign-1]",
+    "editor.formatOnSave": true,
+    "vetur.validation.template": false,
+    "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
