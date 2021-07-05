@@ -2,6 +2,9 @@
   "Hero": {
     "description": "Auto imported from components/Hero.vue"
   },
+  "MainFooter": {
+    "description": "Auto imported from components/MainFooter.vue"
+  },
   "Timeline": {
     "description": "Auto imported from components/Timeline.vue"
   }
