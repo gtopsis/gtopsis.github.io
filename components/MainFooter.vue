@@ -1,8 +1,8 @@
 <template>
   <v-container pa-2>
     <v-row>
-      <v-col cols="12" class="socials-list-container">
-        <v-row class="socials-list pa-2" justify="center">
+      <v-col cols="12" class="socials-list-container py-1">
+        <v-row class="socials-list ma-0" justify="center">
           <v-col
             v-for="(social, index) in socials"
             :key="index"
@@ -10,12 +10,12 @@
             class="pa-1"
           >
             <a :href="social.link" class="social-link" target="_blank">
-              <v-icon large="">{{ social.icon }}</v-icon>
+              <v-icon>{{ social.icon }}</v-icon>
             </a>
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" class="py-1">
         <p class="text-center ma-0">&copy; {{ footerText }}</p>
       </v-col>
     </v-row>
