@@ -3,22 +3,14 @@
     <v-row>
       <v-col cols="12" class="socials-list-container">
         <v-row class="socials-list pa-2" justify="center">
-          <v-col cols="auto" class="pa-1">
-            <a
-              href="https://www.linkedin.com/in/gtopsis"
-              class="social-link"
-              target="_blank"
-            >
-              <v-icon large="">mdi-linkedin</v-icon>
-            </a>
-          </v-col>
-          <v-col cols="auto" class="pa-1">
-            <a
-              href="https://github.com/gtopsis"
-              class="social-link"
-              target="_blank"
-            >
-              <v-icon large="">mdi-github</v-icon>
+          <v-col
+            v-for="(social, index) in socials"
+            :key="index"
+            cols="auto"
+            class="pa-1"
+          >
+            <a :href="social.link" class="social-link" target="_blank">
+              <v-icon large="">{{ social.icon }}</v-icon>
             </a>
           </v-col>
         </v-row>
@@ -33,7 +25,18 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      socials: [
+        {
+          icon: "mdi-linkedin",
+          link: "https://www.linkedin.com/in/gtopsis",
+        },
+        {
+          icon: "mdi-github",
+          link: "https://github.com/gtopsis",
+        },
+      ],
+    };
   },
   computed: {
     footerText() {
