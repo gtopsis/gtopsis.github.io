@@ -1,8 +1,9 @@
 <template>
   <v-app dark>
-    <v-app-bar :clipped-left="clipped" fixed app elevate-on-scroll>
+    <v-app-bar fixed app elevate-on-scroll>
       <v-toolbar-title v-text="title" />
-      <v-spacer />
+      <v-spacer></v-spacer>
+      <theme-toggle></theme-toggle>
     </v-app-bar>
 
     <v-main>

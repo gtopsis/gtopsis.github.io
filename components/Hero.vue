@@ -22,8 +22,8 @@
 
 <style>
 .hero-container {
-  background-color: #3c3741 !important;
   height: 100vh;
+  background-color: var(--v-primary-base);
 }
 .content {
   max-width: 500px !important;
