@@ -3,6 +3,18 @@
     <v-app-bar fixed app elevate-on-scroll>
       <v-toolbar-title v-text="title" />
       <v-spacer></v-spacer>
+
+      <nav>
+        <ul>
+          <li>
+            <NuxtLink to="/">Work</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/about">About</NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
       <theme-toggle></theme-toggle>
     </v-app-bar>
 
@@ -45,5 +57,19 @@ export default {
     url("@/assets/fonts/Manrope/otf/Manrope-Regular.otf")
       format("embedded-opentype"),
     url("@/assets/fonts/Manrope/ttf/Manrope-Regular.ttf") format("truetype");
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+ul li {
+  margin: 0 0.5rem;
+  padding: 0 0.25rem;
+  font-size: 1.2rem;
 }
 </style>

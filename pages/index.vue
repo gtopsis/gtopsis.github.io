@@ -1,9 +1,9 @@
 <template>
   <v-row no-gutters>
-    <v-col cols="12" class="pa-0 ma-0">
+    <v-col cols="12" class="px-4 py-3 ma-0">
       <hero></hero>
     </v-col>
-    <v-col cols="12" class="pa-0 mx-0" style="margin-top: -100px">
+    <v-col cols="12" class="px-4 py-3 mx-0">
       <timeline></timeline>
     </v-col>
   </v-row>

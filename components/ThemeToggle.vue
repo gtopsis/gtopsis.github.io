@@ -1,13 +1,22 @@
 <template>
-  <v-row align="center">
-    <v-col>
-      <span
-        class="toggle"
-        :class="{ active: darkMode }"
-        @click="toggleDarkMode"
-      ></span>
-    </v-col>
-  </v-row>
+  <div class="theme-toggle-container">
+    <v-row align="center" justify="center" style="height: 100%" no-gutters>
+      <v-col class="pa-0">
+        <v-tooltip bottom>
+          <template #activator="{ on, attrs }">
+            <span
+              class="toggle"
+              v-bind="attrs"
+              :class="{ active: darkMode }"
+              @click="toggleDarkMode"
+              v-on="on"
+            ></span>
+          </template>
+          <span>Toggle {{ currentMode }} mode</span>
+        </v-tooltip>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
@@ -15,7 +24,11 @@ export default {
   data: () => ({
     darkMode: false,
   }),
-  computed: {},
+  computed: {
+    currentMode() {
+      return this.darkMode ? "dark" : "light";
+    },
+  },
   mounted() {
     const theme = localStorage.getItem("dark_theme");
     if (theme) {
@@ -31,10 +44,6 @@ export default {
   },
   methods: {
     toggleDarkMode: function () {
-      console.log(
-        "🚀 ~ file: ThemeToggle.vue ~ line 24 ~ mounted ~ this.$vuetify.theme",
-        this.$vuetify
-      );
       document.querySelector(".toggle").classList.add("animate");
 
       setTimeout(
@@ -43,40 +52,34 @@ export default {
       );
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       this.darkMode = !this.darkMode;
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
     },
   },
 };
 </script>
 
 <style>
+.theme-toggle-container {
+  position: relative;
+  width: 50px;
+  height: 100%;
+}
 .toggle {
   position: absolute;
-  cursor: pointer;
-  top: 20px;
-  right: 25px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
   font-size: 150%;
+  cursor: pointer;
 }
 
 .toggle:before {
-  content: "☀️";
+  /* content: "☀️"; */
+  content: "🌞";
 }
 
 .toggle.active:before {
+  /* content: "🌒"; */
   content: "🌒";
-}
-.toggle.animate {
-  animation: animate 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes animate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 </style>
