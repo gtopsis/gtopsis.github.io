@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-row align="center" class="justify-center justify-sm-left">
+    <v-row align="center" class="justify-md-center justify-sm-left">
       <v-col cols="auto">
         <h2>Experience</h2>
       </v-col>
@@ -8,22 +8,19 @@
 
     <v-row align="center" class="justify-center">
       <v-col cols="12" md="8" lg="7" class="px-0">
-        <v-timeline :dense="$vuetify.breakpoint.smAndDown">
-          <v-timeline-item
-            v-for="(element, index) in timelineItems"
-            :key="index"
-          >
+        <v-timeline :dense="isMobileDevice">
+          <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
             <template #icon>
               <v-avatar
-                size="32"
-                :color="element.avatar.bgColor"
+                :size="avatarSize"
+                :color="item.avatar.bgColor"
                 align-center
                 justify-center
               >
                 <v-img
                   contain
-                  :src="element.avatar.img"
-                  :alt="element.avatar.alt"
+                  :src="item.avatar.img"
+                  :alt="item.avatar.alt"
                   class="firm-logo"
                   width="24"
                   height="24"
@@ -33,29 +30,35 @@
             </template>
             <template #opposite>
               <a
-                :href="element.avatar.label.link"
+                :href="item.avatar.label.link"
                 class="firm-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>{{ element.avatar.label.text }}</span>
+                <span>{{ item.avatar.label.text }}</span>
               </a>
             </template>
             <v-card class="elevation-2 timeline-item">
               <v-card-title class="text-h6">
-                {{ element.card.title }}
+                {{ item.card.title }}
               </v-card-title>
               <v-card-subtitle>
-                {{ element.card.period.start }} -
-                {{ element.card.period.end }}
-                <span v-if="$vuetify.breakpoint.smAndDown" class="pl-1">
-                  | {{ element.avatar.label.text }}</span
-                >
+                {{ item.card.period.start }} -
+                {{ item.card.period.end }}
+                <div v-if="isMobileDevice" style="display: inline">
+                  <span class="px-1">|</span>
+                  <a
+                    :href="item.avatar.label.link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ item.avatar.label.text }}</a
+                  >
+                </div>
               </v-card-subtitle>
-              <v-card-text v-if="hasTimelineItemDetails(element.card)">
-                <!-- <ul v-if="element.card.roles.length > 1" class="ma-0 pl-0">
+              <v-card-text v-if="hasTimelineItemDetails(item.card)">
+                <!-- <ul v-if="item.card.roles.length > 1" class="ma-0 pl-0">
                   <li
-                    v-for="(role, k) in element.card.roles"
+                    v-for="(role, k) in item.card.roles"
                     :key="k"
                     class="ml-0"
                   >
@@ -69,13 +72,13 @@
                 </ul> -->
 
                 <p class="ma-0">
-                  {{ element.card.description }}
+                  {{ item.card.description }}
                 </p>
                 <ul class="ma-0">
-                  <li v-for="(tool, j) in element.card.tools" :key="j"></li>
+                  <li v-for="(tool, j) in item.card.tools" :key="j"></li>
                 </ul>
               </v-card-text>
-              <v-card-actions v-if="element.card.readMore != ''">
+              <v-card-actions v-if="item.card.readMore != ''">
                 <!-- <nuxt-link :to="element.card.action">Read more</nuxt-link> -->
                 Read more
               </v-card-actions>
@@ -91,6 +94,7 @@
 export default {
   data() {
     return {
+      avatarSize: 32,
       timelineItems: [
         {
           id: 1,
@@ -140,6 +144,7 @@ export default {
           id: 3,
           avatar: {
             img: "conveos_logo.png",
+            alt: "Logo of software agency Conveos",
             bgColor: "#000",
             label: { text: "Conveos", link: "https://conveos.com" },
           },
@@ -165,7 +170,7 @@ export default {
     };
   },
   computed: {
-    isMobile() {
+    isMobileDevice() {
       return this.$vuetify.breakpoint.smAndDown;
     },
   },
