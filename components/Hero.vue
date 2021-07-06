@@ -4,8 +4,9 @@
       <v-col class="px-0">
         <h1 class="statement">
           I'm
-          <nuxt-link to="about" class="first-name">Giorgos</nuxt-link>
-          , a Full Stack Web Developer based in Heraklion of Crete.
+          <nuxt-link to="about" class="first-name">Γιώργος</nuxt-link>
+          (/Giórgos/),<br />
+          a Full Stack Web Developer based in Heraklion of Crete.
         </h1>
       </v-col>
     </v-row>
@@ -26,7 +27,7 @@
 
 <style>
 .hero-container {
-  height: 100vh;
+  height: 60vh;
 }
 .content {
   max-width: 500px !important;
