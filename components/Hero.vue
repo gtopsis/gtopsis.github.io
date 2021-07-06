@@ -39,7 +39,7 @@
   font-size: 3rem;
 }
 .statement {
-  font-size: 2.7rem !important;
+  font-size: 2.5rem !important;
   letter-spacing: 0.2rem;
 }
 .first-name {
