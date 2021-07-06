@@ -1,16 +1,18 @@
 <template>
   <v-app dark>
     <v-app-bar fixed app elevate-on-scroll>
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title>
+        <h2>{{ title }}</h2>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
 
       <nav>
         <ul>
-          <li>
-            <NuxtLink to="/">Work</NuxtLink>
+          <li class="nav-item">
+            <nuxt-link to="/">Work</nuxt-link>
           </li>
-          <li>
-            <NuxtLink to="/about">About</NuxtLink>
+          <li class="nav-item">
+            <nuxt-link to="/about">About</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -67,9 +69,13 @@ ul {
   flex-wrap: wrap;
 }
 
-ul li {
+ul li.nav-item {
   margin: 0 0.5rem;
   padding: 0 0.25rem;
   font-size: 1.2rem;
+}
+
+ul li.nav-item a {
+  text-decoration: none;
 }
 </style>
