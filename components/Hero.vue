@@ -10,22 +10,10 @@
         </h1>
       </v-col>
     </v-row>
-    <!-- <v-row class="no-gutters content">
-      <v-col cols="12" class="text-center">
-        <v-icon x-large class="hero-icon" white>mdi-laptop-chromebook</v-icon>
-      </v-col>
-      <v-col cols="12">
-        <h2 class="text-center fullname" white>Giorgos topsis</h2>
-      </v-col>
-      <v-col cols="12">
-        <h3 class="text-center">Full Stack Web Developer</h3>
-        <h4 class="text-center">Studies in HCI field</h4>
-      </v-col>
-    </v-row> -->
   </v-container>
 </template>
 
-<style>
+<style scoped>
 .hero-container {
   height: 60vh;
 }

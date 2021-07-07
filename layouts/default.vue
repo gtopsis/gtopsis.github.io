@@ -1,8 +1,12 @@
 <template>
-  <v-app dark>
+  <v-app light>
     <v-app-bar fixed app elevate-on-scroll>
       <v-toolbar-title>
-        <h2>{{ title }}</h2>
+        <h2 class="logo">
+          <nuxt-link to="/">
+            {{ title }}
+          </nuxt-link>
+        </h2>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
@@ -61,6 +65,17 @@ export default {
     url("@/assets/fonts/Manrope/ttf/Manrope-Regular.ttf") format("truetype");
 }
 
+.logo a {
+  text-decoration: none;
+  color: var(--v-primary-base);
+}
+.theme--light .logo a {
+  color: rgba(0, 0, 0, 0.87);
+}
+.theme--dark .logo a {
+  color: rgba(255, 255, 255, 0.87);
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -77,5 +92,13 @@ ul li.nav-item {
 
 ul li.nav-item a {
   text-decoration: none;
+}
+
+.theme--light ul li.nav-item a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.theme--dark ul li.nav-item a {
+  color: rgba(255, 255, 255, 0.87);
 }
 </style>
