@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .theme-toggle-container {
   position: relative;
   width: 50px;
