@@ -2,7 +2,9 @@ export const state = () => ( {
     jobs: [ {
             id: 1,
             avatar: {
-                img: "/conveos_logo.png",
+                // img: "/conveos_logo.png",
+
+                img: `/images/conveos_logo.png`,
                 alt: "Logo of software agency Conveos",
                 bgColor: "#000",
                 label: {
@@ -31,7 +33,9 @@ export const state = () => ( {
         {
             id: 2,
             avatar: {
-                img: "/army_logo.png",
+                // img: "/army_logo.png",
+                img: `/images/army_logo.png`,
+
                 alt: "Logo of greek army",
                 bgColor: "blue",
                 label: {
@@ -60,7 +64,9 @@ export const state = () => ( {
         {
             id: 3,
             avatar: {
-                img: "/conveos_logo.png",
+                // img: "/conveos_logo.png",
+                img: `/images/conveos_logo.png`,
+
                 alt: "Logo of software agency Conveos",
                 bgColor: "#000",
                 label: {
@@ -97,7 +103,9 @@ export const state = () => ( {
         {
             id: 4,
             avatar: {
-                img: "/forth_logo.png",
+                // img: "/forth_logo.png",
+                img: `/images/forth_logo.png`,
+
                 alt: "Logo of FORTH in Greece",
                 bgColor: "#fff",
                 label: {
@@ -127,7 +135,9 @@ export const state = () => ( {
     education: [ {
             id: 1,
             avatar: {
-                img: "/uoc_logo.png",
+                // img: "/uoc_logo.png",
+                img: `/images/uoc_logo.png`,
+
                 alt: "Logo of University of Crete",
                 bgColor: "#000",
                 label: {

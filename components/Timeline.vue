@@ -95,78 +95,6 @@ export default {
   data() {
     return {
       avatarSize: 32,
-      // timelineItems: [
-      //   {
-      //     id: 1,
-      //     avatar: {
-      //       img: "conveos_logo.png",
-      //       alt: "Logo of software agency Conveos",
-      //       bgColor: "#000",
-      //       label: { text: "Conveos", link: "https://conveos.com" },
-      //     },
-      //     card: {
-      //       title: "Back End Web Developer",
-      //       roles: [
-      //         {
-      //           jobTitle: "Back End Web Developer",
-      //           period: { start: "Jan 2015", end: "March 2021" },
-      //         },
-      //       ],
-      //       period: { start: "Jan 2015", end: "March 2021" },
-      //       description: "",
-      //       tools: [],
-      //       readMore: "",
-      //     },
-      //   },
-      //   {
-      //     id: 2,
-      //     avatar: {
-      //       img: "army_logo.png",
-      //       alt: "Logo of greek army",
-      //       bgColor: "blue",
-      //       label: { text: "Greek Army", link: "" },
-      //     },
-      //     card: {
-      //       title: "IT Technician",
-      //       roles: [
-      //         {
-      //           jobTitle: "IT Technician",
-      //           period: { start: "Jan 2015", end: "March 2021" },
-      //         },
-      //       ],
-      //       period: { start: "Jan 2015", end: "March 2021" },
-      //       description: "",
-      //       tools: [],
-      //       readMore: "",
-      //     },
-      //   },
-      //   {
-      //     id: 3,
-      //     avatar: {
-      //       img: "conveos_logo.png",
-      //       alt: "Logo of software agency Conveos",
-      //       bgColor: "#000",
-      //       label: { text: "Conveos", link: "https://conveos.com" },
-      //     },
-      //     card: {
-      //       title: "Full Stack Web Developer",
-      //       roles: [
-      //         {
-      //           jobTitle: "Back End Web Developer",
-      //           period: { start: "Jan 2015", end: "March 2021" },
-      //         },
-      //         {
-      //           jobTitle: "Front End Web Developer",
-      //           period: { start: "Jan 2015", end: "March 2021" },
-      //         },
-      //       ],
-      //       period: { start: "Jan 2015", end: "March 2021" },
-      //       description: "",
-      //       tools: [],
-      //       readMore: "",
-      //     },
-      //   },
-      // ],
     };
   },
   computed: {
@@ -179,6 +107,10 @@ export default {
     },
   },
   methods: {
+    loadImage(src) {
+      console.log("🚀 ~ file: Timeline.vue ~ line 111 ~ loadImage ~ src", src);
+      return import(src);
+    },
     hasTimelineItemDetails(timelineItemData) {
       return timelineItemData.description && timelineItemData != "";
     },
