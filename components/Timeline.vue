@@ -1,13 +1,13 @@
 <template>
   <v-container fluid>
     <v-row align="center" class="justify-md-center justify-sm-left">
-      <v-col cols="auto">
-        <h2>Experience</h2>
+      <v-col cols="auto" class="mb-2">
+        <h2>{{ timelineTitle }}</h2>
       </v-col>
     </v-row>
 
-    <v-row align="center" class="justify-center">
-      <v-col cols="12" md="9" lg="8" class="px-0">
+    <v-row align="center" justify="center">
+      <v-col cols="12" md="10" lg="9" class="px-0">
         <v-timeline :dense="isMobileDevice">
           <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
             <template #icon>
@@ -39,8 +39,10 @@
               </a>
             </template>
             <v-card class="elevation-2 timeline-item">
-              <v-card-title class="text-h6">
-                {{ item.card.title }}
+              <v-card-title>
+                <strong class="timeline-item-title">
+                  {{ item.card.title }}
+                </strong>
               </v-card-title>
               <v-card-subtitle>
                 {{ item.card.period.start }} -
@@ -94,7 +96,8 @@
 export default {
   data() {
     return {
-      avatarSize: 32,
+      timelineTitle: "Experience and Studies",
+      avatarSize: 34,
     };
   },
   computed: {
@@ -127,5 +130,9 @@ export default {
   width: 45px;
   height: 45px;
   cursor: pointer;
+}
+
+.timeline-item-title {
+  font-size: 1.15rem;
 }
 </style>

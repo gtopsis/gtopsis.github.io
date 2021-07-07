@@ -60,7 +60,7 @@ export default {
   color: rgba(255, 255, 255, 0.87);
 }
 
-ul {
+nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -68,21 +68,21 @@ ul {
   flex-wrap: wrap;
 }
 
-ul li.nav-item {
+nav ul li.nav-item {
   margin: 0 0.5rem;
   padding: 0 0.25rem;
   font-size: 1.2rem;
 }
 
-ul li.nav-item a {
+nav ul li.nav-item a {
   text-decoration: none;
 }
 
-.theme--light ul li.nav-item a {
+/* .theme--light ul li.nav-item a {
   color: rgba(0, 0, 0, 0.87);
 }
 
 .theme--dark ul li.nav-item a {
   color: rgba(255, 255, 255, 0.87);
-}
+} */
 </style>

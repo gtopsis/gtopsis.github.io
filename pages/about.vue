@@ -1,6 +1,6 @@
 <template>
   <div class="main-layout">
-    <v-container class="headline-container" fluid full-width fill-height>
+    <v-container class="headline-container my-5" fluid full-width fill-height>
       <v-row
         class="no-gutters"
         full-width
@@ -9,18 +9,18 @@
         align-center
       >
         <v-col cols="12">
-          <h2 class="text-center fullname" white>Giorgos Topsis</h2>
+          <h1 class="text-center fullname" white>Giorgos Topsis</h1>
         </v-col>
         <v-col cols="12">
           <h3 class="text-center">
-            What You <span class="primary-text">Read</span> is What you Get
+            What You <span class="text-primary">Read</span> is What you Get
           </h3>
         </v-col>
       </v-row>
     </v-container>
 
     <!-- about me section -->
-    <v-container class="about-me-container" fluid full-width>
+    <v-container class="about-me-container my-5" fluid full-width>
       <v-row class="no-gutters" full-width justify-center align="center">
         <v-col cols="12">
           <p v-for="(paragraph, i) in aboutMe" :key="i" class="text-left" white>
@@ -62,20 +62,9 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
 .about-me-container {
   padding: 16px 100px;
 }
-.hero-icon {
-  font-size: 2.5rem !important;
-}
+
 .fullname {
-  font-size: 3rem;
-}
-.statement {
-  font-size: 2.5rem !important;
+  /* font-size: 3rem; */
   letter-spacing: 0.2rem;
-}
-.first-name {
-  height: 50px;
-  line-height: 50px;
-  text-decoration: none;
-  border-bottom: 4px dashed grey;
 }
 </style>

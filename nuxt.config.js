@@ -67,22 +67,28 @@ export default {
     treeShake: true,
     customVariables: [ "~/assets/variables.scss" ],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         light: {
-          primary: colors.indigo.accent3,
-          secondary: colors.deepOrange.lighten1,
-          accent: colors.grey.lighten2,
+          primary: '#a46548',
+          secondary: '#3b4e58',
+          accent: '#dfe0e0',
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+          background: '#ffffff'
 
         },
         dark: {
-          primary: '#3b4358',
+          primary: '#d0826f',
           secondary: '#dfe0e0',
           accent: '#d0826f',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
+          background: '#121212'
         },
       },
       options: {

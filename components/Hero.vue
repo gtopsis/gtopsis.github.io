@@ -2,7 +2,7 @@
   <v-container fluid fill-height class="hero-container px-0">
     <v-row no-gutters align="center" justify="center">
       <v-col class="px-0">
-        <h1 class="statement">
+        <h1 class="statement text-h5 text-sm-h2 text-md-h4">
           I'm
           <nuxt-link to="about" class="first-name">Γιώργος</nuxt-link>
           (/Giórgos/),<br />
@@ -27,7 +27,7 @@
   font-size: 3rem;
 }
 .statement {
-  font-size: 2.5rem !important;
+  /* font-size: 2.5rem !important; */
   letter-spacing: 0.2rem;
 }
 .first-name {
