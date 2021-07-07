@@ -46,8 +46,9 @@ export default {
 };
 </script>
 <style>
-
-
+.logo {
+  font-size: 1.9rem;
+}
 .logo a {
   text-decoration: none;
   color: var(--v-primary-base);

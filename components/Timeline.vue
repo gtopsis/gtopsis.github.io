@@ -7,7 +7,7 @@
     </v-row>
 
     <v-row align="center" class="justify-center">
-      <v-col cols="12" md="8" lg="7" class="px-0">
+      <v-col cols="12" md="9" lg="8" class="px-0">
         <v-timeline :dense="isMobileDevice">
           <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
             <template #icon>
@@ -107,10 +107,6 @@ export default {
     },
   },
   methods: {
-    loadImage(src) {
-      console.log("🚀 ~ file: Timeline.vue ~ line 111 ~ loadImage ~ src", src);
-      return import(src);
-    },
     hasTimelineItemDetails(timelineItemData) {
       return timelineItemData.description && timelineItemData != "";
     },
