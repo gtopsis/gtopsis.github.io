@@ -9,20 +9,22 @@
         align-center
       >
         <v-col cols="12">
-          <h1 class="text-center fullname" white>Giorgos Topsis</h1>
+          <h1 class="text-center text-h5 text-sm-h2 text-md-h4 mb-3" white>
+            Giorgos Topsis
+          </h1>
         </v-col>
         <v-col cols="12">
-          <h3 class="text-center">
+          <p class="text-center text-sm-h4 text-md-h6">
             What You <span class="text-primary">Read</span> is What you Get
-          </h3>
+          </p>
         </v-col>
       </v-row>
     </v-container>
 
     <!-- about me section -->
     <v-container class="about-me-container my-5" fluid full-width>
-      <v-row class="no-gutters" full-width justify-center align="center">
-        <v-col cols="12">
+      <v-row full-width justify="center" align="center">
+        <v-col cols="12" md="10" lg="9" class="px-4">
           <p v-for="(paragraph, i) in aboutMe" :key="i" class="text-left" white>
             {{ paragraph }}
           </p>
@@ -60,11 +62,10 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
   height: 60vh;
 }
 .about-me-container {
-  padding: 16px 100px;
 }
 
 .fullname {
   /* font-size: 3rem; */
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.25rem !important;
 }
 </style>

@@ -29,19 +29,7 @@ export default {
       return this.darkMode ? "dark" : "light";
     },
   },
-  mounted() {
-    const theme = localStorage.getItem("dark_theme");
-    if (theme) {
-      if (theme == "true") {
-        this.$vuetify.theme.dark = true;
 
-        localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
-      } else {
-        this.$vuetify.theme.dark = false;
-        localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
-      }
-    }
-  },
   methods: {
     toggleDarkMode: function () {
       document.querySelector(".toggle").classList.add("animate");

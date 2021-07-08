@@ -10,16 +10,15 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <nav>
-        <ul>
-          <li class="nav-item">
-            <nuxt-link to="/">Work</nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link to="/about">About</nuxt-link>
-          </li>
-        </ul>
-      </nav>
+      <v-list nav class="nav">
+        <v-list-item class="nav-item">
+          <nuxt-link to="/">Work</nuxt-link>
+        </v-list-item>
+
+        <v-list-item class="nav-item">
+          <nuxt-link to="/about">About</nuxt-link>
+        </v-list-item>
+      </v-list>
 
       <theme-toggle></theme-toggle>
     </v-app-bar>
@@ -43,6 +42,19 @@ export default {
       title: "{GT}",
     };
   },
+  mounted() {
+    const theme = localStorage.getItem("dark_theme");
+    if (theme) {
+      if (theme == "true") {
+        this.$vuetify.theme.dark = true;
+
+        localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+      } else {
+        this.$vuetify.theme.dark = false;
+        localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+      }
+    }
+  },
 };
 </script>
 <style>
@@ -60,22 +72,27 @@ export default {
   color: rgba(255, 255, 255, 0.87);
 }
 
-nav ul {
+.nav {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background: transparent !important;
 }
-
-nav ul li.nav-item {
+.nav .nav-item {
   margin: 0 0.5rem;
   padding: 0 0.25rem;
   font-size: 1.2rem;
+  display: inline;
+  background: transparent;
 }
 
-nav ul li.nav-item a {
+.nav .nav-item a {
   text-decoration: none;
+}
+.nav .nav-item a.nuxt-link-exact-active {
+  color: var(--v-secondary-darken2);
 }
 
 /* .theme--light ul li.nav-item a {

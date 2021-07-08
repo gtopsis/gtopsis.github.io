@@ -8,7 +8,7 @@
 
     <v-row align="center" justify="center">
       <v-col cols="12" md="10" lg="9" class="px-0">
-        <v-timeline :dense="isMobileDevice">
+        <v-timeline :dense="$vuetify.breakpoint.smAndDown">
           <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
             <template #icon>
               <v-avatar
@@ -47,7 +47,10 @@
               <v-card-subtitle>
                 {{ item.card.period.start }} -
                 {{ item.card.period.end }}
-                <div v-if="isMobileDevice" style="display: inline">
+                <div
+                  v-if="$vuetify.breakpoint.smAndDown"
+                  style="display: inline"
+                >
                   <span class="px-1">|</span>
                   <a
                     :href="item.avatar.label.link"
