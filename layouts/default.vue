@@ -10,12 +10,12 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <v-list nav class="nav">
-        <v-list-item class="nav-item">
+      <v-list nav class="nav d-inline-flex flex-row justify-end align-center">
+        <v-list-item class="nav-item mb-0">
           <nuxt-link to="/">Work</nuxt-link>
         </v-list-item>
 
-        <v-list-item class="nav-item">
+        <v-list-item class="nav-item mb-0">
           <nuxt-link to="/about">About</nuxt-link>
         </v-list-item>
       </v-list>
@@ -75,16 +75,13 @@ export default {
 .nav {
   list-style-type: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   background: transparent !important;
 }
 .nav .nav-item {
-  margin: 0 0.5rem;
-  padding: 0 0.25rem;
+  /* margin: 0 0.5rem;
+  padding: 0 0.25rem; */
   font-size: 1.2rem;
-  display: inline;
+  /* display: inline-block; */
   background: transparent;
 }
 
