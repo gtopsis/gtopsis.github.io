@@ -42,17 +42,15 @@ export default {
       title: "{GT}",
     };
   },
-  mounted() {
+  created() {
     const theme = localStorage.getItem("dark_theme");
     if (theme) {
-      if (theme == "true") {
+      if (theme === "true") {
         this.$vuetify.theme.dark = true;
-
-        localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
       } else {
         this.$vuetify.theme.dark = false;
-        localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
       }
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
     }
   },
 };
