@@ -47,20 +47,18 @@
               <v-card-subtitle>
                 {{ item.card.period.start }} -
                 {{ item.card.period.end }}
-                <div
-                  v-if="$vuetify.breakpoint.smAndDown"
-                  style="display: inline"
-                >
-                  <span class="px-1">|</span>
+              </v-card-subtitle>
+              <v-card-text v-if="$vuetify.breakpoint.smAndDown">
+                <!-- v-if="hasTimelineItemDetails(item.card)" -->
+                <p v-if="$vuetify.breakpoint.smAndDown" class="mb-0">
                   <a
                     :href="item.avatar.label.link"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="firm-link"
                     >{{ item.avatar.label.text }}</a
                   >
-                </div>
-              </v-card-subtitle>
-              <v-card-text v-if="hasTimelineItemDetails(item.card)">
+                </p>
                 <!-- <ul v-if="item.card.roles.length > 1" class="ma-0 pl-0">
                   <li
                     v-for="(role, k) in item.card.roles"

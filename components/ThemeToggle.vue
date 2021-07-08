@@ -32,7 +32,18 @@ export default {
       return this.currentMode == "light" ? "dark" : "light";
     },
   },
-
+  mounted() {
+    const theme = localStorage.getItem("dark_theme");
+    console.log("🚀 ~ file: default.vue ~ line 47 ~ mounted ~ theme", theme);
+    if (theme) {
+      if (theme === "true") {
+        this.$vuetify.theme.dark = true;
+      } else {
+        this.$vuetify.theme.dark = false;
+      }
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+    }
+  },
   methods: {
     toggleDarkMode: function () {
       document.querySelector(".toggle").classList.add("animate");
