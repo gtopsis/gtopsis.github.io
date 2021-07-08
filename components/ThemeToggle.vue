@@ -7,12 +7,12 @@
             <span
               class="toggle"
               v-bind="attrs"
-              :class="{ active: darkMode }"
+              :class="{ 'is-light-mode': !darkMode }"
               @click="toggleDarkMode"
               v-on="on"
             ></span>
           </template>
-          <span>Toggle {{ currentMode }} mode</span>
+          <span>Enable {{ oppositeMode }} mode</span>
         </v-tooltip>
       </v-col>
     </v-row>
@@ -27,6 +27,9 @@ export default {
   computed: {
     currentMode() {
       return this.darkMode ? "dark" : "light";
+    },
+    oppositeMode() {
+      return this.currentMode == "light" ? "dark" : "light";
     },
   },
 
@@ -66,7 +69,7 @@ export default {
   content: "🌞";
 }
 
-.toggle.active:before {
+.toggle.is-light-mode:before {
   /* content: "🌒"; */
   content: "🌒";
 }
