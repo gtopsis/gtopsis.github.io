@@ -9,7 +9,12 @@
             cols="auto"
             class="pa-1"
           >
-            <a :href="social.link" class="social-link" target="_blank">
+            <a
+              :href="social.link"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <v-icon>{{ social.icon }}</v-icon>
             </a>
           </v-col>
