@@ -9,6 +9,27 @@
   </v-row>
 </template>
 
+<script>
+export default {
+  data() {
+    return {};
+  },
+  head() {
+    return {
+      title: "Home",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Home page of personal website. It contains details about my work experience and my education background.",
+        },
+      ],
+    };
+  },
+};
+</script>
 <style scoped>
 .page-container {
   max-width: 1100px !important;

@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "%s",
-    title: "Giorgos Topsis",
+    titleTemplate: "%s - Giorgos Topsis",
+    // title: "Giorgos Topsis",
     htmlAttrs: {
       lang: "en",
     },

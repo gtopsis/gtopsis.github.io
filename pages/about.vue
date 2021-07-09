@@ -51,6 +51,20 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
       ],
     };
   },
+  head() {
+    return {
+      title: "About",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "About me page contains details about my personal hobbies, projects and goals.",
+        },
+      ],
+    };
+  },
 };
 </script>
 

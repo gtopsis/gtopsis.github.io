@@ -10,26 +10,27 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <v-list nav class="nav d-inline-flex flex-row justify-end align-center">
-        <v-list-item class="nav-item mb-0">
-          <nuxt-link to="/">Work</nuxt-link>
-        </v-list-item>
-
-        <v-list-item class="nav-item mb-0">
-          <nuxt-link to="/about">About</nuxt-link>
-        </v-list-item>
-      </v-list>
+      <nav role="navigation">
+        <v-list nav class="nav d-inline-flex flex-row justify-end align-center">
+          <v-list-item class="nav-item mb-0">
+            <nuxt-link to="/">Work</nuxt-link>
+          </v-list-item>
+          <v-list-item class="nav-item mb-0">
+            <nuxt-link to="/about">About</nuxt-link>
+          </v-list-item>
+        </v-list>
+      </nav>
 
       <theme-toggle></theme-toggle>
     </v-app-bar>
 
-    <v-main>
+    <v-main role="main">
       <v-container fluid fill-height pa-0>
         <Nuxt />
       </v-container>
     </v-main>
 
-    <v-footer>
+    <v-footer role="contentinfo">
       <main-footer></main-footer>
     </v-footer>
   </v-app>
