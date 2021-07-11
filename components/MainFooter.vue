@@ -21,6 +21,7 @@
         </v-row>
       </v-col>
       <v-col cols="12" class="py-1">
+        <p class="text-center ma-0">{{ personalMessage }}</p>
         <p class="text-center ma-0">&copy; {{ footerText }}</p>
       </v-col>
     </v-row>
@@ -41,6 +42,7 @@ export default {
           link: "https://github.com/gtopsis",
         },
       ],
+      personalMessage: "Build from scratch with Nuxt.js",
     };
   },
   computed: {
