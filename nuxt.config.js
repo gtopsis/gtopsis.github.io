@@ -21,7 +21,7 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "",
+        content: 'Everything about my work experience, education, personal projects and hobbies.'
       },
       {
         name: "format-detection",
@@ -35,11 +35,11 @@ export default {
         name: 'twitter:card',
         content: 'summary_large_image'
       },
-      {
-        hid: 'twitter:url',
-        name: 'twitter:url',
-        content: 'https://nuxtjs.org'
-      },
+      // {
+      //   hid: 'twitter:url',
+      //   name: 'twitter:url',
+      //   content: 'https://nuxtjs.org'
+      // },
       {
         hid: 'twitter:title',
         name: 'twitter:title',
@@ -47,7 +47,7 @@ export default {
       }, {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: 'Everything about my work experience, education, personal projects and hobbies'
+        content: 'Everything about my work experience, education, personal projects and hobbies.'
       }, {
         hid: 'twitter:image',
         name: 'twitter:image',
@@ -76,7 +76,7 @@ export default {
       }, {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Everything about my work experience, education, personal projects and hobbies'
+        content: 'Everything about my work experience, education, personal projects and hobbies.'
       },
 
       {
