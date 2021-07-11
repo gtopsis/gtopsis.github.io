@@ -27,6 +27,73 @@ export default {
         name: "format-detection",
         content: "telephone=no",
       },
+
+      // Twitter
+      // Test on: https://cards-dev.twitter.com/validator
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://nuxtjs.org'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Giorgos Topsis - My personal website!'
+      }, {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: 'Everything about my work experience, education, personal projects and hobbies'
+      }, {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '~/assets/Twitter-card.png'
+      },
+
+      // Open Graph
+      // Test on: https://developers.facebook.com/tools/debug/
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Giorgos Topsis - My personal website!'
+      }, {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      }, {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://nuxtjs.org'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Giorgos Topsis - My personal website!'
+      }, {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Everything about my work experience, education, personal projects and hobbies'
+      },
+
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '~/assets/Twitter-card.png'
+      }, {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: '~/assets/Twitter-card.png'
+      },
+      // {
+      //   hid: 'og:image:alt',
+      //   property: 'og:image:alt',
+      //   content: 'NuxtJS'
+      // }
+
     ],
     link: [ {
       rel: "icon",
