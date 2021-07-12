@@ -1,5 +1,11 @@
 <template>
   <div class="main-layout">
+    <SocialHead
+      :title="head.title"
+      :description="head.description"
+      :image="head.image"
+    />
+
     <v-container class="headline-container my-5" fluid full-width fill-height>
       <v-row
         class="no-gutters"
@@ -53,6 +59,11 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
   },
   head() {
     return {
+      head: {
+        title: "About - Giorgos Topsis",
+        description: "Learn more about me!",
+        image: "/images/Twitter-card.png",
+      },
       title: "About",
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
