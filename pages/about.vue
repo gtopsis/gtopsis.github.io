@@ -48,7 +48,7 @@ export default {
       head: {
         title: "About - Giorgos Topsis",
         description: "Learn more about me!",
-        image: "/images/Twitter-card.png",
+        image: "./images/Twitter-card.png",
       },
       aboutMe: [
         `As a kid I was thinking that sooner or later I will find which is my dream job, in which direction I'm was born to shine having a unique and enviable talent. The mission was clear, to find my specialty!
