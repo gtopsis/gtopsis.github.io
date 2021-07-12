@@ -51,7 +51,7 @@ export default {
       }, {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: '/static/images/Twitter-card.png'
+        content: '/images/Twitter-card.png'
       },
 
       // Open Graph
@@ -82,11 +82,11 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/static/images/Twitter-card.png'
+        content: '/images/Twitter-card.png'
       }, {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: '/static/images/Twitter-card.png'
+        content: '/images/Twitter-card.png'
       },
       // {
       //   hid: 'og:image:alt',
