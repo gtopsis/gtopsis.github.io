@@ -54,7 +54,7 @@ export default {
   color: var(--v-primary-base);
 }
 .theme--light .logo a {
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--v-secondary-base);
 }
 .theme--dark .logo a {
   color: rgba(255, 255, 255, 0.87);
@@ -66,10 +66,7 @@ export default {
   background: transparent !important;
 }
 .nav .nav-item {
-  /* margin: 0 0.5rem;
-  padding: 0 0.25rem; */
   font-size: 1.2rem;
-  /* display: inline-block; */
   background: transparent;
 }
 

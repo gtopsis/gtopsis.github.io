@@ -15,7 +15,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <v-icon>{{ social.icon }}</v-icon>
+              <!-- <v-icon>{{ social.icon }}</v-icon> -->
+              <fa class="social-icon" :icon="['fab', social.icon]" />
             </a>
           </v-col>
         </v-row>
@@ -34,11 +35,11 @@ export default {
     return {
       socials: [
         {
-          icon: "mdi-linkedin",
+          icon: "linkedin",
           link: "https://www.linkedin.com/in/gtopsis",
         },
         {
-          icon: "mdi-github",
+          icon: "github",
           link: "https://github.com/gtopsis",
         },
       ],
@@ -64,7 +65,7 @@ export default {
   text-decoration: none;
 }
 
-.socials-list a.social-link:hover .v-icon {
-  color: blue;
+.socials-list a.social-link .social-icon {
+  font-size: 1.6rem;
 }
 </style>

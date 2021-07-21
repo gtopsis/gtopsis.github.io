@@ -121,7 +121,16 @@ export default {
     "@nuxtjs/eslint-module",
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify",
+    '@nuxtjs/fontawesome'
   ],
+
+  fontawesome:{
+    component: 'fa',
+    icons:{
+      solid: true,
+      brands: true,
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -167,7 +176,9 @@ export default {
     },
     defaultAssets: {
       font: false,
-      icons: 'mdi'
+    },
+    icons:{
+      iconfont: 'fa'
     }
   },
 

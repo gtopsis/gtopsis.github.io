@@ -146,7 +146,7 @@ export const state = () => ( {
                 },
             },
             card: {
-                title: "MSc in Computer Science Field Of Study Human Computer Interaction, Information Systems",
+                title: "MSc in Computer Science - Human Computer Interaction, Information Systems",
                 roles: [ {
                     jobTitle: "Back End Web Developer",
                     period: {
@@ -169,7 +169,6 @@ export const state = () => ( {
 
 export const getters = {
     timelineItems: state => {
-        console.log( "🚀 ~ file: timelineItems.js ~ line 105 ~ state", state )
         return [ ...state.jobs, ...state.education ];
     }
 }
