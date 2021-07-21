@@ -3,8 +3,8 @@ skills: [
         {
           icon: "laptop-code",
           title: "Front End Developer",
-          desc: "Following the OpenAPI specification and tools I design and document robust web services.",
-          heading: "Languages and frameworks",
+          desc: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
+          heading: "Languages and Frameworks",
           technologies: [
             "Vue.js, Vuex",
             "Vuetify",
@@ -19,8 +19,8 @@ skills: [
         {
           icon: "server",
           title: "Back End Developer",
-          desc: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
-          heading: "Languages and frameworks",
+          desc: "Following the OpenAPI specification and tools I design and document robust web services.",
+          heading: "Languages and Frameworks",
           technologies: [
             "Node.js",
             "Express",
