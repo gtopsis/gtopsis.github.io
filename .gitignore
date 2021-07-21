@@ -4,3 +4,4 @@ node_modules
 .nuxt/vuetify/plugin.js
 dist
 .eslintcache
+syncAndDeploy.sh
