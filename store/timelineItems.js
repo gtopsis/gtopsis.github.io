@@ -118,13 +118,13 @@ export const state = () => ( {
                 roles: [ {
                     jobTitle: "Back End Web Developer",
                     period: {
-                        start: "Jan 2015",
-                        end: "March 2021"
+                        start: "Jun 2016",
+                        end: "Jun 2019"
                     },
                 }, ],
                 period: {
-                    start: "Jan 2015",
-                    end: "March 2021"
+                    start: "Jun 2016",
+                    end: "Jun 2019"
                 },
                 description: "",
                 tools: [],
