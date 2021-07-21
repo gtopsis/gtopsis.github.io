@@ -12,7 +12,15 @@
 
     <!-- timeline section -->
     <v-col cols="12" class="px-4 py-0 mx-0 section">
-      <timeline></timeline>
+      <v-row class="justify-space-between">
+        <v-col cols="12" md="5">
+          <timeline content="experience"></timeline>
+        </v-col>
+
+        <v-col cols="12" md="5">
+          <timeline content="education"></timeline>
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 </template>

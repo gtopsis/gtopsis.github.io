@@ -132,44 +132,11 @@ export const state = () => ( {
             },
         },
     ],
-    education: [ {
-            id: 1,
-            avatar: {
-                // img: "/uoc_logo.png",
-                img: `/images/uoc_logo.png`,
-
-                alt: "Logo of University of Crete",
-                bgColor: "#000",
-                label: {
-                    text: "University of Crete",
-                    link: "https://www.uoc.gr/"
-                },
-            },
-            card: {
-                title: "MSc in Computer Science - Human Computer Interaction, Information Systems",
-                roles: [ {
-                    jobTitle: "Back End Web Developer",
-                    period: {
-                        start: "2016",
-                        end: "2019"
-                    },
-                }, ],
-                period: {
-                    start: "2016",
-                    end: "2019"
-                },
-                description: "",
-                tools: [],
-                readMore: "",
-            },
-        },
-
-    ]
 } );
 
 export const getters = {
-    timelineItems: state => {
-        return [ ...state.jobs, ...state.education ];
+    experience: state => {
+        return state.jobs;
     }
 }
 

@@ -7,8 +7,8 @@
     </v-row>
 
     <v-row align="center" justify="center">
-      <v-col cols="12" md="10" lg="9" class="px-0">
-        <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+      <v-col cols="12" class="px-0">
+        <v-timeline dense>
           <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
             <template #icon>
               <v-avatar
@@ -22,22 +22,13 @@
                   :src="item.avatar.img"
                   :alt="item.avatar.alt"
                   class="firm-logo"
-                  width="24"
-                  height="24"
+                  width="26"
+                  height="26"
                 >
                 </v-img>
               </v-avatar>
             </template>
-            <template #opposite>
-              <a
-                :href="item.avatar.label.link"
-                class="firm-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>{{ item.avatar.label.text }}</span>
-              </a>
-            </template>
+
             <v-card class="elevation-2 timeline-item">
               <v-card-title>
                 <strong class="timeline-item-title">
@@ -50,7 +41,7 @@
               </v-card-subtitle>
               <v-card-text v-if="$vuetify.breakpoint.smAndDown">
                 <!-- v-if="hasTimelineItemDetails(item.card)" -->
-                <p v-if="$vuetify.breakpoint.smAndDown" class="mb-0">
+                <p class="mb-0">
                   <a
                     :href="item.avatar.label.link"
                     target="_blank"
@@ -95,19 +86,39 @@
 
 <script>
 export default {
+  props: {
+    content: {
+      type: String,
+      default: "experience",
+      validator: (v) => ["experience", "education"].includes(v),
+    },
+  },
   data() {
     return {
-      timelineTitle: "Experience and Studies",
-      avatarSize: 34,
+      avatarSize: 40,
     };
   },
   computed: {
     isMobileDevice() {
       return this.$vuetify.breakpoint.smAndDown;
     },
+    timelineTitle() {
+      if (this.content == "experience") {
+        return "Experience";
+      } else if (this.content == "education") {
+        return "Education";
+      }
+      return "My Story";
+    },
     timelineItems() {
-      let timelineItems = this.$store.state.timelineItems;
-      return [...timelineItems.jobs, ...timelineItems.education];
+      if (this.content == "experience") {
+        let experience = this.$store.state.experience;
+        return experience.jobs;
+      } else if (this.content == "education") {
+        let education = this.$store.state.education;
+        return education.studies || [];
+      }
+      return [];
     },
   },
   methods: {
@@ -134,6 +145,6 @@ export default {
 }
 
 .timeline-item-title {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 </style>
