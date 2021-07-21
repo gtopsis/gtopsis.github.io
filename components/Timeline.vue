@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row align="center" class="justify-md-center justify-sm-left">
       <v-col cols="auto" class="mb-2">
-        <h2>{{ timelineTitle }}</h2>
+        <h1>{{ timelineTitle }}</h1>
       </v-col>
     </v-row>
 
