@@ -11,22 +11,29 @@
         <v-timeline dense>
           <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
             <template #icon>
-              <v-avatar
-                :size="avatarSize"
-                :color="item.avatar.bgColor"
-                align-center
-                justify-center
-              >
-                <v-img
-                  contain
-                  :src="item.avatar.img"
-                  :alt="item.avatar.alt"
-                  class="firm-logo"
-                  width="26"
-                  height="26"
-                >
-                </v-img>
-              </v-avatar>
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-avatar
+                    :size="avatarSize"
+                    :color="item.avatar.bgColor"
+                    align-center
+                    justify-center
+                    v-bind="attrs"
+                    v-on="on"
+                  >
+                    <v-img
+                      contain
+                      :src="item.avatar.img"
+                      :alt="item.avatar.alt"
+                      class="firm-logo"
+                      width="26"
+                      height="26"
+                    >
+                    </v-img>
+                  </v-avatar>
+                </template>
+                <span>{{ item.avatar.label.text }}</span>
+              </v-tooltip>
             </template>
 
             <v-card class="elevation-2 timeline-item">
@@ -39,16 +46,18 @@
                 {{ item.card.period.start }} -
                 {{ item.card.period.end }}
               </v-card-subtitle>
-              <v-card-text v-if="$vuetify.breakpoint.smAndDown">
+              <v-card-text>
                 <!-- v-if="hasTimelineItemDetails(item.card)" -->
                 <p class="mb-0">
                   <a
+                    v-if="item.avatar.label.link"
                     :href="item.avatar.label.link"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="firm-link"
                     >{{ item.avatar.label.text }}</a
                   >
+                  <span v-else>{{ item.avatar.label.text }}</span>
                 </p>
                 <!-- <ul v-if="item.card.roles.length > 1" class="ma-0 pl-0">
                   <li
