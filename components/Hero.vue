@@ -22,8 +22,8 @@ export default {
       headline: {
         pre: "I'm ",
         name: {
-          text: "Γιώργος",
-          pronunciation: "(/Giórgos/)",
+          text: "Giorgos",
+          pronunciation: "(/ɡi.ɔ̌ːr.ɡ.os/)",
           route: "about",
         },
         post: "a Full Stack Web Developer based in Heraklion of Crete.",
