@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row align="center" class="justify-md-center justify-sm-left">
-      <v-col cols="auto" class="mb-2">
+      <v-col cols="auto" class="mb-3">
         <h1>{{ title }}</h1>
       </v-col>
     </v-row>

@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row align="center" class="justify-md-center justify-sm-left">
-      <v-col cols="auto" class="mb-2">
+      <v-col cols="auto" class="mb-3">
         <h1>{{ timelineTitle }}</h1>
       </v-col>
     </v-row>
@@ -12,7 +12,7 @@
           <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
             <template #icon>
               <v-tooltip bottom>
-                <template v-slot:activator="{ on, attrs }">
+                <template #activator="{ on, attrs }">
                   <v-avatar
                     :size="avatarSize"
                     :color="item.avatar.bgColor"

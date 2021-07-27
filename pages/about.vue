@@ -1,12 +1,17 @@
 <template>
-  <div class="main-layout">
+  <div class="main-layout page-container">
     <SocialHead
       :title="head.title"
       :description="head.description"
       :image="head.image"
     />
 
-    <v-container class="headline-container my-5" fluid full-width fill-height>
+    <v-container
+      class="headline-container section"
+      fluid
+      full-width
+      fill-height
+    >
       <v-row
         class="no-gutters"
         full-width
@@ -28,7 +33,7 @@
     </v-container>
 
     <!-- about me section -->
-    <v-container class="about-me-container my-5" fluid full-width>
+    <v-container class="about-me-container section" fluid full-width>
       <v-row full-width justify="center" align="center">
         <v-col cols="12" md="10" lg="9" class="px-4">
           <p v-for="(paragraph, i) in aboutMe" :key="i" class="text-left" white>
@@ -38,6 +43,8 @@
         <v-col cols="12"> </v-col>
       </v-row>
     </v-container>
+
+    <meetups class="section"></meetups>
   </div>
 </template>
 
@@ -92,5 +99,14 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
 .fullname {
   /* font-size: 3rem; */
   letter-spacing: 0.25rem !important;
+}
+
+.page-container {
+  max-width: 1100px !important;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 100px 0;
 }
 </style>
