@@ -44,6 +44,7 @@
       </v-row>
     </v-container>
 
+    <!-- meetups section -->
     <meetups class="section"></meetups>
   </div>
 </template>

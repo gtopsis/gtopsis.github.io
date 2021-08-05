@@ -10,6 +10,9 @@
       <skills-collection></skills-collection>
     </v-col>
 
+    <!-- meetups section -->
+    <projects class="section"></projects>
+
     <!-- timeline section -->
     <v-col cols="12" class="px-4 py-0 mx-0 section">
       <v-row class="justify-space-between no-gutters">
