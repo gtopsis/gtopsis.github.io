@@ -6,46 +6,55 @@
       :image="head.image"
     />
 
-    <v-container
-      class="headline-container section"
-      fluid
-      full-width
-      fill-height
-    >
-      <v-row
-        class="no-gutters"
-        full-width
-        fill-height
-        justify-center
-        align-center
-      >
-        <v-col cols="12">
-          <h1 class="text-center text-h5 text-sm-h2 text-md-h4 mb-3" white>
-            Giorgos Topsis
-          </h1>
-        </v-col>
-        <v-col cols="12">
-          <p class="text-center text-sm-h4 text-md-h6">
-            What You <span class="text-primary">Read</span> is What you Get
-          </p>
-        </v-col>
-      </v-row>
-    </v-container>
+    <v-row no-gutters justify-center class="page-container">
+      <!-- hero section -->
+      <v-col cols="12" class="section px-4 py-0 mx-0">
+        <v-container class="headline-container" fluid full-width fill-height>
+          <v-row
+            class="no-gutters"
+            full-width
+            fill-height
+            justify-center
+            align-center
+          >
+            <v-col cols="12">
+              <h1 class="text-center text-h5 text-sm-h2 text-md-h4 mb-3" white>
+                Giorgos Topsis
+              </h1>
+            </v-col>
+            <v-col cols="12">
+              <p class="text-center text-sm-h4 text-md-h6">
+                What You <span class="text-primary">Read</span> is What you Get
+              </p>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-col>
 
-    <!-- about me section -->
-    <v-container class="about-me-container section" fluid full-width>
-      <v-row full-width justify="center" align="center">
-        <v-col cols="12" md="10" lg="9" class="px-4">
-          <p v-for="(paragraph, i) in aboutMe" :key="i" class="text-left" white>
-            {{ paragraph }}
-          </p>
-        </v-col>
-        <v-col cols="12"> </v-col>
-      </v-row>
-    </v-container>
+      <!-- about me section -->
+      <v-col cols="12" class="section px-4 py-0 mx-0">
+        <v-container class="about-me-container" fluid full-width>
+          <v-row full-width justify="center" align="center">
+            <v-col cols="12" md="10" lg="9" class="px-4">
+              <p
+                v-for="(paragraph, i) in aboutMe"
+                :key="i"
+                class="text-left"
+                white
+              >
+                {{ paragraph }}
+              </p>
+            </v-col>
+            <v-col cols="12"> </v-col>
+          </v-row>
+        </v-container>
+      </v-col>
 
-    <!-- meetups section -->
-    <meetups class="section"></meetups>
+      <!-- meetups section -->
+      <v-col cols="12" class="section px-4 py-0 mx-0">
+        <meetups class=""></meetups>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

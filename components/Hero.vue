@@ -2,7 +2,7 @@
   <v-container fluid fill-height class="hero-container px-0">
     <v-row no-gutters align="center" justify="center">
       <v-col class="px-0">
-        <h1 class="headline text-h5 text-sm-h2 text-md-h4">
+        <h1 class="headline text-h5 text-sm-h3 text-md-h4">
           {{ headline.pre }}
           <nuxt-link :to="headline.name.route" class="first-name">{{
             headline.name.text

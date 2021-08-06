@@ -1,20 +1,22 @@
 <template>
   <v-row no-gutters justify-center class="page-container">
     <!-- hero section -->
-    <v-col cols="12" class="px-4 py-0 mx-0 section">
+    <v-col cols="12" class="section px-4 py-0 mx-0">
       <hero></hero>
     </v-col>
 
     <!-- skills section -->
-    <v-col cols="12" class="px-4 py-0 mx-0 section">
+    <v-col cols="12" class="section px-4 py-0 mx-0">
       <skills-collection></skills-collection>
     </v-col>
 
     <!-- meetups section -->
-    <projects class="section"></projects>
+    <v-col cols="12" class="section px-4 py-0 mx-0">
+      <projects></projects>
+    </v-col>
 
     <!-- timeline section -->
-    <v-col cols="12" class="px-4 py-0 mx-0 section">
+    <v-col cols="12" class="section px-4 py-0 mx-0">
       <v-row class="justify-space-between no-gutters">
         <v-col cols="12" md="5">
           <timeline content="experience"></timeline>

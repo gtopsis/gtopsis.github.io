@@ -6,17 +6,17 @@
       </v-col>
     </v-row>
 
-    <v-row class="columns-container justify-md-space-between">
+    <v-row class="columns-container justify-md-space-between no-gutters">
       <v-col
         v-for="(skill, index) in skills"
         :key="index"
-        class="column mb-sm-3 mb-md-0"
-        :cols="$vuetify.breakpoint.smAndDown ? 12 : undefined"
+        class="column my-xs-3"
+        :cols="$vuetify.breakpoint.mdAndDown ? 12 : undefined"
         :class="{ 'mx-md-5': index == 1 }"
       >
         <!-- Column -->
         <div class="column__content pa-2">
-          <v-row>
+          <v-row no-gutters>
             <v-col cols="12" class="text-center column__header">
               <fa class="content__icon mb-2" :icon="['fas', skill.icon]" />
               <h3 class="">{{ skill.title }}</h3>

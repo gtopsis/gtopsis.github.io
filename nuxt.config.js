@@ -51,7 +51,7 @@ export default {
       }, {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: './images/Twitter-card.png'
+        content: './images/portfolio.png'
       },
 
       // Open Graph
