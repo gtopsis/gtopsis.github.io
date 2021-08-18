@@ -15,7 +15,7 @@
         :class="{ 'mx-md-5': index == 1 }"
       >
         <!-- Column -->
-        <div class="column__content pa-2">
+        <div class="column__content pa-6">
           <v-row no-gutters>
             <v-col cols="12" class="text-center column__header">
               <fa class="content__icon mb-2" :icon="['fas', skill.icon]" />
@@ -30,7 +30,15 @@
               </h4>
               <ul class="ma-0 pa-0 tech-list text-center">
                 <li v-for="(tech, j) in skill.technologies" :key="j">
-                  <span> {{ tech }} </span>
+                  <span v-if="tech.desc == ''"> {{ tech.title }} </span>
+                  <v-tooltip v-else top small>
+                    <template #activator="{ on, attrs }">
+                      <span v-bind="attrs" v-on="on"> {{ tech.title }} </span>
+                    </template>
+                    <span style="display: block; max-width: 250px">{{
+                      tech.desc
+                    }}</span>
+                  </v-tooltip>
                 </li>
               </ul>
             </v-col>
