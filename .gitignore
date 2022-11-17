@@ -3,3 +3,5 @@ node_modules
 .vscode/
 .nuxt/vuetify/plugin.js
 dist
+.eslintcache
+syncAndDeploy.sh
