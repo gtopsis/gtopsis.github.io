@@ -49,27 +49,22 @@
 export default {
   data() {
     return {
-      title: "Personal Projects",
+      title: 'Personal Projects',
       meetups: [
         {
-          src: "/images/portfolio.png",
-          title: "Personal website",
-          link: "https://gtopsis.github.io/",
+          src: '/images/portfolio.png',
+          title: 'Personal website',
+          link: 'https://gtopsis.github.io/',
         },
         {
-          src: "/images/TangoPanoramaB.webp",
-          title: "Tangoneon",
-          link: "https://tangoneon.gr/",
+          src: '/images/uoc-radio.png',
+          title: 'Uoc radio',
+          link: 'https://gtopsis.github.io/Uoc-radio-website/index.html',
         },
         {
-          src: "/images/uoc-radio.png",
-          title: "Uoc radio",
-          link: "https://gtopsis.github.io/Uoc-radio-website/index.html",
-        },
-        {
-          src: "/images/cs-352.png",
-          title: "Website for course cs-352",
-          link: "#",
+          src: '/images/cs-352.png',
+          title: 'Website for course cs-352',
+          link: '#',
         },
       ],
     };
