@@ -13,13 +13,13 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
-# generate static project
+# generate and publish static site
 - Merge and/or push your work in branch develop
-- Generate dist folder:
+- Generate `dist` folder:
 
 $ npm run generate
 
-- Replace all files (except hidden ones) of branch master with ones from the generated dist folder.
+- Replace all(except hidden) files of branch master with ones from the generated `dist` folder. (<span style="color:red">important</span>)
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
