@@ -5,9 +5,26 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/vue-fontawesome": "^3.0.2",
+    "@mdi/font": "^7.0.96",
+    "@pinia/nuxt": "^0.4.4",
+    "core-js": "^3.26.1",
+    "sass": "^1.56.1"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "@babel/eslint-parser": "^7.19.1",
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "nuxt": "^3.0.0",
+    "vite-plugin-vuetify": "^1.0.0",
+    "vuetify": "^3.0.1"
   }
 }
