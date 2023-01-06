@@ -28,15 +28,19 @@ export const useJobsStore = defineStore('JobsStore', {
             end: 'Present',
           },
           description: '',
-          tools: [],
+          tools: [
+            'TypeScript',
+            'Node.js',
+            'PostgreSQL',
+            'Jest',
+            'Document RESTful APIs (OpenAPI specification)',
+          ],
           readMore: '',
         },
       },
       {
         id: 2,
         avatar: {
-          // img: "/conveos_logo.png",
-
           img: `/images/conveos_logo.png`,
           alt: 'Logo of software agency Conveos',
           bgColor: '#000',
@@ -61,16 +65,20 @@ export const useJobsStore = defineStore('JobsStore', {
             end: 'June 2021',
           },
           description: '',
-          tools: [],
+          tools: [
+            'JavaScript',
+            'Node.js',
+            'MongoDB',
+            'Jest',
+            'Document RESTful APIs (OpenAPI specification)',
+          ],
           readMore: '',
         },
       },
       {
         id: 3,
         avatar: {
-          // img: "/conveos_logo.png",
           img: `/images/conveos_logo.png`,
-
           alt: 'Logo of software agency Conveos',
           bgColor: '#000',
           label: {
@@ -79,7 +87,7 @@ export const useJobsStore = defineStore('JobsStore', {
           },
         },
         card: {
-          title: 'Full Stack Web Developer',
+          title: 'Front & Back End Web Developer',
           roles: [
             {
               jobTitle: 'Back End Web Developer',
@@ -101,14 +109,20 @@ export const useJobsStore = defineStore('JobsStore', {
             end: 'July 2020',
           },
           description: '',
-          tools: [],
+          tools: [
+            'JavaScript',
+            'Vue.js',
+            'Vuetify',
+            'Node.js',
+            'MongoDB',
+            'Document RESTful APIs (OpenAPI specification)',
+          ],
           readMore: '',
         },
       },
       {
         id: 4,
         avatar: {
-          // img: "/forth_logo.png",
           img: `/images/forth_logo.png`,
 
           alt: 'Logo of FORTH in Greece',
@@ -135,7 +149,17 @@ export const useJobsStore = defineStore('JobsStore', {
             end: 'Jun 2019',
           },
           description: '',
-          tools: [],
+          tools: [
+            'JavaScript',
+            'AngularJS (v1.6)',
+            'Foundation for Sites',
+            'Node.js',
+            'MongoDB',
+            'SocketIO',
+            'Invision',
+            'Gravid Designer',
+            'Presentator.io',
+          ],
           readMore: '',
         },
       },

@@ -64,26 +64,14 @@
                   >
                   <span v-else>{{ item.avatar.label.text }}</span>
                 </p>
-                <!-- <ul v-if="item.card.roles.length > 1" class="ma-0 pl-0">
-                  <li
-                    v-for="(role, k) in item.card.roles"
-                    :key="k"
-                    class="ml-0"
-                  >
-                    <strong>{{ role.jobTitle }}</strong
-                    ><br />
-                    <span class="">
-                      {{ role.period.start }} -
-                      {{ role.period.end }}
-                    </span>
-                  </li>
-                </ul> -->
 
                 <p class="ma-0">
                   {{ item.card.description }}
                 </p>
-                <ul class="ma-0">
-                  <li v-for="(tool, j) in item.card.tools" :key="j"></li>
+                <ul class="ma-2">
+                  <li v-for="(tool, j) in item.card.tools" :key="j">
+                    <span>{{ tool }}</span>
+                  </li>
                 </ul>
               </v-card-text>
               <v-card-actions v-if="item.card.readMore != ''">

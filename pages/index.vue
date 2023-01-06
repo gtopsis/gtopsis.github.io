@@ -5,9 +5,13 @@
       <hero></hero>
     </v-col>
 
-    <!-- skills section -->
+    <!-- timeline section -->
     <v-col cols="12" class="section px-4 py-0 mx-0">
-      <skills-collection></skills-collection>
+      <v-row class="justify-space-between no-gutters">
+        <v-col cols="12" mb="2">
+          <timeline content="experience"></timeline>
+        </v-col>
+      </v-row>
     </v-col>
 
     <!-- meetups section -->
@@ -18,10 +22,6 @@
     <!-- timeline section -->
     <v-col cols="12" class="section px-4 py-0 mx-0">
       <v-row class="justify-space-between no-gutters">
-        <v-col cols="12" mb="2">
-          <timeline content="experience"></timeline>
-        </v-col>
-
         <v-col cols="12" mb="2">
           <timeline content="education"></timeline>
         </v-col>
