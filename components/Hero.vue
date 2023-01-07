@@ -1,5 +1,9 @@
 <template>
-  <v-container fluid fill-height class="hero-container px-0" justify="center">
+  <v-container
+    fluid
+    fill-height
+    class="hero-container px-0 d-flex align-center justify-center"
+  >
     <v-row no-gutters class="align-center justify-center">
       <v-col class="px-0">
         <h1 class="headline text-h5 text-sm-h3 text-md-h4">

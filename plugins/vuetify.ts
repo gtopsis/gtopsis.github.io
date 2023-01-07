@@ -23,7 +23,7 @@ const customDark: ThemeDefinition = {
     primary: '#1976D2',
     secondary: '#424242',
     accent: '#82B1FF',
-    background: '#000000',
+    background: '#34495e',
   },
 };
 

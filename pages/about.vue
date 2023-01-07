@@ -9,7 +9,12 @@
     <v-row no-gutters justify-center class="page-container">
       <!-- hero section -->
       <v-col cols="12" class="section px-4 py-0 mx-0">
-        <v-container class="headline-container" fluid full-width fill-height>
+        <v-container
+          class="headline-container d-flex align-center"
+          fluid
+          full-width
+          fill-height
+        >
           <v-row
             class="no-gutters"
             full-width
