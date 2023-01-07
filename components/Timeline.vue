@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="pa-0">
     <v-row align="center" class="justify-md-center justify-sm-left">
       <v-col cols="auto" class="mb-3">
         <h1>{{ timelineTitle }}</h1>
@@ -10,7 +10,7 @@
       <v-col cols="12" class="px-0">
         <v-timeline
           align="start"
-          direction="horizontal"
+          :direction="timelineDirection"
           side="end"
           :truncate-line="truncateLines"
         >
@@ -87,7 +87,16 @@
 
 <script setup>
 import { useDisplay } from 'vuetify';
+
 const { mobile } = useDisplay();
+const timelineDirection = computed(() => {
+  switch (mobile.value) {
+    case true:
+      return 'vertical';
+    case false:
+      return 'horizontal';
+  }
+});
 
 const avatarSize = 40;
 const props = defineProps({
@@ -133,6 +142,7 @@ function navigateToCompany(cUrl) {
   window.open(url, '_blank');
 }
 </script>
+
 <style scoped>
 .firm-link {
   text-decoration: none;
@@ -147,11 +157,18 @@ function navigateToCompany(cUrl) {
 .timeline-item {
   max-width: 300px;
 }
+
 .timeline-item-title {
   font-size: 1.1rem;
 }
 
 .timeline-avatar {
   border: 1px solid grey;
+}
+
+@media only screen and (max-width: 600px) {
+  .timeline-item {
+    max-width: 320px;
+  }
 }
 </style>
