@@ -19,7 +19,7 @@ export const useJobsStore = defineStore('JobsStore', {
               jobTitle: 'Back End Web Developer',
               period: {
                 start: 'September 2021',
-                end: 'Present',
+                end: 'February 2023',
               },
             },
           ],
