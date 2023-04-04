@@ -2,21 +2,23 @@
   <v-app>
     <v-app-bar fixed app elevate-on-scroll>
       <v-toolbar-title>
-        <h2 class="logo">
-          <nuxt-link to="/">
-            {{ title }}
-          </nuxt-link>
+        <h2 class="logo text-subtitle-1 text-md-h5 text-wrap">
+          <nuxt-link to="/"> {{ title }} </nuxt-link>
         </h2>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
       <nav role="navigation">
-        <v-list nav class="nav d-inline-flex flex-row justify-end align-center">
+        <v-list
+          nav
+          class="nav d-inline-flex flex-row justify-end"
+          align="center"
+        >
           <v-list-item class="nav-item mb-0">
-            <nuxt-link to="/">Work</nuxt-link>
+            <nuxt-link to="/" class="text-subtitle-1">Work</nuxt-link>
           </v-list-item>
           <v-list-item class="nav-item mb-0">
-            <nuxt-link to="/about">About</nuxt-link>
+            <nuxt-link to="/about" class="text-subtitle-1">About</nuxt-link>
           </v-list-item>
         </v-list>
       </nav>
@@ -37,13 +39,10 @@
 </template>
 
 <script setup>
-const title = '{GT}';
+const title = "Giorgos Topsis";
 </script>
 
 <style>
-.logo {
-  font-size: 1.9rem;
-}
 .logo a {
   text-decoration: none;
   color: var(--v-theme-primary-base);
@@ -71,12 +70,4 @@ const title = '{GT}';
 .nav .nav-item a.nuxt-link-exact-active {
   color: var(--v-theme-secondary-darken2);
 }
-
-/* .theme--light ul li.nav-item a {
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.theme--dark ul li.nav-item a {
-  color: rgba(255, 255, 255, 0.87);
-} */
 </style>
