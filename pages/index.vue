@@ -1,17 +1,17 @@
 <template>
-  <v-row no-gutters justify-center class="page-container">
+  <v-row class="page-container" no-gutters justify="center">
     <!-- hero section -->
-    <v-col cols="12" class="section px-4 py-0 mx-0">
+    <v-col cols="12" class="section pa-0 mx-0">
       <hero></hero>
     </v-col>
 
     <!-- projects section -->
-    <v-col cols="12" class="section px-4 py-0 mx-0">
+    <v-col cols="12" class="section pa-0 mx-0">
       <projects></projects>
     </v-col>
 
     <!-- meetups section -->
-    <v-col cols="12" class="section px-4 py-0 mx-0">
+    <v-col cols="12" class="section pa-0 mx-0">
       <meetups class=""></meetups>
     </v-col>
   </v-row>
@@ -34,7 +34,6 @@ useHead({
 
 <style scoped>
 .section {
-  margin: 100px 0;
 }
 .page-container {
   max-width: 1100px !important;
