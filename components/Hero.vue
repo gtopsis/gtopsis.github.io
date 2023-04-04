@@ -1,16 +1,12 @@
 <template>
-  <v-container
-    fluid
-    fill-height
-    class="hero-container px-0 d-flex align-center justify-center"
-  >
-    <v-row no-gutters class="align-center justify-center">
-      <v-col class="px-0">
-        <h1 class="headline text-h5 text-sm-h3 text-md-h4">
+  <v-container class="hero-container pa-0 d-flex" fill-height>
+    <v-row no-gutters>
+      <v-col class="px-0" cols="12" align-self="center">
+        <h1 class="headline text-h6 text-md-h5 text-lg-h4">
           {{ headline.pre }}
-          <nuxt-link :to="headline.name.route" class="first-name">{{
-            headline.name.text
-          }}</nuxt-link>
+          <nuxt-link :to="{ name: 'about' }" class="first-name">
+            {{ headline.name.text }}
+          </nuxt-link>
           {{ headline.name.pronunciation }},<br />
           {{ headline.post }}
         </h1>
@@ -23,26 +19,21 @@
 const headline = {
   pre: "I'm ",
   name: {
-    text: 'Giorgos',
-    pronunciation: '(/ɡi.ɔ̌ːr.ɡ.os/)',
-    route: 'about',
+    text: "Giorgos",
+    pronunciation: "(/ɡi.ɔ̌ːr.ɡ.os/)",
   },
-  post: 'a Full Stack Web Developer based in Heraklion of Crete.',
+  post: "a Full Stack Web Developer based in Heraklion of Crete.",
 };
 </script>
 <style scoped>
 .hero-container {
-  height: 60vh;
-}
-
-.hero-icon {
-  font-size: 2.5rem !important;
+  height: 80vh;
 }
 
 .headline {
-  /* font-size: 2.5rem !important; */
   letter-spacing: 0.25rem !important;
 }
+
 .first-name {
   height: 50px;
   line-height: 50px;
