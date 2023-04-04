@@ -55,9 +55,22 @@
         </v-container>
       </v-col>
 
-      <!-- meetups section -->
+      <!-- timeline section -->
       <v-col cols="12" class="section px-4 py-0 mx-0">
-        <meetups class=""></meetups>
+        <v-row class="justify-space-between no-gutters">
+          <v-col cols="12" mb="2">
+            <timeline content="experience"></timeline>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <!-- timeline section -->
+      <v-col cols="12" class="section px-4 py-0 mx-0">
+        <v-row class="justify-space-between no-gutters">
+          <v-col cols="12" mb="2">
+            <timeline content="education"></timeline>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </div>
@@ -65,22 +78,22 @@
 
 <script setup>
 useHead({
-  title: 'About',
+  title: "About",
   meta: [
     // hid is used as unique identifier. Do not use `vmid` for it as it will not work
     {
-      hid: 'description',
-      name: 'description',
+      hid: "description",
+      name: "description",
       content:
-        'About me page contains details about my personal hobbies, projects and goals.',
+        "About me page contains details about my personal hobbies, projects and goals.",
     },
   ],
 });
 
 const head = {
-  title: 'About - Giorgos Topsis',
-  description: 'Learn more about me!',
-  image: './images/Twitter-card.png',
+  title: "About - Giorgos Topsis",
+  description: "Learn more about me!",
+  image: "./images/Twitter-card.png",
 };
 const aboutMe = [
   `As a kid I was thinking that sooner or later I will find which is my dream job, in which direction I'm was born to shine having a unique and enviable talent. The mission was clear, to find my specialty!
