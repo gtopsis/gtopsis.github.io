@@ -12,7 +12,7 @@
 
     <!-- meetups section -->
     <v-col cols="12" class="section py-5 mx-0">
-      <meetups class=""></meetups>
+      <meetups></meetups>
     </v-col>
   </v-row>
 </template>
@@ -33,8 +33,6 @@ useHead({
 </script>
 
 <style scoped>
-.section {
-}
 .page-container {
   max-width: 1100px !important;
   margin: 0 auto;
