@@ -76,7 +76,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 useHead({
   title: "About",
   meta: [
@@ -95,6 +95,7 @@ const head = {
   description: "Learn more about me!",
   image: "./images/Twitter-card.png",
 };
+
 const aboutMe = [
   `As a kid I was thinking that sooner or later I will find which is my dream job, in which direction I'm was born to shine having a unique and enviable talent. The mission was clear, to find my specialty!
 My studies (BSc, MSc, Erasmus periods) in Information Systems and Human-Computer Interaction at Computer Science Department of University of Crete seemed to offer me an appropriate opportunity to achieve my mission. And I was close, so close; Finally, I only had to choose between Web Development and User Experience Design fields.`,
