@@ -8,11 +8,11 @@
 
     <v-row dense justify="center">
       <v-col
-        v-for="(project, index) in projects"
-        :key="index"
+        v-for="project in projects"
+        :key="project.title"
         cols="12"
-        md="4"
-        lg="3"
+        md="3"
+        lg="4"
       >
         <v-card class="mx-auto" max-width="400">
           <v-img
@@ -80,8 +80,4 @@ function navigateToProjectCode(project) {
 }
 </script>
 
-<style scoped>
-.project-card:hover {
-  cursor: pointer;
-}
-</style>
+<style scoped></style>
