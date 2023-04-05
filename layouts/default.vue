@@ -1,29 +1,32 @@
 <template>
   <v-app>
-    <v-app-bar fixed app elevate-on-scroll>
-      <v-toolbar-title>
+    <v-app-bar class="px-3" fixed app elevate-on-scroll>
+      <v-toolbar-title class="ml-0">
         <h2 class="logo text-subtitle-1 text-md-h5 text-wrap">
           <nuxt-link to="/"> {{ title }} </nuxt-link>
         </h2>
       </v-toolbar-title>
+
       <v-spacer></v-spacer>
 
-      <nav role="navigation">
-        <v-list
-          nav
-          class="nav d-inline-flex flex-row justify-end"
-          align="center"
-        >
-          <v-list-item class="nav-item mb-0">
-            <nuxt-link to="/" class="text-subtitle-1">Work</nuxt-link>
-          </v-list-item>
-          <v-list-item class="nav-item mb-0">
-            <nuxt-link to="/about" class="text-subtitle-1">About</nuxt-link>
-          </v-list-item>
-        </v-list>
-      </nav>
+      <template v-slot:append>
+        <nav role="navigation">
+          <v-list
+            nav
+            class="nav d-inline-flex flex-row justify-end"
+            align="center"
+          >
+            <v-list-item class="nav-item mb-0">
+              <nuxt-link to="/" class="text-subtitle-1">Work</nuxt-link>
+            </v-list-item>
+            <v-list-item class="nav-item mb-0">
+              <nuxt-link to="/about" class="text-subtitle-1">About</nuxt-link>
+            </v-list-item>
+          </v-list>
+        </nav>
 
-      <theme-toggle></theme-toggle>
+        <theme-toggle></theme-toggle>
+      </template>
     </v-app-bar>
 
     <v-main role="main">
