@@ -107,27 +107,4 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
 ];
 </script>
 
-<style scoped>
-.main-layout {
-  width: 100%;
-}
-.headline-container {
-  height: 60vh;
-}
-.about-me-container {
-}
-
-.fullname {
-  /* font-size: 3rem; */
-  letter-spacing: 0.25rem !important;
-}
-
-.page-container {
-  max-width: 1100px !important;
-  margin: 0 auto;
-}
-
-.section {
-  margin: 100px 0;
-}
-</style>
+<style scoped></style>
