@@ -1,3 +1,14 @@
+<script setup lang="ts">
+const headline = {
+  pre: "I'm ",
+  name: {
+    text: "Giorgos",
+    pronunciation: "(/ɡi.ɔ̌ːr.ɡ.os/)",
+  },
+  post: "a Full Stack Web Developer based in Heraklion of Crete.",
+};
+</script>
+
 <template>
   <v-container class="hero-container pa-0 d-flex" fill-height>
     <v-row no-gutters>
@@ -15,16 +26,6 @@
   </v-container>
 </template>
 
-<script setup>
-const headline = {
-  pre: "I'm ",
-  name: {
-    text: "Giorgos",
-    pronunciation: "(/ɡi.ɔ̌ːr.ɡ.os/)",
-  },
-  post: "a Full Stack Web Developer based in Heraklion of Crete.",
-};
-</script>
 <style scoped>
 .hero-container {
   height: 80vh;

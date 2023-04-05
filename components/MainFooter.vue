@@ -1,3 +1,24 @@
+<script setup lang="ts">
+// import {computed} from 'vue';
+
+const socials = [
+  {
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/gtopsis",
+  },
+  {
+    icon: "github",
+    link: "https://github.com/gtopsis",
+  },
+];
+const personalMessage = "Build playing with Nuxt.js";
+
+const footerText = computed(() => {
+  const now = new Date().getFullYear();
+  return `Giorgos Topsis ${now}`;
+});
+</script>
+
 <template>
   <v-container pa-2>
     <v-row>
@@ -29,38 +50,15 @@
   </v-container>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      socials: [
-        {
-          icon: 'linkedin',
-          link: 'https://www.linkedin.com/in/gtopsis',
-        },
-        {
-          icon: 'github',
-          link: 'https://github.com/gtopsis',
-        },
-      ],
-      personalMessage: 'Build playing with Nuxt.js',
-    };
-  },
-  computed: {
-    footerText() {
-      const now = new Date().getFullYear();
-      return `Giorgos Topsis ${now}`;
-    },
-  },
-};
-</script>
 <style scoped>
 .socials-list-container {
   /* width: 100%; */
 }
+
 .socials-list {
   /* width: 100%; */
 }
+
 .socials-list a.social-link {
   text-decoration: none;
 }

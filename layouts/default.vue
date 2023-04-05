@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const title = "Giorgos Topsis";
+</script>
+
 <template>
   <v-app>
     <v-app-bar class="px-3" fixed app elevate-on-scroll>
@@ -40,10 +44,6 @@
     </v-footer>
   </v-app>
 </template>
-
-<script setup>
-const title = "Giorgos Topsis";
-</script>
 
 <style>
 .logo a {
