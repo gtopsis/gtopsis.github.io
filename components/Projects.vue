@@ -14,15 +14,34 @@
         md="4"
         lg="3"
       >
-        <v-card class="project-card" @click="navigateToProject(project)">
+        <v-card class="mx-auto" max-width="400">
           <v-img
+            class="align-end text-white"
+            height="200"
             :src="project.src"
-            class="white--text align-end"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            height="200px"
+            cover
           >
             <v-card-title v-text="project.title"></v-card-title>
           </v-img>
+
+          <!-- <v-card-subtitle class="pt-4"> Number 10 </v-card-subtitle>
+
+          <v-card-text>
+            <div>Whitehaven Beach</div>
+
+            <div>Whitsunday Island, Whitsunday Islands</div>
+          </v-card-text> -->
+
+          <v-card-actions>
+            <v-btn color="primary" @click="navigateToProjectDemo(project)">
+              Demo
+            </v-btn>
+
+            <v-btn color="primary" @click="navigateToProjectCode(project)">
+              Code
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
@@ -36,21 +55,28 @@ const projects = [
     src: "/images/portfolio.png",
     title: "Personal website",
     link: "https://gtopsis.github.io/",
+    code: "https://github.com/gtopsis/gtopsis.github.io",
   },
   {
     src: "/images/uoc-radio.png",
     title: "Uoc radio",
     link: "https://gtopsis.github.io/Uoc-radio-website/index.html",
+    code: "https://github.com/gtopsis/Uoc-radio-website",
   },
   {
     src: "/images/cs-352.png",
     title: "Website for course cs-352",
     link: "https://gtopsis.github.io/Course-cs352-website/",
+    code: "https://github.com/gtopsis/Course-cs352-website",
   },
 ];
 
-function navigateToProject(project) {
+function navigateToProjectDemo(project) {
   window.open(project.link);
+}
+
+function navigateToProjectCode(project) {
+  window.open(project.code);
 }
 </script>
 
