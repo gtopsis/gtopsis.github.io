@@ -8,20 +8,20 @@
 
     <v-row dense justify="center">
       <v-col
-        v-for="(meetup, index) in meetups"
+        v-for="(project, index) in projects"
         :key="index"
         cols="12"
         md="4"
         lg="3"
       >
-        <v-card class="meetup-card" @click="navigateToMeetup(meetup)">
+        <v-card class="project-card" @click="navigateToProject(project)">
           <v-img
-            :src="meetup.src"
+            :src="project.src"
             class="white--text align-end"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"
           >
-            <v-card-title v-text="meetup.title"></v-card-title>
+            <v-card-title v-text="project.title"></v-card-title>
           </v-img>
         </v-card>
       </v-col>
@@ -30,32 +30,32 @@
 </template>
 
 <script setup>
-const title = 'Personal Projects';
-const meetups = [
+const title = "Personal Projects";
+const projects = [
   {
-    src: '/images/portfolio.png',
-    title: 'Personal website',
-    link: 'https://gtopsis.github.io/',
+    src: "/images/portfolio.png",
+    title: "Personal website",
+    link: "https://gtopsis.github.io/",
   },
   {
-    src: '/images/uoc-radio.png',
-    title: 'Uoc radio',
-    link: 'https://gtopsis.github.io/Uoc-radio-website/index.html',
+    src: "/images/uoc-radio.png",
+    title: "Uoc radio",
+    link: "https://gtopsis.github.io/Uoc-radio-website/index.html",
   },
   {
-    src: '/images/cs-352.png',
-    title: 'Website for course cs-352',
-    link: '#',
+    src: "/images/cs-352.png",
+    title: "Website for course cs-352",
+    link: "https://gtopsis.github.io/Course-cs352-website/",
   },
 ];
 
-function navigateToMeetup(meetup) {
-  window.open(meetup.link);
+function navigateToProject(project) {
+  window.open(project.link);
 }
 </script>
 
 <style scoped>
-.meetup-card:hover {
+.project-card:hover {
   cursor: pointer;
 }
 </style>
