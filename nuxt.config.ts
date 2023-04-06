@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   app: {
+    pageTransition: { name: "page", mode: "out-in" },
     head: {
       titleTemplate: "%s - Giorgos Topsis",
       // title: "Giorgos Topsis",
