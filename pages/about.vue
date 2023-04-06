@@ -59,7 +59,7 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
               <p
                 v-for="(paragraph, i) in aboutMe"
                 :key="i"
-                class="text-left"
+                class="text-left text-body-1 mb-6"
                 white
               >
                 {{ paragraph }}

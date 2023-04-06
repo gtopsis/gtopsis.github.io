@@ -40,12 +40,6 @@ const timelineItems = computed(() => {
   }
   return [];
 });
-
-function navigateToCompany(cUrl) {
-  if (!cUrl || cUrl == "") return;
-  let url = cUrl;
-  window.open(url, "_blank");
-}
 </script>
 
 <template>
