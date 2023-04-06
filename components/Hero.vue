@@ -28,7 +28,7 @@ const headline = {
 
 <style scoped>
 .hero-container {
-  height: 75vh;
+  height: 70vh;
 }
 
 .headline {

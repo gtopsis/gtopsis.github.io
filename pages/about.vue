@@ -30,12 +30,7 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
 </script>
 
 <template>
-  <v-container
-    class="main-layout page-container d-flex align-center"
-    fluid
-    full-width
-    fill-height
-  >
+  <v-container class="d-flex pa-0" fluid full-width fill-height align="center">
     <SocialHead
       :title="head.title"
       :description="head.description"
@@ -44,10 +39,16 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
 
     <v-row class="page-container" no-gutters justify="center">
       <!-- hero section -->
-      <v-col cols="12" class="section px-4 py-0 mx-0">
-        <p class="text-center text-h6 text-md-h4">
-          What You <span class="text-primary">Read</span> is What you Get
-        </p>
+      <v-col cols="12" class="section pa-0 mx-0">
+        <v-container class="hero-container ma-0 pa-0" fill-height>
+          <v-row no-gutters justify="center" align="center">
+            <v-col cols="auto" align-self="center">
+              <p class="text-center text-h6 text-sm-h5 text-md-h4">
+                What You <span class="text-primary">Read</span> is What you Get
+              </p>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-col>
 
       <!-- about me section -->
@@ -90,4 +91,12 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
   </v-container>
 </template>
 
-<style scoped></style>
+<style scoped>
+.hero-container {
+  height: 70vh;
+}
+
+.hero-container .v-row {
+  height: 100%;
+}
+</style>
