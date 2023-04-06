@@ -1,8 +1,7 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 useHead({
   title: "About",
   meta: [
-    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
     {
       hid: "description",
       name: "description",
@@ -31,45 +30,28 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
 </script>
 
 <template>
-  <div class="main-layout page-container">
+  <v-container
+    class="main-layout page-container d-flex align-center"
+    fluid
+    full-width
+    fill-height
+  >
     <SocialHead
       :title="head.title"
       :description="head.description"
       :image="head.image"
     />
 
-    <v-row no-gutters justify-center class="page-container">
+    <v-row class="page-container" no-gutters justify="center">
       <!-- hero section -->
       <v-col cols="12" class="section px-4 py-0 mx-0">
-        <v-container
-          class="headline-container d-flex align-center"
-          fluid
-          full-width
-          fill-height
-        >
-          <v-row
-            class="no-gutters"
-            full-width
-            fill-height
-            justify-center
-            align-center
-          >
-            <v-col cols="12">
-              <h1 class="text-center text-h5 text-sm-h2 text-md-h4 mb-3" white>
-                Giorgos Topsis
-              </h1>
-            </v-col>
-            <v-col cols="12">
-              <p class="text-center text-sm-h4 text-md-h6">
-                What You <span class="text-primary">Read</span> is What you Get
-              </p>
-            </v-col>
-          </v-row>
-        </v-container>
+        <p class="text-center text-h6 text-md-h4">
+          What You <span class="text-primary">Read</span> is What you Get
+        </p>
       </v-col>
 
       <!-- about me section -->
-      <v-col cols="12" class="section px-4 py-0 mx-0">
+      <v-col cols="12" class="section px-4 py-10 mx-0">
         <v-container class="about-me-container" fluid full-width>
           <v-row full-width justify="center" align="center">
             <v-col cols="12" md="10" lg="9" class="px-4">
@@ -88,7 +70,7 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
       </v-col>
 
       <!-- timeline section -->
-      <v-col cols="12" class="section px-4 py-0 mx-0">
+      <v-col cols="12" class="section px-4 py-10 mx-0">
         <v-row class="justify-space-between no-gutters">
           <v-col cols="12" mb="2">
             <timeline content="experience"></timeline>
@@ -97,7 +79,7 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
       </v-col>
 
       <!-- timeline section -->
-      <v-col cols="12" class="section px-4 py-0 mx-0">
+      <v-col cols="12" class="section px-4 py-10 mx-0">
         <v-row class="justify-space-between no-gutters">
           <v-col cols="12" mb="2">
             <timeline content="education"></timeline>
@@ -105,7 +87,7 @@ As a member of a team, I seek honest and trustworthy connections. In such enviro
         </v-row>
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <style scoped></style>
