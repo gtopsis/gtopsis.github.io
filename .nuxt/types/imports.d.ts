@@ -22,7 +22,6 @@ declare global {
   const effectScope: typeof import('vue')['effectScope']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
-  const getToolDescription: typeof import('../../utils/tootls-descriptions')['getToolDescription']
   const h: typeof import('vue')['h']
   const inject: typeof import('vue')['inject']
   const injectHead: typeof import('@unhead/vue')['injectHead']
@@ -37,7 +36,6 @@ declare global {
   const isVue3: typeof import('../../node_modules/nuxt/dist/app/compat/vue-demi')['isVue3']
   const loadPayload: typeof import('../../node_modules/nuxt/dist/app')['loadPayload']
   const markRaw: typeof import('vue')['markRaw']
-  const mutations: typeof import('../../stores/index')['mutations']
   const navigateTo: typeof import('../../node_modules/nuxt/dist/app')['navigateTo']
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
@@ -74,7 +72,6 @@ declare global {
   const shallowReadonly: typeof import('vue')['shallowReadonly']
   const shallowRef: typeof import('vue')['shallowRef']
   const showError: typeof import('../../node_modules/nuxt/dist/app')['showError']
-  const state: typeof import('../../stores/index')['state']
   const toRaw: typeof import('vue')['toRaw']
   const toRef: typeof import('vue')['toRef']
   const toRefs: typeof import('vue')['toRefs']
@@ -91,7 +88,6 @@ declare global {
   const useFetch: typeof import('../../node_modules/nuxt/dist/app')['useFetch']
   const useHead: typeof import('@unhead/vue')['useHead']
   const useHeadSafe: typeof import('@unhead/vue')['useHeadSafe']
-  const useJobsStore: typeof import('../../stores/experience')['useJobsStore']
   const useLazyAsyncData: typeof import('../../node_modules/nuxt/dist/app')['useLazyAsyncData']
   const useLazyFetch: typeof import('../../node_modules/nuxt/dist/app')['useLazyFetch']
   const useLink: typeof import('vue-router')['useLink']
@@ -108,10 +104,8 @@ declare global {
   const useServerHead: typeof import('@unhead/vue')['useServerHead']
   const useServerHeadSafe: typeof import('@unhead/vue')['useServerHeadSafe']
   const useServerSeoMeta: typeof import('@unhead/vue')['useServerSeoMeta']
-  const useSkillsStore: typeof import('../../stores/skills')['useSkillsStore']
   const useSlots: typeof import('vue')['useSlots']
   const useState: typeof import('../../node_modules/nuxt/dist/app')['useState']
-  const useStudiesStore: typeof import('../../stores/education')['useStudiesStore']
   const useTransitionState: typeof import('vue')['useTransitionState']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
@@ -152,7 +146,6 @@ declare module 'vue' {
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
-    readonly getToolDescription: UnwrapRef<typeof import('../../utils/tootls-descriptions')['getToolDescription']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly injectHead: UnwrapRef<typeof import('@unhead/vue')['injectHead']>
@@ -167,7 +160,6 @@ declare module 'vue' {
     readonly isVue3: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/vue-demi')['isVue3']>
     readonly loadPayload: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['loadPayload']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
-    readonly mutations: UnwrapRef<typeof import('../../stores/index')['mutations']>
     readonly navigateTo: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['navigateTo']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
@@ -204,7 +196,6 @@ declare module 'vue' {
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
     readonly showError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['showError']>
-    readonly state: UnwrapRef<typeof import('../../stores/index')['state']>
     readonly toRaw: UnwrapRef<typeof import('vue')['toRaw']>
     readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
@@ -221,7 +212,6 @@ declare module 'vue' {
     readonly useFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useFetch']>
     readonly useHead: UnwrapRef<typeof import('@unhead/vue')['useHead']>
     readonly useHeadSafe: UnwrapRef<typeof import('@unhead/vue')['useHeadSafe']>
-    readonly useJobsStore: UnwrapRef<typeof import('../../stores/experience')['useJobsStore']>
     readonly useLazyAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useLazyAsyncData']>
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useLazyFetch']>
     readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
@@ -238,10 +228,8 @@ declare module 'vue' {
     readonly useServerHead: UnwrapRef<typeof import('@unhead/vue')['useServerHead']>
     readonly useServerHeadSafe: UnwrapRef<typeof import('@unhead/vue')['useServerHeadSafe']>
     readonly useServerSeoMeta: UnwrapRef<typeof import('@unhead/vue')['useServerSeoMeta']>
-    readonly useSkillsStore: UnwrapRef<typeof import('../../stores/skills')['useSkillsStore']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useState: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app')['useState']>
-    readonly useStudiesStore: UnwrapRef<typeof import('../../stores/education')['useStudiesStore']>
     readonly useTransitionState: UnwrapRef<typeof import('vue')['useTransitionState']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
