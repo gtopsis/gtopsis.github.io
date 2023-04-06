@@ -1,3 +1,34 @@
+<script setup lang="ts">
+interface Meetup {
+  src: string;
+  title: string;
+  link: string;
+}
+
+const title = "Proud member of Meetups";
+const meetups: Meetup[] = [
+  {
+    src: "/images/devstaff-meetup.jpg",
+    title: "DevStaff: A developer community in Crete",
+    link: "https://www.meetup.com/devstaff/",
+  },
+  {
+    src: "/images/opencoffe-meetup.jpg",
+    title: "Open Coffee Heraklion",
+    link: "https://www.meetup.com/opencoffeeher/",
+  },
+  {
+    src: "/images/gdg-meetup.jpg",
+    title: "Google Developers Group Heraklion",
+    link: "https://www.meetup.com/GDG-Heraklion/",
+  },
+];
+
+function navigateToMeetup(meetup: Meetup) {
+  window.open(meetup.link);
+}
+</script>
+
 <template>
   <v-container fluid full-width>
     <v-row align="center" class="justify-md-center justify-sm-left">
@@ -44,38 +75,6 @@
     </v-row>
   </v-container>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      title: 'Proud member of Meetups',
-      meetups: [
-        {
-          src: '/images/devstaff-meetup.jpg',
-          title: 'DevStaff: A developer community in Crete',
-          link: 'https://www.meetup.com/devstaff/',
-        },
-        {
-          src: '/images/opencoffe-meetup.jpg',
-          title: 'Open Coffee Heraklion',
-          link: 'https://www.meetup.com/opencoffeeher/',
-        },
-        {
-          src: '/images/gdg-meetup.jpg',
-          title: 'Google Developers Group Heraklion',
-          link: 'https://www.meetup.com/GDG-Heraklion/',
-        },
-      ],
-    };
-  },
-  methods: {
-    navigateToMeetup(meetup) {
-      window.open(meetup.link);
-    },
-  },
-};
-</script>
 
 <style scoped>
 .meetup-card:hover {

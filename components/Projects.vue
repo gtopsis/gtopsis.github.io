@@ -1,3 +1,35 @@
+<script setup lang="ts">
+const title = "Personal Projects";
+const projects = [
+  {
+    src: "/images/portfolio.png",
+    title: "Personal website",
+    link: "https://gtopsis.github.io/",
+    code: "https://github.com/gtopsis/gtopsis.github.io",
+  },
+  {
+    src: "/images/uoc-radio.png",
+    title: "Uoc radio",
+    link: "https://gtopsis.github.io/Uoc-radio-website/index.html",
+    code: "https://github.com/gtopsis/Uoc-radio-website",
+  },
+  {
+    src: "/images/cs-352.png",
+    title: "Website for course cs-352",
+    link: "https://gtopsis.github.io/Course-cs352-website/",
+    code: "https://github.com/gtopsis/Course-cs352-website",
+  },
+];
+
+function navigateToProjectDemo(project) {
+  window.open(project.link);
+}
+
+function navigateToProjectCode(project) {
+  window.open(project.code);
+}
+</script>
+
 <template>
   <v-container fluid full-width>
     <v-row align="center" class="justify-md-center justify-sm-left">
@@ -47,37 +79,5 @@
     </v-row>
   </v-container>
 </template>
-
-<script setup>
-const title = "Personal Projects";
-const projects = [
-  {
-    src: "/images/portfolio.png",
-    title: "Personal website",
-    link: "https://gtopsis.github.io/",
-    code: "https://github.com/gtopsis/gtopsis.github.io",
-  },
-  {
-    src: "/images/uoc-radio.png",
-    title: "Uoc radio",
-    link: "https://gtopsis.github.io/Uoc-radio-website/index.html",
-    code: "https://github.com/gtopsis/Uoc-radio-website",
-  },
-  {
-    src: "/images/cs-352.png",
-    title: "Website for course cs-352",
-    link: "https://gtopsis.github.io/Course-cs352-website/",
-    code: "https://github.com/gtopsis/Course-cs352-website",
-  },
-];
-
-function navigateToProjectDemo(project) {
-  window.open(project.link);
-}
-
-function navigateToProjectCode(project) {
-  window.open(project.code);
-}
-</script>
 
 <style scoped></style>

@@ -1,3 +1,53 @@
+<script setup lang="ts">
+import { useDisplay } from "vuetify";
+
+const { mobile } = useDisplay();
+const timelineDirection = computed(() => {
+  switch (mobile.value) {
+    case true:
+      return "vertical";
+    case false:
+      return "horizontal";
+  }
+});
+
+const avatarSize = 40;
+const props = defineProps({
+  content: {
+    type: String,
+    default: "experience",
+    validator: (v) => ["experience", "education"].includes(v),
+  },
+});
+
+const truncateLines = props.content == "education" ? "start" : "both";
+const timelineTitle = computed(() => {
+  if (props.content == "experience") {
+    return "Experience";
+  } else if (props.content == "education") {
+    return "Education";
+  }
+  return "My Story";
+});
+
+const timelineItems = computed(() => {
+  if (props.content === "experience") {
+    const { jobs } = useJobsStore();
+    return jobs;
+  } else if (props.content === "education") {
+    const { studies } = useStudiesStore();
+    return studies;
+  }
+  return [];
+});
+
+function navigateToCompany(cUrl) {
+  if (!cUrl || cUrl == "") return;
+  let url = cUrl;
+  window.open(url, "_blank");
+}
+</script>
+
 <template>
   <v-container class="pa-0">
     <v-row align="center" class="justify-md-center justify-sm-left">
@@ -84,64 +134,6 @@
     </v-row>
   </v-container>
 </template>
-
-<script setup>
-import { useDisplay } from 'vuetify';
-
-const { mobile } = useDisplay();
-const timelineDirection = computed(() => {
-  switch (mobile.value) {
-    case true:
-      return 'vertical';
-    case false:
-      return 'horizontal';
-  }
-});
-
-const avatarSize = 40;
-const props = defineProps({
-  content: {
-    type: String,
-    default: 'experience',
-    validator: v => ['experience', 'education'].includes(v),
-  },
-});
-
-const truncateLines = props.content == 'education' ? 'start' : 'both';
-const timelineTitle = computed({
-  get() {
-    if (props.content == 'experience') {
-      return 'Experience';
-    } else if (props.content == 'education') {
-      return 'Education';
-    }
-    return 'My Story';
-  },
-});
-
-const timelineItems = computed({
-  get() {
-    if (props.content === 'experience') {
-      const { jobs } = useJobsStore();
-      return jobs;
-    } else if (props.content === 'education') {
-      const { studies } = useStudiesStore();
-      return studies;
-    }
-    return [];
-  },
-});
-
-function hasTimelineItemDetails(timelineItemData) {
-  return timelineItemData.description && timelineItemData != '';
-}
-
-function navigateToCompany(cUrl) {
-  if (!cUrl || cUrl == '') return;
-  let url = cUrl;
-  window.open(url, '_blank');
-}
-</script>
 
 <style scoped>
 .firm-link {

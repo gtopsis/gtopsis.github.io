@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const title = "Technical Skills";
+const { skills } = useSkillsStore();
+</script>
+
 <template>
   <v-container fluid>
     <v-row align="center" class="justify-md-center justify-sm-left">
@@ -47,11 +52,6 @@
     </v-row>
   </v-container>
 </template>
-
-<script setup>
-const title = 'Technical Skills';
-const { skills } = useSkillsStore();
-</script>
 
 <style scoped>
 .columns-container {

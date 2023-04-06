@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// import {computed} from 'vue';
-
 const socials = [
   {
     icon: "linkedin",
@@ -14,8 +12,7 @@ const socials = [
 const personalMessage = "Build playing with Nuxt.js";
 
 const footerText = computed(() => {
-  const now = new Date().getFullYear();
-  return `Giorgos Topsis ${now}`;
+  return `Giorgos Topsis 2022`;
 });
 </script>
 
@@ -36,7 +33,6 @@ const footerText = computed(() => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <!-- <v-icon>{{ social.icon }}</v-icon> -->
               <fa class="social-icon" :icon="['fab', social.icon]" />
             </a>
           </v-col>
