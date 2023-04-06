@@ -6,12 +6,12 @@
     </v-col>
 
     <!-- projects section -->
-    <v-col cols="12" class="section py-5 mx-0">
+    <v-col cols="12" class="section py-10 mx-0">
       <projects></projects>
     </v-col>
 
     <!-- meetups section -->
-    <v-col cols="12" class="section py-5 mx-0">
+    <v-col cols="12" class="section py-10 mx-0">
       <meetups></meetups>
     </v-col>
   </v-row>

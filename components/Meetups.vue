@@ -32,7 +32,7 @@ function navigateToMeetup(meetup: Meetup) {
 <template>
   <v-container fluid full-width>
     <v-row align="center" class="justify-md-center justify-sm-left">
-      <v-col cols="auto" class="mb-3">
+      <v-col cols="auto" class="mb-6">
         <h1>{{ title }}</h1>
       </v-col>
     </v-row>
