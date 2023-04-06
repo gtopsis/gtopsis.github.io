@@ -13,10 +13,10 @@ export const useJobsStore = defineStore("JobsStore", {
           },
         },
         card: {
-          title: "Back End Web Developer",
+          title: "Back End Engineer",
           roles: [
             {
-              jobTitle: "Back End Web Developer",
+              jobTitle: "Back End Engineer",
               period: {
                 start: "September 2021",
                 end: "February 2023",
@@ -33,6 +33,7 @@ export const useJobsStore = defineStore("JobsStore", {
             "Node.js",
             "PostgreSQL",
             "Jest",
+            "AWS ",
             "Document RESTful APIs (OpenAPI specification)",
           ],
           readMore: "",
