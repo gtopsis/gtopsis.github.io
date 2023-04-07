@@ -26,18 +26,19 @@ function toggleDarkMode() {
 <template>
   <v-row class="theme-toggle-container mx-0" align="center" justify="center">
     <v-col class="px-2 py-1">
-      <i
-        class="toggle fa-solid"
-        :class="{
-          'fa-sun': disabledTheme === 'light',
-          'fa-moon': disabledTheme === 'dark',
-        }"
-        @click="toggleDarkMode"
-      >
-        <v-tooltip activator="parent" location="bottom end">
-          <span>Enable {{ disabledTheme }} mode</span>
-        </v-tooltip>
-      </i>
+      <v-tooltip location="bottom end">
+        <template v-slot:activator="{ props }">
+          <font-awesome-icon
+            class="toggle"
+            :icon="['fas', disabledTheme === 'light' ? 'sun' : 'moon']"
+            @click="toggleDarkMode"
+            v-bind="props"
+          >
+          </font-awesome-icon>
+        </template>
+
+        <span>Enable {{ disabledTheme }} mode</span>
+      </v-tooltip>
     </v-col>
   </v-row>
 </template>
