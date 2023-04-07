@@ -33,7 +33,7 @@ const footerText = computed(() => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <fa class="social-icon" :icon="['fab', social.icon]" />
+              <font-awesome-icon :icon="['fab', social.icon]" />
             </a>
           </v-col>
         </v-row>
@@ -57,9 +57,7 @@ const footerText = computed(() => {
 
 .socials-list a.social-link {
   text-decoration: none;
-}
-
-.socials-list a.social-link .social-icon {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  padding: 0 5px;
 }
 </style>

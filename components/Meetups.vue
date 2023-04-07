@@ -5,7 +5,7 @@ interface Meetup {
   link: string;
 }
 
-const title = "Proud member of Meetups";
+const title = "Participation on several Meetups";
 const meetups: Meetup[] = [
   {
     src: "/images/devstaff-meetup.jpg",

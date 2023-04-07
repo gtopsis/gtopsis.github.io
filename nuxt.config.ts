@@ -139,6 +139,7 @@ export default defineNuxtConfig({
     "vuetify/styles",
     "vuetify/lib/styles/main.sass",
     "@/assets/global.css",
+    "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   build: {
     transpile: [
