@@ -86,11 +86,13 @@ const timelineItems = computed(() => {
               </v-tooltip>
             </template>
 
-            <v-card class="elevation-2 timeline-item">
+            <v-card class="elevation-2 timeline-item-card">
               <v-card-title>
-                <strong class="timeline-item-title">
+                <h4
+                  class="timeline-item-title text-left text-subtitle text-md-body-1 text-bold text-wrap font-weight-bold"
+                >
                   {{ item.card.title }}
-                </strong>
+                </h4>
               </v-card-title>
               <v-card-subtitle>
                 {{ item.card.period.start }} -
@@ -113,7 +115,11 @@ const timelineItems = computed(() => {
                   {{ item.card.description }}
                 </p>
                 <ul class="ma-2">
-                  <li v-for="(tool, j) in item.card.tools" :key="j">
+                  <li
+                    v-for="(tool, j) in item.card.tools"
+                    :key="j"
+                    class="text-left"
+                  >
                     <span>{{ tool }}</span>
                   </li>
                 </ul>
@@ -140,12 +146,15 @@ const timelineItems = computed(() => {
   cursor: pointer;
 }
 
-.timeline-item {
+.timeline-item-card {
   max-width: 300px;
 }
 
-.timeline-item-title {
-  font-size: 1.1rem;
+/* cheat to override vuetify style for timeline item */
+.v-timeline--horizontal.v-timeline
+  .v-timeline-item:nth-child(2n + 1)
+  .v-timeline-item__body {
+  align-self: flex-start !important;
 }
 
 .timeline-avatar {
@@ -153,7 +162,7 @@ const timelineItems = computed(() => {
 }
 
 @media only screen and (max-width: 600px) {
-  .timeline-item {
+  .timeline-item-card {
     max-width: 320px;
   }
 }
