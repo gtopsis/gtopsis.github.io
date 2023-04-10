@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
-      titleTemplate: "%s - Giorgos Topsis",
+      titleTemplate: "%s",
       // title: "Giorgos Topsis",
       htmlAttrs: {
         lang: "en",
@@ -159,5 +159,24 @@ export default defineNuxtConfig({
   },
   typescript: {
     strict: true,
+  },
+  buildModules: ["@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      // Roboto: true,
+      "Josefin+Sans": true,
+      Lato: [100, 300],
+      Raleway: {
+        wght: [100, 400],
+        ital: [100],
+      },
+    },
+    display: "swap", // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+    prefetch: true,
+  },
+  vuetify: {
+    customVariables: ["~/assets/variables.scss"],
+    treeShake: true,
+    defaultAssets: false,
   },
 });
