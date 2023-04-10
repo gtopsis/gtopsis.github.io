@@ -3,8 +3,6 @@ import { createVuetify, ThemeDefinition } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import { aliases, fa } from "vuetify/iconsets/fa";
-import { mdi } from "vuetify/lib/iconsets/mdi";
-import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
 
 const customLight: ThemeDefinition = {
   dark: false,
@@ -41,7 +39,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       defaultSet: "fa",
       aliases,
       sets: {
-        mdi,
         fa,
       },
     },
