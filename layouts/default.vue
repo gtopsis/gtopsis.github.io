@@ -6,7 +6,7 @@ const title = "Giorgos Topsis";
   <v-app>
     <v-app-bar class="px-3" fixed app elevate-on-scroll>
       <v-toolbar-title class="ml-0">
-        <h2 class="logo text-subtitle-1 text-md-h5 text-wrap">
+        <h2 class="logo text-subtitle-1 text-sm-h6 text-md-h5 text-wrap">
           <nuxt-link to="/"> {{ title }} </nuxt-link>
         </h2>
       </v-toolbar-title>

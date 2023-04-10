@@ -66,11 +66,11 @@ function navigateToProjectCode(project) {
           </v-card-text> -->
 
           <v-card-actions>
-            <v-btn color="primary" @click="navigateToProjectDemo(project)">
+            <v-btn color="secondary" @click="navigateToProjectDemo(project)">
               Demo
             </v-btn>
 
-            <v-btn color="primary" @click="navigateToProjectCode(project)">
+            <v-btn color="secondary" @click="navigateToProjectCode(project)">
               Code
             </v-btn>
           </v-card-actions>
