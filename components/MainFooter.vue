@@ -29,7 +29,7 @@ const footerText = computed(() => {
           >
             <a
               :href="social.link"
-              class="social-link"
+              class="social-link text-secondary"
               target="_blank"
               rel="noopener noreferrer"
             >

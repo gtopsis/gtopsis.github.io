@@ -64,7 +64,6 @@ const timelineItems = computed(() => {
                 <template #activator="{ on, attrs }">
                   <v-avatar
                     :size="avatarSize"
-                    :color="item.avatar.bgColor"
                     class="timeline-avatar"
                     align-center
                     justify-center
@@ -101,11 +100,11 @@ const timelineItems = computed(() => {
               <v-card-text>
                 <p class="mb-0">
                   <a
-                    v-if="item.avatar.label.link"
+                    class="text-secondary"
                     :href="item.avatar.label.link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="firm-link"
+                    v-if="item.avatar.label.link"
                     >{{ item.avatar.label.text }}</a
                   >
                   <span v-else>{{ item.avatar.label.text }}</span>
@@ -136,10 +135,6 @@ const timelineItems = computed(() => {
 </template>
 
 <style scoped>
-.firm-link {
-  text-decoration: none;
-}
-
 .firm-logo {
   width: 45px;
   height: 45px;

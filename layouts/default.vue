@@ -21,10 +21,14 @@ const title = "Giorgos Topsis";
             align="center"
           >
             <v-list-item class="nav-item mb-0">
-              <nuxt-link to="/" class="text-subtitle-1">Work</nuxt-link>
+              <nuxt-link to="/" class="text-subtitle-1 text-secondary"
+                >Work</nuxt-link
+              >
             </v-list-item>
             <v-list-item class="nav-item mb-0">
-              <nuxt-link to="/about" class="text-subtitle-1">About</nuxt-link>
+              <nuxt-link to="/about" class="text-subtitle-1 text-secondary"
+                >About</nuxt-link
+              >
             </v-list-item>
           </v-list>
         </nav>
@@ -50,9 +54,11 @@ const title = "Giorgos Topsis";
   text-decoration: none;
   color: var(--v-theme-primary-base);
 }
+
 .theme--light .logo a {
   color: var(--v-theme-secondary-base);
 }
+
 .theme--dark .logo a {
   color: rgba(255, 255, 255, 0.87);
 }
@@ -62,6 +68,7 @@ const title = "Giorgos Topsis";
   padding: 0;
   background: transparent !important;
 }
+
 .nav .nav-item {
   font-size: 1.2rem;
   background: transparent;
@@ -70,7 +77,13 @@ const title = "Giorgos Topsis";
 .nav .nav-item a {
   text-decoration: none;
 }
-.nav .nav-item a.nuxt-link-exact-active {
-  color: var(--v-theme-secondary-darken2);
+
+.nav .nav-item a:hover {
+  text-decoration: underline;
+}
+
+.nav .nav-item a.router-link-active {
+  color: var(--v-theme-secondary-darken3);
+  text-decoration: underline;
 }
 </style>

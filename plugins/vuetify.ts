@@ -9,20 +9,20 @@ import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-load
 const customLight: ThemeDefinition = {
   dark: false,
   colors: {
-    primary: "#a46548",
-    secondary: "#3b4e58",
-    accent: "#dfe0e0",
+    primary: "#086972",
+    secondary: "#581b98",
     background: "#ffffff",
+    surface: "#f5f5f5",
   },
 };
 
 const customDark: ThemeDefinition = {
   dark: true,
   colors: {
-    primary: "#1976D2",
-    secondary: "#424242",
-    accent: "#82B1FF",
-    background: "#34495e",
+    primary: "#f26d5b",
+    secondary: "#e3c4a8",
+    background: "#574b90",
+    surface: "#303a52",
   },
 };
 
@@ -31,10 +31,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     components,
     directives,
     theme: {
-      defaultTheme: "customDark",
+      defaultTheme: "dark",
       themes: {
-        customLight,
-        customDark,
+        light: customLight,
+        dark: customDark,
       },
     },
     icons: {
