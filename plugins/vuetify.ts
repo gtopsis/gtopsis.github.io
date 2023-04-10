@@ -11,8 +11,8 @@ const customLight: ThemeDefinition = {
   colors: {
     primary: "#086972",
     secondary: "#581b98",
-    background: "#ffffff",
-    surface: "#f5f5f5",
+    background: "#f5f5f5",
+    surface: "#dfe6e9",
   },
 };
 
@@ -21,7 +21,7 @@ const customDark: ThemeDefinition = {
   colors: {
     primary: "#f26d5b",
     secondary: "#e3c4a8",
-    background: "#574b90",
+    background: "#40407a",
     surface: "#303a52",
   },
 };
@@ -31,7 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     components,
     directives,
     theme: {
-      defaultTheme: "dark",
+      defaultTheme: "light",
       themes: {
         light: customLight,
         dark: customDark,
