@@ -133,6 +133,7 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "acceptHMRUpdate"],
       },
     ],
+    "@nuxtjs/google-fonts",
   ],
 
   css: [
@@ -160,7 +161,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
-  buildModules: ["@nuxtjs/google-fonts"],
+
   googleFonts: {
     families: {
       // Roboto: true,

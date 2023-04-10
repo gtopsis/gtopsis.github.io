@@ -14,12 +14,17 @@ const headline = {
     <v-row no-gutters>
       <v-col class="px-0" cols="12" align-self="center">
         <h1 class="headline text-h6 text-md-h5 text-lg-h4">
-          {{ headline.pre }}
-          <nuxt-link :to="{ name: 'about' }" class="first-name text-secondary">
-            {{ headline.name.text }}
-          </nuxt-link>
-          {{ headline.name.pronunciation }},<br />
-          {{ headline.post }}
+          <span>
+            {{ headline.pre }}
+            <nuxt-link
+              :to="{ name: 'about' }"
+              class="first-name text-secondary"
+            >
+              {{ headline.name.text }}
+            </nuxt-link>
+            {{ headline.name.pronunciation }},<br />
+            {{ headline.post }}
+          </span>
         </h1>
       </v-col>
     </v-row>
