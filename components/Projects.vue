@@ -1,25 +1,9 @@
 <script setup lang="ts">
+import { useProjectsStore } from "../stores/projects";
+
 const title = "Personal Projects";
-const projects = [
-  {
-    src: "/images/portfolio.png",
-    title: "Personal website",
-    link: "https://gtopsis.github.io/",
-    code: "https://github.com/gtopsis/gtopsis.github.io",
-  },
-  {
-    src: "/images/uoc-radio.png",
-    title: "Uoc radio",
-    link: "https://gtopsis.github.io/Uoc-radio-website/index.html",
-    code: "https://github.com/gtopsis/Uoc-radio-website",
-  },
-  {
-    src: "/images/cs-352.png",
-    title: "Website for course cs-352",
-    link: "https://gtopsis.github.io/Course-cs352-website/",
-    code: "https://github.com/gtopsis/Course-cs352-website",
-  },
-];
+const store = useProjectsStore();
+const projects = store.projectsList;
 
 function navigateToProjectDemo(project) {
   window.open(project.link);
