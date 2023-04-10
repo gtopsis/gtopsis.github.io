@@ -22,7 +22,7 @@ function navigateToProjectCode(project) {
       </v-col>
     </v-row>
 
-    <v-row dense justify="center">
+    <v-row dense>
       <v-col
         v-for="project in projects"
         :key="project.title"

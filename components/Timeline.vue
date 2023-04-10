@@ -94,22 +94,25 @@ const timelineItems = computed(() => {
                 </h4>
               </v-card-title>
               <v-card-subtitle>
-                {{ item.card.period.start }} -
-                {{ item.card.period.end }}
-              </v-card-subtitle>
-              <v-card-text>
+                <span>
+                  {{ item.card.period.start }} -
+                  {{ item.card.period.end }}
+                </span>
                 <p class="mb-0">
                   <a
-                    class="text-secondary"
+                    class="text-secondary font-weight-bold"
                     :href="item.avatar.label.link"
                     target="_blank"
                     rel="noopener noreferrer"
                     v-if="item.avatar.label.link"
                     >{{ item.avatar.label.text }}</a
                   >
-                  <span v-else>{{ item.avatar.label.text }}</span>
+                  <span class="text-secondary font-weight-bold" v-else>{{
+                    item.avatar.label.text
+                  }}</span>
                 </p>
-
+              </v-card-subtitle>
+              <v-card-text>
                 <p class="ma-0">
                   {{ item.card.description }}
                 </p>
@@ -146,6 +149,10 @@ const timelineItems = computed(() => {
 }
 
 /* cheat to override vuetify style for timeline item */
+.v-timeline--horizontal.v-timeline .v-timeline-item .v-timeline-item__body {
+  align-self: flex-start !important;
+}
+
 .v-timeline--horizontal.v-timeline
   .v-timeline-item:nth-child(2n + 1)
   .v-timeline-item__body {
