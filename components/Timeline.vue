@@ -50,7 +50,7 @@ const timelineItems = computed(() => {
       </v-col>
     </v-row>
 
-    <v-row align="center" justify="center">
+    <v-row no-gutters>
       <v-col cols="12" class="px-0">
         <v-timeline
           align="center"
@@ -63,17 +63,16 @@ const timelineItems = computed(() => {
             :key="i"
             fill-dot
             :dot-color="item.avatar.bgColor"
+            elevation="2"
+            style="align-self: flex-start"
           >
-            <template #icon style="border: 1px solid grey">
-              <v-tooltip activator="parent" location="bottom">
-                <template #activator="{ on, attrs }">
+            <template #icon>
+              <v-tooltip location="bottom">
+                <template v-slot:activator="{ props }">
                   <v-avatar
                     :size="avatarSize"
                     class="timeline-avatar"
-                    align-center
-                    justify-center
-                    v-bind="attrs"
-                    v-on="on"
+                    v-bind="props"
                   >
                     <v-img
                       contain
@@ -90,7 +89,7 @@ const timelineItems = computed(() => {
               </v-tooltip>
             </template>
 
-            <v-card class="elevation-2 timeline-item-card">
+            <v-card class="timeline-item-card">
               <v-card-title>
                 <h4
                   class="timeline-item-title text-left text-subtitle text-md-body-1 text-bold text-wrap font-weight-bold"
@@ -155,6 +154,10 @@ const timelineItems = computed(() => {
 
 /* cheat to override vuetify style for timeline item */
 .v-timeline--horizontal.v-timeline .v-timeline-item .v-timeline-item__body {
+  align-self: flex-start !important;
+}
+
+.v-timeline-item > div {
   align-self: flex-start !important;
 }
 
