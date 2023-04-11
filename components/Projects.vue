@@ -6,7 +6,7 @@ const store = useProjectsStore();
 const projects = store.projectsList;
 
 function navigateToProjectDemo(project) {
-  window.open(project.link);
+  window.open(project.demo);
 }
 
 function navigateToProjectCode(project) {
@@ -42,12 +42,10 @@ function navigateToProjectCode(project) {
           </v-img>
 
           <!-- <v-card-subtitle class="pt-4"> Number 10 </v-card-subtitle>
-
+-->
           <v-card-text>
-            <div>Whitehaven Beach</div>
-
-            <div>Whitsunday Island, Whitsunday Islands</div>
-          </v-card-text> -->
+            <p>{{ project.description }}</p>
+          </v-card-text>
 
           <v-card-actions>
             <v-btn color="secondary" @click="navigateToProjectDemo(project)">
