@@ -18,9 +18,9 @@ const meetups: Meetup[] = [
     link: "https://www.meetup.com/opencoffeeher/",
   },
   {
-    src: "/images/gdg-meetup.jpg",
-    title: "Google Developers Group Heraklion",
-    link: "https://www.meetup.com/GDG-Heraklion/",
+    src: "/images/vuejs-athens-meetups.jpeg",
+    title: "VueJS Athens",
+    link: "https://www.meetup.com/vuejsathens/",
   },
 ];
 
