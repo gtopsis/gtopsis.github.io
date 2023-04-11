@@ -5,7 +5,7 @@ const headline = {
     text: "Giorgos",
     pronunciation: "(/ɡi.ɔ̌ːr.ɡ.os/)",
   },
-  post: "a Full Stack Web Developer based in Heraklion of Crete.",
+  post: "a Full-Stack Web Developer based in Heraklion of Crete.",
 };
 </script>
 

@@ -88,7 +88,7 @@ export const useJobsStore = defineStore("JobsStore", {
           },
         },
         card: {
-          title: "Front & Back-End Web Developer",
+          title: "Back-End Web Developer",
           roles: [
             {
               jobTitle: "Back-End Web Developer",

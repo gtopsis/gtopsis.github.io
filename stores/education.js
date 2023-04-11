@@ -1,4 +1,4 @@
-export const useStudiesStore = defineStore('StudiesStore', {
+export const useStudiesStore = defineStore("StudiesStore", {
   state: () => ({
     studies: [
       {
@@ -6,32 +6,32 @@ export const useStudiesStore = defineStore('StudiesStore', {
         avatar: {
           img: `/images/uoc_logo.png`,
 
-          alt: 'Logo of University of Crete',
-          bgColor: '#000',
+          alt: "Logo of University of Crete",
+          bgColor: "#000",
           label: {
-            text: 'University of Crete',
-            link: 'https://www.uoc.gr/',
+            text: "University of Crete",
+            link: "https://www.uoc.gr/",
           },
         },
         card: {
           title:
-            'MSc in Computer Science - Human Computer Interaction, Information Systems',
+            "MSc in Computer Science - Human Computer Interaction, Information Systems",
           roles: [
             {
-              jobTitle: 'Back End Web Developer',
+              jobTitle: "Back End Web Developer",
               period: {
-                start: '2016',
-                end: '2019',
+                start: "September 2016",
+                end: "November 2019",
               },
             },
           ],
           period: {
-            start: '2016',
-            end: '2019',
+            start: "September 2016",
+            end: "November 2019",
           },
-          description: '',
+          description: "",
           tools: [],
-          readMore: '',
+          readMore: "",
         },
       },
 
@@ -40,24 +40,24 @@ export const useStudiesStore = defineStore('StudiesStore', {
         avatar: {
           img: `/images/chalmers_logo.png`,
 
-          alt: 'Logo of Chalmers University of Technology',
-          bgColor: '#fff',
+          alt: "Logo of Chalmers University of Technology",
+          bgColor: "#fff",
           label: {
-            text: 'Chalmers University of Technology',
-            link: 'https://www.chalmers.se/',
+            text: "Chalmers University of Technology",
+            link: "https://www.chalmers.se/",
           },
         },
         card: {
           title:
-            'ERASMUS+ for Postgraduate studies - Interaction Design and Technologies',
+            "ERASMUS+ for Postgraduate studies - Interaction Design and Technologies",
           roles: [],
           period: {
-            start: 'August 2017',
-            end: 'January 2018',
+            start: "August 2017",
+            end: "January 2018",
           },
-          description: '',
+          description: "",
           tools: [],
-          readMore: '',
+          readMore: "",
         },
       },
       {
@@ -65,23 +65,23 @@ export const useStudiesStore = defineStore('StudiesStore', {
         avatar: {
           img: `/images/uoc_logo.png`,
 
-          alt: 'Logo of University of Crete',
-          bgColor: '#000',
+          alt: "Logo of University of Crete",
+          bgColor: "#000",
           label: {
-            text: 'University of Crete',
-            link: 'https://www.uoc.gr/',
+            text: "University of Crete",
+            link: "https://www.uoc.gr/",
           },
         },
         card: {
-          title: 'BSc in Computer Science',
+          title: "BSc in Computer Science",
           roles: [],
           period: {
-            start: 'September 2011',
-            end: 'March 2015',
+            start: "September 2011",
+            end: "March 2015",
           },
-          description: '',
+          description: "",
           tools: [],
-          readMore: '',
+          readMore: "",
         },
       },
       {
@@ -89,29 +89,29 @@ export const useStudiesStore = defineStore('StudiesStore', {
         avatar: {
           img: `/images/uoc_cyprus_logo.png`,
 
-          alt: 'Logo of University of Cyprus',
-          bgColor: '#fff',
+          alt: "Logo of University of Cyprus",
+          bgColor: "#fff",
           label: {
-            text: 'University of Cyprus',
-            link: 'https://www.uoc.gr/',
+            text: "University of Cyprus",
+            link: "https://www.uoc.gr/",
           },
         },
         card: {
-          title: 'ERASMUS+ for Undergraduate studies',
+          title: "ERASMUS+ for Undergraduate studies",
           roles: [],
           period: {
-            start: 'September 2014',
-            end: 'January 2015',
+            start: "September 2014",
+            end: "January 2015",
           },
-          description: '',
+          description: "",
           tools: [],
-          readMore: '',
+          readMore: "",
         },
       },
     ],
   }),
   getters: {
-    studiesList: state => state.studies,
+    studiesList: (state) => state.studies,
   },
 });
 
