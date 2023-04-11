@@ -11,7 +11,7 @@ const timelineDirection = computed(() => {
   }
 });
 
-const avatarSize = 40;
+const avatarSize = 44;
 const props = defineProps({
   content: {
     type: String,
@@ -53,12 +53,17 @@ const timelineItems = computed(() => {
     <v-row align="center" justify="center">
       <v-col cols="12" class="px-0">
         <v-timeline
-          align="start"
+          align="center"
           :direction="timelineDirection"
           side="end"
           :truncate-line="truncateLines"
         >
-          <v-timeline-item v-for="(item, i) in timelineItems" :key="i">
+          <v-timeline-item
+            v-for="(item, i) in timelineItems"
+            :key="i"
+            fill-dot
+            :dot-color="item.avatar.bgColor"
+          >
             <template #icon style="border: 1px solid grey">
               <v-tooltip activator="parent" location="bottom">
                 <template #activator="{ on, attrs }">
@@ -75,8 +80,8 @@ const timelineItems = computed(() => {
                       :src="item.avatar.img"
                       :alt="item.avatar.alt"
                       class="firm-logo"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                     >
                     </v-img>
                   </v-avatar>
@@ -139,8 +144,8 @@ const timelineItems = computed(() => {
 
 <style scoped>
 .firm-logo {
-  width: 45px;
-  height: 45px;
+  /* width: 45px;
+  height: 45px; */
   cursor: pointer;
 }
 

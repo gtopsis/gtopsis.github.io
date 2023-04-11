@@ -6,17 +6,17 @@ export const useJobsStore = defineStore("JobsStore", {
         avatar: {
           img: `/images/fairlo_logo.png`,
           alt: "Logo of software agency Fairlo",
-          bgColor: "#000",
+          bgColor: "#fff",
           label: {
             text: "Fairlo",
             link: "https://fairlo.se",
           },
         },
         card: {
-          title: "Back End Engineer",
+          title: "Back-End Engineer",
           roles: [
             {
-              jobTitle: "Back End Engineer",
+              jobTitle: "Back-End Engineer",
               period: {
                 start: "September 2021",
                 end: "February 2023",
@@ -51,10 +51,10 @@ export const useJobsStore = defineStore("JobsStore", {
           },
         },
         card: {
-          title: "Back End Web Developer",
+          title: "Back-End Web Developer",
           roles: [
             {
-              jobTitle: "Back End Web Developer",
+              jobTitle: "Back-End Web Developer",
               period: {
                 start: "January 2021",
                 end: "June 2021",
@@ -88,17 +88,17 @@ export const useJobsStore = defineStore("JobsStore", {
           },
         },
         card: {
-          title: "Front & Back End Web Developer",
+          title: "Front & Back-End Web Developer",
           roles: [
             {
-              jobTitle: "Back End Web Developer",
+              jobTitle: "Back-End Web Developer",
               period: {
                 start: "July 2019",
                 end: "July 2020",
               },
             },
             {
-              jobTitle: "Front End Web Developer",
+              jobTitle: "Front-End Web Developer",
               period: {
                 start: "July 2019",
                 end: "July 2020",
@@ -138,7 +138,7 @@ export const useJobsStore = defineStore("JobsStore", {
             "Graduate R&D assistant at Human-Computer Interaction Lab (HCI)",
           roles: [
             {
-              jobTitle: "Back End Web Developer",
+              jobTitle: "Back-End Web Developer",
               period: {
                 start: "Jun 2016",
                 end: "Jun 2019",
