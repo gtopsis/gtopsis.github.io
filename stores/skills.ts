@@ -1,3 +1,5 @@
+import { getToolDescription } from "~~/utils/tootls-descriptions";
+
 export const useSkillsStore = defineStore("SkillsStore", () => {
   const skills = reactive([
     {

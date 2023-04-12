@@ -28,9 +28,11 @@ const tools = {
   userCentredDesign:
     "User-centered design (UCD) is an iterative design process in which designers focus on the users and their needs in each phase of the design process.",
 };
-const getToolDescription = (toolName) => {
+
+const getToolDescription = (toolName: string) => {
   if (!toolName || !tools[toolName]) return "";
 
   return tools[toolName] || toolName;
 };
+
 export { getToolDescription };

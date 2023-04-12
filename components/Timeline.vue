@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
 import { useDisplay } from "vuetify";
-import { useStudiesStore } from "@/stores/education";
-import { useJobsStore } from "@/stores/experience";
+import { useStudiesStore } from "~~/stores/education.js";
+import { useJobsStore } from "~~/stores/experience.js";
 
 const { mobile } = useDisplay();
 const timelineDirection = computed(() => {
