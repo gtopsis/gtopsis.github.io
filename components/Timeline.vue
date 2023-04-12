@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { storeToRefs } from "pinia";
 import { useDisplay } from "vuetify";
+import { useStudiesStore } from "@/stores/education";
+import { useJobsStore } from "@/stores/experience";
 
 const { mobile } = useDisplay();
 const timelineDirection = computed(() => {
@@ -32,12 +35,13 @@ const timelineTitle = computed(() => {
 
 const timelineItems = computed(() => {
   if (props.content === "experience") {
-    const { jobs } = useJobsStore();
-    return jobs;
+    const { jobsList } = storeToRefs(useJobsStore());
+    return jobsList.value;
   } else if (props.content === "education") {
-    const { studies } = useStudiesStore();
-    return studies;
+    const { studiesList } = storeToRefs(useStudiesStore());
+    return studiesList.value;
   }
+
   return [];
 });
 </script>
