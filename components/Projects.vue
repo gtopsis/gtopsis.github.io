@@ -43,7 +43,7 @@ function navigateToProjectCode(project) {
           </v-img>
 
           <v-card-text>
-            <p>{{ project.description }}</p>
+            <p class="project-description">{{ project.description }}</p>
           </v-card-text>
 
           <v-card-actions>
@@ -61,4 +61,8 @@ function navigateToProjectCode(project) {
   </v-container>
 </template>
 
-<style scoped></style>
+<style scoped>
+.project-description {
+  min-height: 105px;
+}
+</style>

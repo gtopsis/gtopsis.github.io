@@ -4,7 +4,7 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
       src: "/images/website-cs352-showcase.png",
       title: "Website for course cs-352",
       description:
-        "Static website for the course cs352 (year 2017-2018) in Computer Science department at UOC. It was serving the content (lectures, tutorials, assignments and course project) of the course.",
+        "Static website for the course cs352 (year 2017-2018) in Computer Science department at UOC. It was serving the content (lectures, tutorials, assignments and course project) of the course to the students.",
       demo: "https://gtopsis.github.io/Course-cs352-website/",
       code: "https://github.com/gtopsis/Course-cs352-website",
     },
