@@ -98,13 +98,13 @@ const timelineItems = computed(() => {
                 <h4
                   class="timeline-item-title text-left text-subtitle text-md-body-1 text-bold text-wrap font-weight-bold"
                 >
-                  {{ item.card.title }}
+                  {{ item.title }}
                 </h4>
               </v-card-title>
               <v-card-subtitle>
                 <span>
-                  {{ item.card.period.start }} -
-                  {{ item.card.period.end }}
+                  {{ item.period.start }} -
+                  {{ item.period.end }}
                 </span>
                 <p class="mb-0">
                   <a
@@ -122,11 +122,11 @@ const timelineItems = computed(() => {
               </v-card-subtitle>
               <v-card-text>
                 <p class="ma-0">
-                  {{ item.card.description }}
+                  {{ item.description }}
                 </p>
                 <ul class="ma-2">
                   <li
-                    v-for="(tool, j) in item.card.tools"
+                    v-for="(tool, j) in item.tools"
                     :key="j"
                     class="text-left"
                   >
@@ -134,7 +134,7 @@ const timelineItems = computed(() => {
                   </li>
                 </ul>
               </v-card-text>
-              <v-card-actions v-if="item.card.readMore != ''">
+              <v-card-actions v-if="item.readMore != ''">
                 Read more
               </v-card-actions>
             </v-card>

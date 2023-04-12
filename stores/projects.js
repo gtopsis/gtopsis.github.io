@@ -33,7 +33,7 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
     },
   ]);
 
-  const projectsList = computed(() => state.projects);
+  const projectsList = computed(() => projects);
 
   return { projectsList };
 });

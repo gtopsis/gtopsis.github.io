@@ -4,7 +4,7 @@ import { storeToRefs } from "pinia";
 
 const title = "Personal Projects";
 const { projectsList } = storeToRefs(useProjectsStore());
-const projects = computed(() => projectsList);
+const projects = projectsList.value;
 
 function navigateToProjectDemo(project) {
   window.open(project.demo);
@@ -42,8 +42,6 @@ function navigateToProjectCode(project) {
             <v-card-title v-text="project.title"></v-card-title>
           </v-img>
 
-          <!-- <v-card-subtitle class="pt-4"> Number 10 </v-card-subtitle>
--->
           <v-card-text>
             <p>{{ project.description }}</p>
           </v-card-text>

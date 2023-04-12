@@ -11,32 +11,31 @@ export const useJobsStore = defineStore("JobsStore", () => {
           link: "https://fairlo.se",
         },
       },
-      card: {
-        title: "Back-End Engineer",
-        roles: [
-          {
-            jobTitle: "Back-End Engineer",
-            period: {
-              start: "September 2021",
-              end: "February 2023",
-            },
+
+      title: "Back-End Engineer",
+      roles: [
+        {
+          jobTitle: "Back-End Engineer",
+          period: {
+            start: "September 2021",
+            end: "February 2023",
           },
-        ],
-        period: {
-          start: "September 2021",
-          end: "February 2023",
         },
-        description: "",
-        tools: [
-          "TypeScript",
-          "Node.js",
-          "PostgreSQL",
-          "Jest",
-          "AWS ",
-          "Document RESTful APIs (OpenAPI specification)",
-        ],
-        readMore: "",
+      ],
+      period: {
+        start: "September 2021",
+        end: "February 2023",
       },
+      description: "",
+      tools: [
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Jest",
+        "AWS ",
+        "Document RESTful APIs (OpenAPI specification)",
+      ],
+      readMore: "",
     },
     {
       id: 2,
@@ -49,31 +48,30 @@ export const useJobsStore = defineStore("JobsStore", () => {
           link: "https://conveos.com",
         },
       },
-      card: {
-        title: "Back-End Web Developer",
-        roles: [
-          {
-            jobTitle: "Back-End Web Developer",
-            period: {
-              start: "January 2021",
-              end: "June 2021",
-            },
+
+      title: "Back-End Web Developer",
+      roles: [
+        {
+          jobTitle: "Back-End Web Developer",
+          period: {
+            start: "January 2021",
+            end: "June 2021",
           },
-        ],
-        period: {
-          start: "January 2021",
-          end: "June 2021",
         },
-        description: "",
-        tools: [
-          "JavaScript",
-          "Node.js",
-          "MongoDB",
-          "Jest",
-          "Document RESTful APIs (OpenAPI specification)",
-        ],
-        readMore: "",
+      ],
+      period: {
+        start: "January 2021",
+        end: "June 2021",
       },
+      description: "",
+      tools: [
+        "JavaScript",
+        "Node.js",
+        "MongoDB",
+        "Jest",
+        "Document RESTful APIs (OpenAPI specification)",
+      ],
+      readMore: "",
     },
     {
       id: 3,
@@ -86,39 +84,38 @@ export const useJobsStore = defineStore("JobsStore", () => {
           link: "https://conveos.com",
         },
       },
-      card: {
-        title: "Back-End Web Developer",
-        roles: [
-          {
-            jobTitle: "Back-End Web Developer",
-            period: {
-              start: "July 2019",
-              end: "July 2020",
-            },
+
+      title: "Back-End Web Developer",
+      roles: [
+        {
+          jobTitle: "Back-End Web Developer",
+          period: {
+            start: "July 2019",
+            end: "July 2020",
           },
-          {
-            jobTitle: "Front-End Web Developer",
-            period: {
-              start: "July 2019",
-              end: "July 2020",
-            },
-          },
-        ],
-        period: {
-          start: "July 2019",
-          end: "July 2020",
         },
-        description: "",
-        tools: [
-          "JavaScript",
-          "Vue.js",
-          "Vuetify",
-          "Node.js",
-          "MongoDB",
-          "Document RESTful APIs (OpenAPI specification)",
-        ],
-        readMore: "",
+        {
+          jobTitle: "Front-End Web Developer",
+          period: {
+            start: "July 2019",
+            end: "July 2020",
+          },
+        },
+      ],
+      period: {
+        start: "July 2019",
+        end: "July 2020",
       },
+      description: "",
+      tools: [
+        "JavaScript",
+        "Vue.js",
+        "Vuetify",
+        "Node.js",
+        "MongoDB",
+        "Document RESTful APIs (OpenAPI specification)",
+      ],
+      readMore: "",
     },
     {
       id: 4,
@@ -132,35 +129,34 @@ export const useJobsStore = defineStore("JobsStore", () => {
           link: "https://www.ics.forth.gr/",
         },
       },
-      card: {
-        title: "Graduate R&D assistant at Human-Computer Interaction Lab (HCI)",
-        roles: [
-          {
-            jobTitle: "Back-End Web Developer",
-            period: {
-              start: "Jun 2016",
-              end: "Jun 2019",
-            },
+
+      title: "Graduate R&D assistant at Human-Computer Interaction Lab (HCI)",
+      roles: [
+        {
+          jobTitle: "Back-End Web Developer",
+          period: {
+            start: "Jun 2016",
+            end: "Jun 2019",
           },
-        ],
-        period: {
-          start: "Jun 2016",
-          end: "Jun 2019",
         },
-        description: "",
-        tools: [
-          "JavaScript",
-          "AngularJS (v1.6)",
-          "Foundation for Sites",
-          "Node.js",
-          "MongoDB",
-          "SocketIO",
-          "Invision",
-          "Gravid Designer",
-          "Presentator.io",
-        ],
-        readMore: "",
+      ],
+      period: {
+        start: "Jun 2016",
+        end: "Jun 2019",
       },
+      description: "",
+      tools: [
+        "JavaScript",
+        "AngularJS (v1.6)",
+        "Foundation for Sites",
+        "Node.js",
+        "MongoDB",
+        "SocketIO",
+        "Invision",
+        "Gravid Designer",
+        "Presentator.io",
+      ],
+      readMore: "",
     },
   ]);
   const jobsList = computed(() => jobs);
