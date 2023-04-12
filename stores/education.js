@@ -1,5 +1,3 @@
-import { reactive, computed } from "vue";
-
 export const useStudiesStore = defineStore("StudiesStore", () => {
   const studies = reactive([
     {

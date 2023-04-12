@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { useProjectsStore } from "../stores/projects";
+import { storeToRefs } from "pinia";
 
 const title = "Personal Projects";
-const store = useProjectsStore();
-const projects = store.projectsList;
+const { projectsList } = storeToRefs(useProjectsStore());
+const projects = computed(() => projectsList);
 
 function navigateToProjectDemo(project) {
   window.open(project.demo);

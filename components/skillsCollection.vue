@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { storeToRefs } from "pinia";
+
 const title = "Technical Skills";
-const { skills } = useSkillsStore();
+const { skillsList } = storeToRefs(useSkillsStore());
+const skills = computed(() => skillsList);
 </script>
 
 <template>
