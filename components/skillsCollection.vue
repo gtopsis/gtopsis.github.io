@@ -38,13 +38,17 @@ const skills = computed(() => skillsList);
               <ul class="ma-0 pa-0 tech-list text-center">
                 <li v-for="(tech, j) in skill.technologies" :key="j">
                   <span v-if="tech.desc == ''"> {{ tech.title }} </span>
-                  <v-tooltip v-else top small>
-                    <template #activator="{ on, attrs }">
-                      <span v-bind="attrs" v-on="on"> {{ tech.title }} </span>
+                  <v-tooltip
+                    v-else
+                    top
+                    small
+                    aria-labelledby="skillTooltipText"
+                  >
+                    <template #activator="{ props }">
+                      <span v-bind="props"> {{ tech.title }} </span>
                     </template>
-                    <span style="display: block; max-width: 250px">{{
-                      tech.desc
-                    }}</span>
+
+                    <span id="skillTooltipText">{{ tech.desc }}</span>
                   </v-tooltip>
                 </li>
               </ul>
@@ -84,6 +88,12 @@ const skills = computed(() => skillsList);
 .column__main {
   height: 100px;
 }
+
+#skillTooltipText {
+  display: block;
+  max-width: 250px;
+}
+
 @media only screen and (max-width: 600px) {
   .column__main {
     height: 90px;

@@ -71,7 +71,10 @@ const timelineItems = computed(() => {
             style="align-self: flex-start"
           >
             <template #icon>
-              <v-tooltip location="bottom">
+              <v-tooltip
+                location="bottom"
+                aria-labelledby="timelineItemTooltipText"
+              >
                 <template v-slot:activator="{ props }">
                   <v-avatar
                     :size="avatarSize"
@@ -89,17 +92,20 @@ const timelineItems = computed(() => {
                     </v-img>
                   </v-avatar>
                 </template>
-                <span>{{ item.avatar.label.text }}</span>
+
+                <span id="timelineItemTooltipText">{{
+                  item.avatar.label.text
+                }}</span>
               </v-tooltip>
             </template>
 
             <v-card class="timeline-item-card">
               <v-card-title>
-                <h4
+                <span
                   class="timeline-item-title text-left text-subtitle text-md-body-1 text-bold text-wrap font-weight-bold"
                 >
                   {{ item.title }}
-                </h4>
+                </span>
               </v-card-title>
               <v-card-subtitle>
                 <span>
