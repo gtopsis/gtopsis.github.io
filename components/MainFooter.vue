@@ -2,11 +2,13 @@
 const socials = [
   {
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/gtopsis",
+    link: "https://www.linkedin.com/in/gtopsis/",
+    text: "Go to my LinkedIn profile",
   },
   {
     icon: "github",
     link: "https://github.com/gtopsis",
+    text: "Go to my GitHub profile",
   },
 ];
 const personalMessage = "Build playing with Nuxt.js";
@@ -14,6 +16,10 @@ const personalMessage = "Build playing with Nuxt.js";
 const footerText = computed(() => {
   return `Giorgos Topsis 2022`;
 });
+
+function openLink(url: string) {
+  window.open(url, "_blank");
+}
 </script>
 
 <template>
@@ -27,14 +33,14 @@ const footerText = computed(() => {
             cols="auto"
             class="pa-1"
           >
-            <a
-              :href="social.link"
-              class="social-link text-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <font-awesome-icon :icon="['fab', social.icon]" />
-            </a>
+            <button @click="openLink(social.link)">
+              <span class="visually-hidden">{{ social.text }}</span>
+              <font-awesome-icon
+                class="social-link text-secondary"
+                :icon="['fab', social.icon]"
+                aria-hidden="true"
+              />
+            </button>
           </v-col>
         </v-row>
       </v-col>
@@ -47,17 +53,14 @@ const footerText = computed(() => {
 </template>
 
 <style scoped>
-.socials-list-container {
-  /* width: 100%; */
-}
-
-.socials-list {
-  /* width: 100%; */
-}
-
-.socials-list a.social-link {
-  text-decoration: none;
-  font-size: 1.4rem;
+.socials-list button {
   padding: 0 5px;
+}
+.socials-list .social-link {
+  font-size: 1.4rem;
+}
+
+.visually-hidden {
+  display: none;
 }
 </style>
