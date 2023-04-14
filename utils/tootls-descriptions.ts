@@ -1,6 +1,6 @@
-const tools = {
+const tools: Record<string, string> = {
   vuejs:
-    "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
+    "Vue.js is an open-source model-view-viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
   vuex: "Vuex is a state management pattern + library for Vue.js applications.",
   mongoDB:
     "MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.",
@@ -21,7 +21,7 @@ const tools = {
   openapi:
     "The OpenAPI Specification defines a standard interface to RESTful APIs which allows both humans and computers to understand service capabilities without access to source code, documentation, or network traffic inspection.",
   invision:
-    "InVision is the digital product design platform used to make the world’s best customer experiences.",
+    "InVision is the digital product design platform used to make the world's best customer experiences.",
   presentator: "Design presentation and collaboration platform.",
   heuristicevaluation:
     "Heuristic evaluation is a process where experts use rules of thumb to measure the usability of user interfaces in independent walkthroughs and report issues.",
@@ -30,9 +30,9 @@ const tools = {
 };
 
 const getToolDescription = (toolName: string) => {
-  if (!toolName || !tools[toolName]) return "";
+  if (!tools[toolName]) return "";
 
-  return tools[toolName] || toolName;
+  return tools[toolName] || "";
 };
 
 export { getToolDescription };
