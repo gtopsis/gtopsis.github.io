@@ -35,9 +35,10 @@ function navigateToProjectCode(project) {
           <v-img
             class="align-end text-white"
             height="200"
-            :src="project.src"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             cover
+            :src="project.src"
+            :alt="project.imageDescription"
           >
             <v-card-title v-text="project.title"></v-card-title>
           </v-img>

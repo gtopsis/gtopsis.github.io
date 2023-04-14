@@ -2,6 +2,8 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
   const projects = reactive([
     {
       src: "/images/website-cs352-showcase.png",
+      imageDescription:
+        "A browser window which contains a part of the website of the course cs352. This part is the the logo, navigation bar and some basic info of the course.",
       title: "Website for course cs-352",
       description:
         "Static website for the course cs352 (year 2017-2018) in Computer Science department at UOC. It was serving the content (lectures, tutorials, assignments and course project) of the course to the students.",
@@ -11,6 +13,8 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
     {
       src: "/images/loan-calculator-showcase.png",
       title: "Simple loan calculator",
+      imageDescription:
+        "A browser window which contains a small modal window with a form. This form represents the calculator of the monthly payment based on a loan's duration and payment-in-advance amount.",
       description: "A simple calculator for the monthly payment for a loan.",
       demo: "https://gtopsis.github.io/loan-calculator/",
       code: "https://github.com/gtopsis/loan-calculator",
@@ -18,6 +22,8 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
     {
       src: "/images/music-app-api-showcase.png",
       title: "Simple music app API",
+      imageDescription:
+        "A browser window which contains a subset of the documented API endpoints about Artists, Recordings, etc. of the music app.",
       description:
         "The backend side of a music app in which albums, artists and tracks are associated properly.",
       demo: "#",
@@ -26,6 +32,8 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
     {
       src: "/images/website-uoc-radio-showcase.png",
       title: "Website for the UoC radio station",
+      imageDescription:
+        "A browser window which contains a part of the website for the FM radio of University of Crete. This part is the logo, the navigation menu, a background image and an one-line music player.",
       description:
         "A responsive and usable website for the FM radio station of university of Crete.",
       demo: "https://gtopsis.github.io/Uoc-radio-website/index.html",
