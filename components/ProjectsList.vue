@@ -2,8 +2,8 @@
 import { useProjectsStore } from "../stores/projects";
 import { Project } from "~/models";
 
-const { storeToRefs } = usePinia();
 const title = "Personal Projects";
+const { storeToRefs } = usePinia();
 const { projectsList } = storeToRefs(useProjectsStore());
 const projects = projectsList.value as Project[];
 

@@ -1,33 +1,15 @@
 <script setup lang="ts">
+import { useMeetupsStore } from "../stores/meetups";
 import { Meetup } from "~/models";
 
 const title = "Participation on several Meetups";
-const meetups: Meetup[] = [
-  {
-    src: "/images/devstaff-meetup.jpg",
-    title: "DevStaff: A developer community in Crete",
-    link: "https://www.meetup.com/devstaff/",
-    description:
-      "A meetup which is called DevStaff and it is a developer community in Crete.",
-  },
-  {
-    src: "/images/opencoffe-meetup.jpg",
-    title: "Open Coffee Heraklion",
-    link: "https://www.meetup.com/opencoffeeher/",
-    description:
-      "A meetup which is called Open Coffee Heraklion and it gathers motivated youngsters & professionals from Crete, who have as common ground the urge of sharing business ideas",
-  },
-  {
-    src: "/images/vuejs-athens-meetups.jpeg",
-    title: "VueJS Athens",
-    link: "https://www.meetup.com/vuejsathens/",
-    description:
-      "A meetup which is called VueJS Athens and it is a community of people that is eager to learn more about Vue.js",
-  },
-];
 
-function navigateToMeetup(meetup: Meetup) {
-  window.open(meetup.link);
+const { storeToRefs } = usePinia();
+const { meetupsList } = storeToRefs(useMeetupsStore());
+const meetups = meetupsList.value as Meetup[];
+
+function navigateToMeetup(url: string) {
+  window.open(url, "_blank");
 }
 </script>
 
@@ -47,7 +29,7 @@ function navigateToMeetup(meetup: Meetup) {
         md="4"
         lg="3"
       >
-        <v-card class="meetup-card" @click="navigateToMeetup(meetup)">
+        <v-card class="meetup-card" @click="navigateToMeetup(meetup.link)">
           <v-img
             class="white--text align-end"
             :src="meetup.src"
