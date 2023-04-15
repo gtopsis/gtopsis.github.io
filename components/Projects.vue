@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useProjectsStore } from "../stores/projects";
+import { Project } from "~/models";
 
 const { storeToRefs } = usePinia();
 const title = "Personal Projects";
 const { projectsList } = storeToRefs(useProjectsStore());
-const projects = projectsList.value;
+const projects = projectsList.value as Project[];
 
 function navigateToProjectAsset(url: string) {
   window.open(url, "_blank");

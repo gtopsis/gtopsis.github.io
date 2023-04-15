@@ -1,7 +1,8 @@
+import { Skill } from "~/models";
 import { getToolDescription } from "~~/utils/tootls-descriptions";
 
 export const useSkillsStore = defineStore("SkillsStore", () => {
-  const skills = reactive([
+  const skills: Skill[] = reactive([
     {
       icon: "laptop-code",
       title: "Front End Developer",

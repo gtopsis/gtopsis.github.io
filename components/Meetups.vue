@@ -1,10 +1,5 @@
 <script setup lang="ts">
-interface Meetup {
-  src: string;
-  title: string;
-  link: string;
-  description: string;
-}
+import { Meetup } from "~/models";
 
 const title = "Participation on several Meetups";
 const meetups: Meetup[] = [

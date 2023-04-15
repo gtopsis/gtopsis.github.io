@@ -2,7 +2,7 @@
 const title = "Technical Skills";
 const { storeToRefs } = usePinia();
 const { skillsList } = storeToRefs(useSkillsStore());
-const skills = computed(() => skillsList);
+const skills = skillsList.value;
 </script>
 
 <template>
