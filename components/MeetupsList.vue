@@ -4,7 +4,6 @@ import { Meetup } from "~/models";
 
 const title = "Participation on several Meetups";
 
-const { storeToRefs } = usePinia();
 const { meetupsList } = storeToRefs(useMeetupsStore());
 const meetups = meetupsList.value as Meetup[];
 

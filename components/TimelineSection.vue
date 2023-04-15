@@ -3,8 +3,6 @@ import { useDisplay } from "vuetify";
 import { useStudiesStore } from "~~/stores/education.js";
 import { useJobsStore } from "~~/stores/experience.js";
 
-const { storeToRefs } = usePinia();
-
 const { mobile } = useDisplay();
 const timelineDirection = computed(() =>
   mobile.value ? "vertical" : "horizontal"
@@ -19,11 +17,11 @@ const props = defineProps({
   },
 });
 
-const truncateLines = props.content == "education" ? "start" : "both";
+const truncateLines = props.content === "education" ? "start" : "both";
 const timelineTitle = computed(() => {
-  if (props.content == "experience") {
+  if (props.content === "experience") {
     return "Experience";
-  } else if (props.content == "education") {
+  } else if (props.content === "education") {
     return "Education";
   }
 
@@ -72,7 +70,7 @@ const timelineItems = computed(() => {
                 location="bottom"
                 aria-labelledby="timelineItemTooltipText"
               >
-                <template v-slot:activator="{ props }">
+                <template #activator="{ props }">
                   <v-avatar
                     :size="avatarSize"
                     class="timeline-avatar"
@@ -111,14 +109,14 @@ const timelineItems = computed(() => {
                 </span>
                 <p class="mb-0">
                   <a
+                    v-if="item.avatar.label.link"
                     class="text-secondary font-weight-bold"
                     :href="item.avatar.label.link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    v-if="item.avatar.label.link"
                     >{{ item.avatar.label.text }}</a
                   >
-                  <span class="text-secondary font-weight-bold" v-else>{{
+                  <span v-else class="text-secondary font-weight-bold">{{
                     item.avatar.label.text
                   }}</span>
                 </p>

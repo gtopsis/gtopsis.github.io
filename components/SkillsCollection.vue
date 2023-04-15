@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const title = "Technical Skills";
-const { storeToRefs } = usePinia();
+
 const { skillsList } = storeToRefs(useSkillsStore());
 const skills = skillsList.value;
 </script>
