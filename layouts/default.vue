@@ -13,8 +13,8 @@ const title = "Giorgos Topsis";
 
       <v-spacer></v-spacer>
 
-      <template v-slot:append>
-        <nav role="navigation">
+      <template #append>
+        <nav role="navigation" aria-label="Primary">
           <v-list
             class="nav d-inline-flex flex-row justify-end"
             nav
@@ -22,7 +22,7 @@ const title = "Giorgos Topsis";
           >
             <v-list-item class="nav-item mb-0">
               <nuxt-link to="/" class="text-subtitle-1 text-secondary"
-                >Work</nuxt-link
+                >Projects</nuxt-link
               >
             </v-list-item>
             <v-list-item class="nav-item mb-0">
@@ -70,20 +70,26 @@ const title = "Giorgos Topsis";
 }
 
 .nav .nav-item {
-  font-size: 1.2rem;
   background: transparent;
+  transition: border-bottom 0.25s ease;
 }
 
 .nav .nav-item a {
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
 .nav .nav-item a:hover {
-  text-decoration: underline;
 }
 
 .nav .nav-item a.router-link-active {
-  color: var(--v-theme-secondary-darken3);
-  text-decoration: underline;
+}
+
+.nav .nav-item:has(a:hover) {
+  border-bottom: 1px solid rgb(var(--v-theme-secondary));
+}
+
+.nav .nav-item:has(a.router-link-active) {
+  border-bottom: 1px solid rgb(var(--v-theme-secondary));
 }
 </style>
