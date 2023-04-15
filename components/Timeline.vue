@@ -3,7 +3,7 @@ import { useDisplay } from "vuetify";
 import { useStudiesStore } from "~~/stores/education.js";
 import { useJobsStore } from "~~/stores/experience.js";
 
-const  { storeToRefs } = usePinia();
+const { storeToRefs } = usePinia();
 
 const { mobile } = useDisplay();
 const timelineDirection = computed(() =>

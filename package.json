@@ -6,8 +6,12 @@
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare",
-    "lint": "eslint --ext .ts,.js,.vue . --ignore-path .gitignore --ignore-pattern 'old/*' --fix",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "deploy": "push-dir --dir=dist --branch=master --cleanup",
+    "prettier:fix": "npx prettier . --write",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore --ignore-pattern 'old/*'",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lintfix": "prettier --write --list-different . && npm run lint:js --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -18,7 +22,11 @@
     "@mdi/font": "^7.0.96",
     "@pinia/nuxt": "^0.4.4",
     "core-js": "^3.26.1",
-    "sass": "^1.56.1"
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.7",
+    "sass": "^1.56.1",
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
