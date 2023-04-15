@@ -76,7 +76,7 @@ As a partner, I seek trustworthy connections and I enjoy being in work environme
       <v-col cols="12" class="section px-0 py-10 mx-0">
         <v-row class="justify-space-between no-gutters">
           <v-col cols="12" mb="2">
-            <timeline content="experience"></timeline>
+            <TimelineSection content="experience" />
           </v-col>
         </v-row>
       </v-col>
@@ -85,7 +85,7 @@ As a partner, I seek trustworthy connections and I enjoy being in work environme
       <v-col cols="12" class="section px-0 py-10 mx-0">
         <v-row class="justify-space-between no-gutters">
           <v-col cols="12" mb="2">
-            <timeline content="education"></timeline>
+            <TimelineSection content="education" />
           </v-col>
         </v-row>
       </v-col>

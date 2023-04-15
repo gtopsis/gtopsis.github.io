@@ -2,17 +2,17 @@
   <v-row class="page-container" no-gutters justify="center">
     <!-- hero section -->
     <v-col cols="12" class="section pa-0 mx-0">
-      <hero></hero>
+      <HeroSection />
     </v-col>
 
     <!-- projects section -->
     <v-col cols="12" class="section py-10 mx-0">
-      <projects></projects>
+      <ProjectsList />
     </v-col>
 
     <!-- meetups section -->
     <v-col cols="12" class="section py-10 mx-0">
-      <meetups></meetups>
+      <MeetupsList />
     </v-col>
   </v-row>
 </template>
