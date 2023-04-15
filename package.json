@@ -6,8 +6,7 @@
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
+    "lint": "eslint --ext .ts,.js,.vue . --ignore-path .gitignore --ignore-pattern 'old/*' --fix",
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
@@ -23,6 +22,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
