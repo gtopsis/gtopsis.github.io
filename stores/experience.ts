@@ -1,169 +1,169 @@
-export const useJobsStore = defineStore("JobsStore", () => {
+export const useJobsStore = defineStore('JobsStore', () => {
   const jobs = reactive([
     {
       id: 1,
       avatar: {
-        img: `/images/fairlo_logo.png`,
-        alt: "Logo of software agency Fairlo",
-        bgColor: "#fff",
+        img: '/images/fairlo_logo.png',
+        alt: 'Logo of software agency Fairlo',
+        bgColor: '#fff',
         label: {
-          text: "Fairlo",
-          link: "https://fairlo.se",
-        },
+          text: 'Fairlo',
+          link: 'https://fairlo.se'
+        }
       },
 
-      title: "Back-End Engineer",
+      title: 'Back-End Engineer',
       roles: [
         {
-          jobTitle: "Back-End Engineer",
+          jobTitle: 'Back-End Engineer',
           period: {
-            start: "September 2021",
-            end: "February 2023",
-          },
-        },
+            start: 'September 2021',
+            end: 'February 2023'
+          }
+        }
       ],
       period: {
-        start: "September 2021",
-        end: "February 2023",
+        start: 'September 2021',
+        end: 'February 2023'
       },
-      description: "",
+      description: '',
       tools: [
-        "TypeScript",
-        "Node.js",
-        "PostgreSQL",
-        "Jest",
-        "AWS ",
-        "Document RESTful APIs (OpenAPI specification)",
+        'TypeScript',
+        'Node.js',
+        'PostgreSQL',
+        'Jest',
+        'AWS ',
+        'Document RESTful APIs (OpenAPI specification)'
       ],
-      readMore: "",
+      readMore: ''
     },
     {
       id: 2,
       avatar: {
-        img: `/images/conveos_logo.png`,
-        alt: "Logo of software agency Conveos",
-        bgColor: "#000",
+        img: '/images/conveos_logo.png',
+        alt: 'Logo of software agency Conveos',
+        bgColor: '#000',
         label: {
-          text: "Conveos",
-          link: "https://conveos.com",
-        },
+          text: 'Conveos',
+          link: 'https://conveos.com'
+        }
       },
 
-      title: "Back-End Web Developer",
+      title: 'Back-End Web Developer',
       roles: [
         {
-          jobTitle: "Back-End Web Developer",
+          jobTitle: 'Back-End Web Developer',
           period: {
-            start: "January 2021",
-            end: "June 2021",
-          },
-        },
+            start: 'January 2021',
+            end: 'June 2021'
+          }
+        }
       ],
       period: {
-        start: "January 2021",
-        end: "June 2021",
+        start: 'January 2021',
+        end: 'June 2021'
       },
-      description: "",
+      description: '',
       tools: [
-        "JavaScript",
-        "Node.js",
-        "MongoDB",
-        "Jest",
-        "Document RESTful APIs (OpenAPI specification)",
+        'JavaScript',
+        'Node.js',
+        'MongoDB',
+        'Jest',
+        'Document RESTful APIs (OpenAPI specification)'
       ],
-      readMore: "",
+      readMore: ''
     },
     {
       id: 3,
       avatar: {
-        img: `/images/conveos_logo.png`,
-        alt: "Logo of software agency Conveos",
-        bgColor: "#000",
+        img: '/images/conveos_logo.png',
+        alt: 'Logo of software agency Conveos',
+        bgColor: '#000',
         label: {
-          text: "Conveos",
-          link: "https://conveos.com",
-        },
+          text: 'Conveos',
+          link: 'https://conveos.com'
+        }
       },
 
-      title: "Back-End Web Developer",
+      title: 'Back-End Web Developer',
       roles: [
         {
-          jobTitle: "Back-End Web Developer",
+          jobTitle: 'Back-End Web Developer',
           period: {
-            start: "July 2019",
-            end: "July 2020",
-          },
+            start: 'July 2019',
+            end: 'July 2020'
+          }
         },
         {
-          jobTitle: "Front-End Web Developer",
+          jobTitle: 'Front-End Web Developer',
           period: {
-            start: "July 2019",
-            end: "July 2020",
-          },
-        },
+            start: 'July 2019',
+            end: 'July 2020'
+          }
+        }
       ],
       period: {
-        start: "July 2019",
-        end: "July 2020",
+        start: 'July 2019',
+        end: 'July 2020'
       },
-      description: "",
+      description: '',
       tools: [
-        "JavaScript",
-        "Vue.js",
-        "Vuetify",
-        "Node.js",
-        "MongoDB",
-        "Document RESTful APIs (OpenAPI specification)",
+        'JavaScript',
+        'Vue.js',
+        'Vuetify',
+        'Node.js',
+        'MongoDB',
+        'Document RESTful APIs (OpenAPI specification)'
       ],
-      readMore: "",
+      readMore: ''
     },
     {
       id: 4,
       avatar: {
-        img: `/images/forth_logo.png`,
+        img: '/images/forth_logo.png',
 
-        alt: "Logo of FORTH in Greece",
-        bgColor: "#fff",
+        alt: 'Logo of FORTH in Greece',
+        bgColor: '#fff',
         label: {
-          text: "Laboratory HCI of ICS-FORTH",
-          link: "https://www.ics.forth.gr/",
-        },
+          text: 'Laboratory HCI of ICS-FORTH',
+          link: 'https://www.ics.forth.gr/'
+        }
       },
 
-      title: "Graduate R&D assistant at Human-Computer Interaction Lab (HCI)",
+      title: 'Graduate R&D assistant at Human-Computer Interaction Lab (HCI)',
       roles: [
         {
-          jobTitle: "Back-End Web Developer",
+          jobTitle: 'Back-End Web Developer',
           period: {
-            start: "Jun 2016",
-            end: "Jun 2019",
-          },
-        },
+            start: 'Jun 2016',
+            end: 'Jun 2019'
+          }
+        }
       ],
       period: {
-        start: "Jun 2016",
-        end: "Jun 2019",
+        start: 'Jun 2016',
+        end: 'Jun 2019'
       },
-      description: "",
+      description: '',
       tools: [
-        "JavaScript",
-        "AngularJS (v1.6)",
-        "Foundation for Sites",
-        "Node.js",
-        "MongoDB",
-        "SocketIO",
-        "Invision",
-        "Gravid Designer",
-        "Presentator.io",
+        'JavaScript',
+        'AngularJS (v1.6)',
+        'Foundation for Sites',
+        'Node.js',
+        'MongoDB',
+        'SocketIO',
+        'Invision',
+        'Gravid Designer',
+        'Presentator.io'
       ],
-      readMore: "",
-    },
-  ]);
-  const jobsList = computed(() => jobs);
+      readMore: ''
+    }
+  ])
+  const jobsList = computed(() => jobs)
 
-  return { jobsList };
-});
+  return { jobsList }
+})
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useJobsStore, import.meta.hot));
+  import.meta.hot.accept(acceptHMRUpdate(useJobsStore, import.meta.hot))
 }
