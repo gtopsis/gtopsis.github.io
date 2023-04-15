@@ -12,12 +12,9 @@ const socials = [
   },
 ];
 const personalMessage = "Build playing with Nuxt.js";
+const footerText = "Giorgos Topsis 2022";
 
-const footerText = computed(() => {
-  return `Giorgos Topsis 2022`;
-});
-
-function openLink(url: string) {
+function navigateToSocialNetwork(url: string) {
   window.open(url, "_blank");
 }
 </script>
@@ -33,7 +30,10 @@ function openLink(url: string) {
             cols="auto"
             class="pa-1"
           >
-            <button @click="openLink(social.link)">
+            <button
+              :aria-label="social.text"
+              @click="navigateToSocialNetwork(social.link)"
+            >
               <span class="visually-hidden">{{ social.text }}</span>
               <font-awesome-icon
                 class="social-link text-secondary"

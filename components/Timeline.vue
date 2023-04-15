@@ -5,21 +5,16 @@ import { useStudiesStore } from "~~/stores/education.js";
 import { useJobsStore } from "~~/stores/experience.js";
 
 const { mobile } = useDisplay();
-const timelineDirection = computed(() => {
-  switch (mobile.value) {
-    case true:
-      return "vertical";
-    case false:
-      return "horizontal";
-  }
-});
+const timelineDirection = computed(() =>
+  mobile.value ? "vertical" : "horizontal"
+);
 
 const avatarSize = 44;
 const props = defineProps({
   content: {
     type: String,
     default: "experience",
-    validator: (v) => ["experience", "education"].includes(v),
+    validator: (v: string) => ["experience", "education"].includes(v),
   },
 });
 
@@ -30,6 +25,7 @@ const timelineTitle = computed(() => {
   } else if (props.content == "education") {
     return "Education";
   }
+
   return "My Story";
 });
 

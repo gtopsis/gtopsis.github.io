@@ -16,8 +16,8 @@ const title = "Giorgos Topsis";
       <template v-slot:append>
         <nav role="navigation">
           <v-list
-            nav
             class="nav d-inline-flex flex-row justify-end"
+            nav
             align="center"
           >
             <v-list-item class="nav-item mb-0">

@@ -6,12 +6,8 @@ const title = "Personal Projects";
 const { projectsList } = storeToRefs(useProjectsStore());
 const projects = projectsList.value;
 
-function navigateToProjectDemo(project) {
-  window.open(project.demo);
-}
-
-function navigateToProjectCode(project) {
-  window.open(project.code);
+function navigateToProjectAsset(url: string) {
+  window.open(url, "_blank");
 }
 </script>
 
@@ -48,11 +44,17 @@ function navigateToProjectCode(project) {
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="secondary" @click="navigateToProjectDemo(project)">
+            <v-btn
+              color="secondary"
+              @click="navigateToProjectAsset(project.demo)"
+            >
               Demo
             </v-btn>
 
-            <v-btn color="secondary" @click="navigateToProjectCode(project)">
+            <v-btn
+              color="secondary"
+              @click="navigateToProjectAsset(project.code)"
+            >
               Code
             </v-btn>
           </v-card-actions>
