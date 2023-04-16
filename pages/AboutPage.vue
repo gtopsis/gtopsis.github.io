@@ -15,7 +15,7 @@ useHead({
 const head = {
   title: "About - Giorgos Topsis",
   description: "Learn more about me!",
-  image: "./images/Twitter-card.png",
+  image: "./images/Twitter-card.webp",
 };
 
 const { aboutMe } = storeToRefs(useAboutMeStore());

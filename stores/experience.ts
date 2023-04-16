@@ -3,7 +3,7 @@ export const useJobsStore = defineStore("JobsStore", () => {
     {
       id: 1,
       avatar: {
-        img: "/images/fairlo_logo.webp",
+        img: "fairlo_logo.webp",
         alt: "Logo of software agency Fairlo",
         bgColor: "#fff",
         label: {
@@ -40,7 +40,7 @@ export const useJobsStore = defineStore("JobsStore", () => {
     {
       id: 2,
       avatar: {
-        img: "/images/conveos_logo.webp",
+        img: "conveos_logo.webp",
         alt: "Logo of software agency Conveos",
         bgColor: "#000",
         label: {
@@ -76,7 +76,7 @@ export const useJobsStore = defineStore("JobsStore", () => {
     {
       id: 3,
       avatar: {
-        img: "/images/conveos_logo.webp",
+        img: "conveos_logo.webp",
         alt: "Logo of software agency Conveos",
         bgColor: "#000",
         label: {
@@ -120,7 +120,7 @@ export const useJobsStore = defineStore("JobsStore", () => {
     {
       id: 4,
       avatar: {
-        img: "/images/forth_logo.webp",
+        img: "forth_logo.webp",
 
         alt: "Logo of FORTH in Greece",
         bgColor: "#fff",

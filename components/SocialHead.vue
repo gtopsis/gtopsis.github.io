@@ -14,7 +14,7 @@ const props = defineProps({
   },
   image: {
     type: String,
-    default: "./images/Twitter-card.png",
+    default: "./images/Twitter-card.webp",
   },
 });
 
