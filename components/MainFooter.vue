@@ -30,17 +30,14 @@ function navigateToSocialNetwork(url: string) {
             cols="auto"
             class="pa-1"
           >
-            <button
-              :aria-label="social.text"
-              @click="navigateToSocialNetwork(social.link)"
-            >
+            <a :href="social.link" :aria-label="social.text" target="_blank">
               <span class="visually-hidden">{{ social.text }}</span>
               <font-awesome-icon
                 class="social-link text-secondary"
                 :icon="['fab', social.icon]"
                 aria-hidden="true"
               />
-            </button>
+            </a>
           </v-col>
         </v-row>
       </v-col>
@@ -53,7 +50,7 @@ function navigateToSocialNetwork(url: string) {
 </template>
 
 <style scoped>
-.socials-list button {
+.socials-list a {
   padding: 0 5px;
 }
 .socials-list .social-link {
