@@ -11,19 +11,19 @@ const title = "Giorgos Topsis";
 
       <v-spacer></v-spacer>
 
-      <template #append>
+      <template #append class="mr-0">
         <nav role="navigation" aria-label="Primary">
           <v-list
             class="nav d-inline-flex flex-row justify-end"
             nav
             align="center"
           >
-            <v-list-item class="nav-item mb-0 mr-1">
+            <v-list-item class="nav-item mb-0">
               <nuxt-link to="/" class="text-subtitle-1 text-secondary"
                 >Projects</nuxt-link
               >
             </v-list-item>
-            <v-list-item class="nav-item mb-0">
+            <v-list-item class="nav-item mb-0 ml-1">
               <nuxt-link
                 :to="{ name: 'AboutPage' }"
                 class="text-subtitle-1 text-secondary"
@@ -33,7 +33,7 @@ const title = "Giorgos Topsis";
           </v-list>
         </nav>
 
-        <theme-toggle></theme-toggle>
+        <theme-toggle class="ml-1"></theme-toggle>
       </template>
     </v-app-bar>
 
@@ -65,6 +65,10 @@ const title = "Giorgos Topsis";
 
 .theme--dark .logo a {
   color: rgba(255, 255, 255, 0.87);
+}
+
+.v-toolbar__append {
+  margin-right: 0;
 }
 
 .nav {
