@@ -43,8 +43,8 @@ const timelineItems = computed(() => {
 
 <template>
   <v-container class="pa-0">
-    <v-row align="center" class="justify-md-center justify-sm-left">
-      <v-col cols="auto" class="mb-3">
+    <v-row align="center" class="justify-md-center justify-sm-left mb-8">
+      <v-col cols="auto" class="">
         <h1>{{ timelineTitle }}</h1>
       </v-col>
     </v-row>

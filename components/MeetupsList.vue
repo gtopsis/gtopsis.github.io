@@ -15,20 +15,18 @@ function navigateToMeetup(url: string) {
 <template>
   <v-container fluid full-width>
     <v-row align="center" class="justify-md-center justify-sm-left">
-      <v-col cols="auto" class="mb-6">
+      <v-col cols="auto" class="mb-8">
         <h1>{{ title }}</h1>
       </v-col>
     </v-row>
 
     <v-row dense justify="center">
-      <v-col
-        v-for="(meetup, index) in meetups"
-        :key="index"
-        cols="12"
-        md="4"
-        lg="3"
-      >
-        <v-card class="meetup-card" @click="navigateToMeetup(meetup.link)">
+      <v-col v-for="(meetup, index) in meetups" :key="index" cols="12" md="3">
+        <v-card
+          class="meetup-card mx-auto"
+          max-width="400"
+          @click="navigateToMeetup(meetup.link)"
+        >
           <v-img
             class="white--text align-end"
             :src="meetup.src"

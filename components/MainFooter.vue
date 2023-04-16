@@ -20,7 +20,7 @@ function navigateToSocialNetwork(url: string) {
 </script>
 
 <template>
-  <v-container pa-2>
+  <v-container class="pa-2">
     <v-row>
       <v-col cols="12" class="socials-list-container py-1">
         <v-row class="socials-list ma-0" justify="center">

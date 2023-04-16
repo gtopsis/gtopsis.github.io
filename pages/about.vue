@@ -54,7 +54,7 @@ As a partner, I seek trustworthy connections and I enjoy being in work environme
       </v-col>
 
       <!-- about me section -->
-      <v-col cols="12" class="section px-0 py-10 mx-0">
+      <v-col cols="12" class="section px-0 mb-16 mx-0">
         <v-container class="about-me-container" fluid full-width>
           <v-row full-width justify="center" align="center">
             <v-col cols="12" md="10" lg="9" class="px-4">
@@ -73,7 +73,7 @@ As a partner, I seek trustworthy connections and I enjoy being in work environme
       </v-col>
 
       <!-- timeline section -->
-      <v-col cols="12" class="section px-0 py-10 mx-0">
+      <v-col cols="12" class="section px-0 mb-16 mx-0">
         <v-row class="justify-space-between no-gutters">
           <v-col cols="12" mb="2">
             <TimelineSection content="experience" />
@@ -82,7 +82,7 @@ As a partner, I seek trustworthy connections and I enjoy being in work environme
       </v-col>
 
       <!-- timeline section -->
-      <v-col cols="12" class="section px-0 py-10 mx-0">
+      <v-col cols="12" class="section px-0 mb-16 mx-0">
         <v-row class="justify-space-between no-gutters">
           <v-col cols="12" mb="2">
             <TimelineSection content="education" />

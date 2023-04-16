@@ -14,19 +14,13 @@ function navigateToProjectAsset(url: string) {
 <template>
   <v-container fluid full-width>
     <v-row align="center" class="justify-md-center justify-sm-left">
-      <v-col cols="auto" class="mb-6">
+      <v-col cols="auto" class="mb-8">
         <h1>{{ title }}</h1>
       </v-col>
     </v-row>
 
     <v-row dense>
-      <v-col
-        v-for="project in projects"
-        :key="project.title"
-        cols="12"
-        md="3"
-        lg="4"
-      >
+      <v-col v-for="project in projects" :key="project.title" cols="12" md="3">
         <v-card class="mx-auto" max-width="400">
           <v-img
             class="align-end text-white"
