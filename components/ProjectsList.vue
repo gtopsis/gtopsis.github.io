@@ -20,7 +20,7 @@ function navigateToProjectAsset(url: string) {
     </v-row>
 
     <v-row dense>
-      <v-col v-for="project in projects" :key="project.title" cols="12" md="3">
+      <v-col v-for="project in projects" :key="project.title" cols="12" md="4">
         <v-card class="mx-auto" max-width="400">
           <v-img
             class="align-end text-white"

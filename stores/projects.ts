@@ -17,7 +17,8 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
       title: "Simple loan calculator",
       imageDescription:
         "A browser window which contains a small modal window with a form. This form represents the calculator of the monthly payment based on a loan's duration and payment-in-advance amount.",
-      description: "A simple calculator for the monthly payment for a loan.",
+      description:
+        "A simple calculator for the monthly payment of a loan, based on the payment-in-advance and its duration.",
       demo: "https://gtopsis.github.io/loan-calculator/",
       code: "https://github.com/gtopsis/loan-calculator",
     },
@@ -37,7 +38,7 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
       imageDescription:
         "A browser window which contains a part of the website for the FM radio of University of Crete. This part is the logo, the navigation menu, a background image and an one-line music player.",
       description:
-        "A responsive and usable website for the FM radio station of university of Crete.",
+        "A responsive and usable website (showcase - not the current one) of RASTAPANK, the team behind the FM radio station of university of Crete.",
       demo: "https://gtopsis.github.io/Uoc-radio-website/index.html",
       code: "https://github.com/gtopsis/Uoc-radio-website",
     },
