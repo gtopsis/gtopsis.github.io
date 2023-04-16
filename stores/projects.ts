@@ -3,7 +3,7 @@ import { Project } from "~~/models";
 export const useProjectsStore = defineStore("ProjectsStore", () => {
   const projects: Project[] = reactive([
     {
-      src: "/images/website-cs352-showcase.png",
+      src: "/images/website-cs352-showcase.webp",
       imageDescription:
         "A browser window which contains a part of the website of the course cs352. This part is the the logo, navigation bar and some basic info of the course.",
       title: "Website for course cs-352",
@@ -13,7 +13,7 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
       code: "https://github.com/gtopsis/Course-cs352-website",
     },
     {
-      src: "/images/loan-calculator-showcase.png",
+      src: "/images/loan-calculator-showcase.webp",
       title: "Simple loan calculator",
       imageDescription:
         "A browser window which contains a small modal window with a form. This form represents the calculator of the monthly payment based on a loan's duration and payment-in-advance amount.",
@@ -23,7 +23,7 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
       code: "https://github.com/gtopsis/loan-calculator",
     },
     {
-      src: "/images/music-app-api-showcase.png",
+      src: "/images/music-app-api-showcase.webp",
       title: "Simple music app API",
       imageDescription:
         "A browser window which contains a subset of the documented API endpoints about Artists, Recordings, etc. of the music app.",
@@ -33,7 +33,7 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
       code: "https://github.com/gtopsis/music-app",
     },
     {
-      src: "/images/website-uoc-radio-showcase.png",
+      src: "/images/website-uoc-radio-showcase.webp",
       title: "Website for the UoC radio station",
       imageDescription:
         "A browser window which contains a part of the website for the FM radio of University of Crete. This part is the logo, the navigation menu, a background image and an one-line music player.",
