@@ -13,10 +13,6 @@ const socials = [
 ];
 const personalMessage = "Build playing with Nuxt.js";
 const footerText = "Giorgos Topsis 2022";
-
-function navigateToSocialNetwork(url: string) {
-  window.open(url, "_blank");
-}
 </script>
 
 <template>
