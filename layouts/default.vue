@@ -24,7 +24,9 @@ const title = "Giorgos Topsis";
               >
             </v-list-item>
             <v-list-item class="nav-item mb-0">
-              <nuxt-link to="/about" class="text-subtitle-1 text-secondary"
+              <nuxt-link
+                :to="{ name: 'AboutPage' }"
+                class="text-subtitle-1 text-secondary"
                 >About</nuxt-link
               >
             </v-list-item>
