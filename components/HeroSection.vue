@@ -13,7 +13,7 @@ const headline = {
   <v-container class="hero-container pa-0 d-flex" fill-height>
     <v-row no-gutters>
       <v-col class="px-0" cols="12" align-self="center">
-        <h1 class="headline text-h6 text-md-h5 text-lg-h4">
+        <h1 class="headline text-h5 text-md-h5 text-lg-h4">
           <span>
             {{ headline.pre }}
             <nuxt-link

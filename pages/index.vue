@@ -1,3 +1,18 @@
+<script lang="ts" setup>
+useHead({
+  title: "Home",
+  meta: [
+    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "Home page of personal website. It contains details about my work experience and my education background.",
+    },
+  ],
+});
+</script>
+
 <template>
   <v-row class="page-container" no-gutters justify="center">
     <!-- hero section -->
@@ -16,21 +31,6 @@
     </v-col>
   </v-row>
 </template>
-
-<script lang="ts" setup>
-useHead({
-  title: "Home",
-  meta: [
-    // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-    {
-      hid: "description",
-      name: "description",
-      content:
-        "Home page of personal website. It contains details about my work experience and my education background.",
-    },
-  ],
-});
-</script>
 
 <style scoped>
 .page-container {
