@@ -5,10 +5,8 @@ const title = "Giorgos Topsis";
 <template>
   <v-app>
     <v-app-bar class="px-3" fixed app elevate-on-scroll>
-      <v-toolbar-title class="ml-0">
-        <h2 class="logo text-subtitle-1 text-sm-h6 text-md-h5 text-wrap">
-          <nuxt-link to="/"> {{ title }} </nuxt-link>
-        </h2>
+      <v-toolbar-title class="ml-0 logo text-h6 text-md-h5 text-wrap">
+        <nuxt-link to="/"> {{ title }} </nuxt-link>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -20,7 +18,7 @@ const title = "Giorgos Topsis";
             nav
             align="center"
           >
-            <v-list-item class="nav-item mb-0">
+            <v-list-item class="nav-item mb-0 mr-1">
               <nuxt-link to="/" class="text-subtitle-1 text-secondary"
                 >Projects</nuxt-link
               >
@@ -50,6 +48,10 @@ const title = "Giorgos Topsis";
 </template>
 
 <style>
+.logo {
+  min-width: 170px;
+}
+
 .logo a {
   text-decoration: none;
   color: var(--v-theme-primary-base);
@@ -72,6 +74,8 @@ const title = "Giorgos Topsis";
 .nav .nav-item {
   background: transparent;
   transition: border-bottom 0.25s ease;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
 }
 
 .nav .nav-item a {
@@ -79,17 +83,8 @@ const title = "Giorgos Topsis";
   text-decoration: none;
 }
 
-.nav .nav-item a:hover {
-}
-
-.nav .nav-item a.router-link-active {
-}
-
-.nav .nav-item:has(a:hover) {
-  border-bottom: 1px solid rgb(var(--v-theme-secondary));
-}
-
+.nav .nav-item:has(a:hover),
 .nav .nav-item:has(a.router-link-active) {
-  border-bottom: 1px solid rgb(var(--v-theme-secondary));
+  border-bottom-color: rgb(var(--v-theme-secondary));
 }
 </style>
