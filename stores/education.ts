@@ -3,7 +3,7 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
     {
       id: 1,
       avatar: {
-        img: "uoc_logo.webp",
+        img: "/images/uoc_logo.webp",
 
         alt: "Logo of University of Crete",
         bgColor: "#000",
@@ -36,7 +36,7 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
     {
       id: 2,
       avatar: {
-        img: "chalmers_logo.webp",
+        img: "/images/chalmers_logo.webp",
 
         alt: "Logo of Chalmers University of Technology",
         bgColor: "#fff",
@@ -60,7 +60,7 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
     {
       id: 3,
       avatar: {
-        img: "uoc_logo.webp",
+        img: "/images/uoc_logo.webp",
 
         alt: "Logo of University of Crete",
         bgColor: "#000",
@@ -83,7 +83,7 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
     {
       id: 4,
       avatar: {
-        img: "uoc_cyprus_logo.webp",
+        img: "/images/uoc_cyprus_logo.webp",
 
         alt: "Logo of University of Cyprus",
         bgColor: "#fff",

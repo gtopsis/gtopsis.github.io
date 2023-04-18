@@ -29,7 +29,7 @@ function navigateToMeetup(url: string) {
         >
           <v-img
             class="white--text align-end"
-            :src="`/images/${meetup.src}`"
+            :src="meetup.src"
             :alt="meetup.description"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"

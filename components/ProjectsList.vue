@@ -27,7 +27,7 @@ function navigateToProjectAsset(url: string) {
             height="200"
             gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             cover
-            :src="`/images/${project.src}`"
+            :src="project.src"
             :alt="project.imageDescription"
           >
             <v-card-title v-text="project.title"></v-card-title>

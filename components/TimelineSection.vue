@@ -78,7 +78,7 @@ const timelineItems = computed(() => {
                   >
                     <v-img
                       contain
-                      :src="`/images/${item.avatar.img}`"
+                      :src="item.avatar.img"
                       :alt="item.avatar.alt"
                       class="firm-logo"
                       width="32"
