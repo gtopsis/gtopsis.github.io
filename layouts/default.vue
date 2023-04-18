@@ -43,7 +43,7 @@ const title = "Giorgos Topsis";
       </v-container>
     </v-main>
 
-    <v-footer role="contentinfo" class="mt-10">
+    <v-footer role="contentinfo" class="mt-16">
       <main-footer></main-footer>
     </v-footer>
   </v-app>

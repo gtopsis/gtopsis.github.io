@@ -64,20 +64,12 @@ const { aboutMe } = storeToRefs(useAboutMeStore());
 
       <!-- timeline section -->
       <v-col cols="12" class="section px-0 mb-16 mx-0">
-        <v-row class="justify-space-between no-gutters">
-          <v-col cols="12" mb="2">
-            <TimelineSection content="experience" />
-          </v-col>
-        </v-row>
+        <TimelineSection content="experience" />
       </v-col>
 
       <!-- timeline section -->
       <v-col cols="12" class="section px-0 mb-16 mx-0">
-        <v-row class="justify-space-between no-gutters">
-          <v-col cols="12" mb="2">
-            <TimelineSection content="education" />
-          </v-col>
-        </v-row>
+        <TimelineSection content="education" />
       </v-col>
     </v-row>
   </v-container>
