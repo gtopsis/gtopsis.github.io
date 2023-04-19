@@ -123,8 +123,7 @@ export default defineNuxtConfig({
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
+  buildModules: [
     // https://go.nuxtjs.dev/axios
     // '@nuxtjs/axios',
     [
@@ -134,6 +133,7 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxtjs/google-fonts",
+    "nuxt-purgecss",
   ],
 
   css: [
