@@ -58,7 +58,7 @@ export default defineNuxtConfig({
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: "./public/images/portfolio.webp",
+          content: "/images/portfolio.webp",
         },
 
         // Open Graph
@@ -93,12 +93,12 @@ export default defineNuxtConfig({
         {
           hid: "og:image",
           property: "og:image",
-          content: "./public/images/portfolio.webp",
+          content: "/images/portfolio.webp",
         },
         {
           hid: "og:image:secure_url",
           property: "og:image:secure_url",
-          content: "./public/images/portfolio.webp",
+          content: "/images/portfolio.webp",
         },
         {
           hid: "og:image:alt",
