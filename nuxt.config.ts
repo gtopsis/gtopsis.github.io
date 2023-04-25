@@ -133,7 +133,7 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxtjs/google-fonts",
-    // "nuxt-purgecss",
+    "nuxt-purgecss",
   ],
 
   css: [
