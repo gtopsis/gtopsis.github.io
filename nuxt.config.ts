@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       titleTemplate: "%s",
-      // title: "Giorgos Topsis",
       htmlAttrs: {
         lang: "en",
       },
@@ -40,11 +39,11 @@ export default defineNuxtConfig({
           name: "twitter:card",
           content: "summary_large_image",
         },
-        // {
-        //   hid: 'twitter:url',
-        //   name: 'twitter:url',
-        //   content: 'https://nuxtjs.org'
-        // },
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          content: "https://gtopsis.github.io",
+        },
         {
           hid: "twitter:title",
           name: "twitter:title",
@@ -59,7 +58,7 @@ export default defineNuxtConfig({
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: "./images/portfolio.png",
+          content: "./public/images/portfolio.webp",
         },
 
         // Open Graph
@@ -77,7 +76,7 @@ export default defineNuxtConfig({
         {
           hid: "og:url",
           property: "og:url",
-          content: "https://nuxtjs.org",
+          content: "https://gtopsis.github.io",
         },
         {
           hid: "og:title",
@@ -94,18 +93,19 @@ export default defineNuxtConfig({
         {
           hid: "og:image",
           property: "og:image",
-          content: "./images/Twitter-card.png",
+          content: "./public/images/portfolio.webp",
         },
         {
           hid: "og:image:secure_url",
           property: "og:image:secure_url",
-          content: "./images/Twitter-card.png",
+          content: "./public/images/portfolio.webp",
         },
-        // {
-        //   hid: 'og:image:alt',
-        //   property: 'og:image:alt',
-        //   content: 'NuxtJS'
-        // }
+        {
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content:
+            "Picture of the hero sections of the website. It contains a logo, menu bar and a big heading introducing myself as a software engineer.",
+        },
       ],
       link: [
         {
@@ -133,7 +133,7 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxtjs/google-fonts",
-    "nuxt-purgecss",
+    // "nuxt-purgecss",
   ],
 
   css: [

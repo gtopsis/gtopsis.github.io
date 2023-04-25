@@ -7,7 +7,7 @@ useHead({
       hid: "description",
       name: "description",
       content:
-        "Home page of personal website. It contains details about my work experience and my education background.",
+        "Home page of my personal website. It contains details about my participation on activities and several personal projects and .",
     },
   ],
 });
