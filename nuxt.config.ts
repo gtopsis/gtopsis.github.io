@@ -1,5 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
+const websitePreviewImage = "/images/website-preview.webp";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
@@ -58,7 +60,7 @@ export default defineNuxtConfig({
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: "/images/portfolio.webp",
+          content: websitePreviewImage,
         },
 
         // Open Graph
@@ -93,12 +95,12 @@ export default defineNuxtConfig({
         {
           hid: "og:image",
           property: "og:image",
-          content: "/images/portfolio.webp",
+          content: websitePreviewImage,
         },
         {
           hid: "og:image:secure_url",
           property: "og:image:secure_url",
-          content: "/images/portfolio.webp",
+          content: websitePreviewImage,
         },
         {
           hid: "og:image:alt",
