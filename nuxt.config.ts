@@ -123,7 +123,7 @@ export default defineNuxtConfig({
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  buildModules: [
+  modules: [
     // https://go.nuxtjs.dev/axios
     // '@nuxtjs/axios',
     [
