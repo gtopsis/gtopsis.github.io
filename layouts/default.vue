@@ -89,7 +89,11 @@ const title = "Giorgos Topsis";
   text-decoration: none;
 }
 
-.nav .nav-item:has(a:hover),
+/* counter measure in case :has is not supported on the browser */
+.nav .nav-item:hover {
+  border-bottom-color: rgb(var(--v-theme-secondary));
+}
+
 .nav .nav-item:has(a.router-link-active) {
   border-bottom-color: rgb(var(--v-theme-secondary));
 }
