@@ -135,6 +135,7 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxtjs/google-fonts",
+    "@nuxt/image-edge",
     // "nuxt-purgecss",
   ],
 

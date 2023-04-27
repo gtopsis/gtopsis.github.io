@@ -22,16 +22,17 @@ function navigateToProjectAsset(url: string) {
     <v-row dense>
       <v-col v-for="project in projects" :key="project.title" cols="12" md="4">
         <v-card class="mx-auto" max-width="400">
-          <v-img
+          <nuxt-img
             class="align-end text-white"
-            height="200"
-            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            cover
+            :placeholder="15"
             :src="project.src"
+            fit="outside"
+            loading="lazy"
+            sizes="sm:400px md:400px lg:400px"
             :alt="project.imageDescription"
           >
-            <v-card-title v-text="project.title"></v-card-title>
-          </v-img>
+          </nuxt-img>
+          <v-card-title v-text="project.title"></v-card-title>
 
           <v-card-text>
             <p class="project-description">{{ project.description }}</p>
