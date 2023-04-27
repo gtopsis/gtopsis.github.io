@@ -21,21 +21,23 @@ function navigateToMeetup(url: string) {
     </v-row>
 
     <v-row dense justify="center">
-      <v-col v-for="(meetup, index) in meetups" :key="index" cols="12" md="3">
+      <v-col v-for="(meetup, index) in meetups" :key="index" cols="12" md="4">
         <v-card
           class="meetup-card mx-auto"
           max-width="400"
           @click="navigateToMeetup(meetup.link)"
         >
-          <v-img
-            class="white--text align-end"
+          <nuxt-picture
+            :img-attrs="{ class: 'align-end text-white' }"
             :src="meetup.src"
             :alt="meetup.description"
-            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            height="200px"
+            placeholder
+            fit="cover"
+            loading="lazy"
+            sizes="sm:400px md:400px lg:350px"
           >
-            <v-card-title v-text="meetup.title"></v-card-title>
-          </v-img>
+          </nuxt-picture>
+          <v-card-title v-text="meetup.title"></v-card-title>
         </v-card>
       </v-col>
     </v-row>
