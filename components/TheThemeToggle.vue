@@ -5,7 +5,11 @@ const theme = useTheme();
 const themesNames = ["customLight", "customDark"];
 
 const disabledTheme = computed(() =>
-  theme.global.current.value.dark ? themesNames[0] : themesNames[1]
+  theme.global.current.value.dark ? "light" : "dark"
+);
+
+const themeToggleIcon = computed(() =>
+  disabledTheme.value === "light" ? "sun" : "moon"
 );
 
 function toggleDarkMode() {
@@ -23,7 +27,7 @@ function toggleDarkMode() {
         <template #activator="{ props }">
           <font-awesome-icon
             class="toggle"
-            :icon="['fas', disabledTheme === 'light' ? 'sun' : 'moon']"
+            :icon="['fas', themeToggleIcon]"
             v-bind="props"
             @click="toggleDarkMode"
           >
