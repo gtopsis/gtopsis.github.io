@@ -38,9 +38,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     icons: {
       defaultSet: "fa",
       aliases,
-      sets: {
-        fa,
-      },
+      sets: { fa },
     },
   });
 
