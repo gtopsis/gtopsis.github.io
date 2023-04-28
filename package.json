@@ -37,7 +37,6 @@
     "eslint-plugin-vue": "^9.11.0",
     "nuxi": "^3.4.2",
     "nuxt": "^3.4.2",
-    "nuxt-purgecss": "^2.0.0",
     "vite-plugin-vuetify": "^1.0.2",
     "vuetify": "^3.2.1"
   }
