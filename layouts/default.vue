@@ -1,5 +1,19 @@
 <script setup lang="ts">
+import { useTheme } from "vuetify";
+
 const title = "Giorgos Topsis";
+
+const theme = useTheme();
+const themesNames = ["customLight", "customDark"];
+
+onMounted(() => {
+  const isDarkThemeEnabled = localStorage.getItem("dark_theme");
+
+  theme.global.name.value =
+    !isDarkThemeEnabled || isDarkThemeEnabled === "false"
+      ? themesNames[0]
+      : themesNames[1];
+});
 </script>
 
 <template>

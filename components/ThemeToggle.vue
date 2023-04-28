@@ -2,24 +2,17 @@
 import { useTheme } from "vuetify";
 
 const theme = useTheme();
+const themesNames = ["customLight", "customDark"];
 
 const disabledTheme = computed(() =>
-  !theme.global.current.value.dark ? "dark" : "light"
+  theme.global.current.value.dark ? themesNames[0] : themesNames[1]
 );
 
-onMounted(() => {
-  const isDarkThemeEnabled = localStorage.getItem("dark_theme");
-
-  theme.global.name.value = isDarkThemeEnabled === "false" ? "light" : "dark";
-});
-
 function toggleDarkMode() {
-  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
+  const isDarkTheme = theme.global.current.value.dark;
+  theme.global.name.value = isDarkTheme ? themesNames[0] : themesNames[1];
 
-  localStorage.setItem(
-    "dark_theme",
-    theme.global.current.value.dark.toString()
-  );
+  localStorage.setItem("dark_theme", isDarkTheme.toString());
 }
 </script>
 
@@ -27,12 +20,12 @@ function toggleDarkMode() {
   <v-row class="theme-toggle-container mx-0" align="center" justify="center">
     <v-col class="px-2 py-1">
       <v-tooltip location="bottom end" aria-labelledby="themeTogglePromptText">
-        <template v-slot:activator="{ props }">
+        <template #activator="{ props }">
           <font-awesome-icon
             class="toggle"
             :icon="['fas', disabledTheme === 'light' ? 'sun' : 'moon']"
-            @click="toggleDarkMode"
             v-bind="props"
+            @click="toggleDarkMode"
           >
           </font-awesome-icon>
         </template>
@@ -46,7 +39,6 @@ function toggleDarkMode() {
 <style scoped>
 .theme-toggle-container {
   height: 100%;
-  /* width: 40px !important; */
 }
 .toggle {
   cursor: pointer;

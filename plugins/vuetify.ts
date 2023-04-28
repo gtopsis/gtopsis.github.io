@@ -29,10 +29,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     components,
     directives,
     theme: {
-      defaultTheme: "light",
+      defaultTheme: "customLight",
       themes: {
-        light: customLight,
-        dark: customDark,
+        customLight,
+        customDark,
       },
     },
     icons: {
