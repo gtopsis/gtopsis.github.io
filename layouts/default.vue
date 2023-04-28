@@ -25,8 +25,8 @@ onMounted(() => {
 
       <v-spacer></v-spacer>
 
-      <template #append class="mr-0">
-        <nav role="navigation" aria-label="Primary">
+      <template #append>
+        <nav class="mr-0" role="navigation" aria-label="Primary">
           <v-list
             class="nav d-inline-flex flex-row justify-end"
             nav
@@ -47,7 +47,7 @@ onMounted(() => {
           </v-list>
         </nav>
 
-        <theme-toggle class="ml-1"></theme-toggle>
+        <TheThemeToggle class="ml-1" />
       </template>
     </v-app-bar>
 
@@ -58,7 +58,7 @@ onMounted(() => {
     </v-main>
 
     <v-footer role="contentinfo" class="mt-16">
-      <main-footer></main-footer>
+      <TheFooter />
     </v-footer>
   </v-app>
 </template>
