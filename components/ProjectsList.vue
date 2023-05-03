@@ -23,13 +23,13 @@ function navigateToProjectAsset(url: string) {
       <v-col v-for="project in projects" :key="project.title" cols="12" md="4">
         <v-card class="mx-auto" max-width="400">
           <nuxt-picture
-            :img-attrs="{ class: 'align-end text-white' }"
+            :img-attrs="{ style: 'display:block; width:100%' }"
             :src="project.src"
             :alt="project.imageDescription"
             placeholder
             loading="lazy"
-            fill="cover"
-            sizes="sm:400px md:400px lg:350px"
+            fit="cover"
+            sizes="xs:400px sm:450px md:350px lg:350px xl:400px"
           >
           </nuxt-picture>
           <v-card-title v-text="project.title"></v-card-title>
@@ -62,5 +62,10 @@ function navigateToProjectAsset(url: string) {
 <style scoped>
 .project-description {
   min-height: 105px;
+}
+
+.custom img {
+  object-fit: cover;
+  display: block;
 }
 </style>
