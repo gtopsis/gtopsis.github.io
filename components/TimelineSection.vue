@@ -79,7 +79,6 @@ const timelineItems = computed(() => {
                     <nuxt-img
                       :src="item.avatar.img"
                       :alt="item.avatar.alt"
-                      placeholder
                       fit="fill"
                       width="31"
                       height="31"
