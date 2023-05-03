@@ -28,13 +28,13 @@ function navigateToMeetup(url: string) {
           @click="navigateToMeetup(meetup.link)"
         >
           <nuxt-picture
-            :img-attrs="{ class: 'align-end text-white' }"
+            :img-attrs="{ style: 'display:block; width:100%' }"
             :src="meetup.src"
             :alt="meetup.description"
             placeholder
             fit="cover"
             loading="lazy"
-            sizes="sm:400px md:400px lg:350px"
+            sizes="xs:400px sm:450px md:350px lg:350px xl:400px"
           >
           </nuxt-picture>
           <v-card-title v-text="meetup.title"></v-card-title>
