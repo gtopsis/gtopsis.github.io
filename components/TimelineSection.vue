@@ -76,15 +76,15 @@ const timelineItems = computed(() => {
                     class="timeline-avatar"
                     v-bind="props"
                   >
-                    <v-img
-                      contain
+                    <nuxt-img
                       :src="item.avatar.img"
                       :alt="item.avatar.alt"
-                      class="firm-logo"
-                      width="32"
-                      height="32"
+                      fit="fill"
+                      width="31"
+                      height="31"
+                      placeholder
                     >
-                    </v-img>
+                    </nuxt-img>
                   </v-avatar>
                 </template>
 
@@ -147,12 +147,6 @@ const timelineItems = computed(() => {
 </template>
 
 <style scoped>
-.firm-logo {
-  /* width: 45px;
-  height: 45px; */
-  cursor: pointer;
-}
-
 .timeline-item-card {
   max-width: 300px;
 }
