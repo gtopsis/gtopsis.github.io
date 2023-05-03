@@ -70,27 +70,25 @@ const timelineItems = computed(() => {
                 location="bottom"
                 aria-labelledby="timelineItemTooltipText"
               >
-                <template #activator="{ props }">
+                <template #activator="{ props: tooltipProps }">
                   <v-avatar
                     :size="avatarSize"
                     class="timeline-avatar"
-                    v-bind="props"
+                    v-bind="tooltipProps"
                   >
                     <nuxt-img
                       :src="item.avatar.img"
                       :alt="item.avatar.alt"
+                      placeholder
                       fit="fill"
                       width="31"
                       height="31"
-                      placeholder
                     >
                     </nuxt-img>
                   </v-avatar>
                 </template>
 
-                <span id="timelineItemTooltipText">{{
-                  item.avatar.label.text
-                }}</span>
+                <span id="timelineItemTooltipText">{{ item.avatar.alt }}</span>
               </v-tooltip>
             </template>
 

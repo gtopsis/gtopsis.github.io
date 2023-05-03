@@ -4,7 +4,7 @@ export const useJobsStore = defineStore("JobsStore", () => {
       id: 1,
       avatar: {
         img: "/images/fairlo_logo.webp",
-        alt: "Logo of software agency Fairlo",
+        alt: "Logo of fintech Fairlo",
         bgColor: "#fff",
         label: {
           text: "Fairlo",
@@ -85,7 +85,7 @@ export const useJobsStore = defineStore("JobsStore", () => {
         },
       },
 
-      title: "Back-End Web Developer",
+      title: "Full-Stack Web Developer",
       roles: [
         {
           jobTitle: "Back-End Web Developer",
@@ -122,7 +122,7 @@ export const useJobsStore = defineStore("JobsStore", () => {
       avatar: {
         img: "/images/forth_logo.webp",
 
-        alt: "Logo of FORTH in Greece",
+        alt: "Logo of Foundation for Research and Technology in Greece",
         bgColor: "#fff",
         label: {
           text: "Laboratory HCI of ICS-FORTH",
