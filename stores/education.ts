@@ -19,20 +19,19 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
         {
           jobTitle: "Back End Web Developer",
           period: {
-            start: "September 2016",
-            end: "November 2019",
+            start: "2016-09-01",
+            end: "2019-11-30",
           },
         },
       ],
       period: {
-        start: "September 2016",
-        end: "November 2019",
+        start: "2016-09-01",
+        end: "2019-11-30",
       },
       description: "",
       tools: [],
       readMore: "",
     },
-
     {
       id: 2,
       avatar: {
@@ -50,8 +49,8 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
         "ERASMUS+ for Postgraduate studies - Interaction Design and Technologies",
       roles: [],
       period: {
-        start: "August 2017",
-        end: "January 2018",
+        start: "2017-08-01",
+        end: "2018-01-31",
       },
       description: "",
       tools: [],
@@ -73,8 +72,8 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
       title: "BSc in Computer Science",
       roles: [],
       period: {
-        start: "September 2011",
-        end: "March 2015",
+        start: "2011-09-01",
+        end: "2015-03-31",
       },
       description: "",
       tools: [],
@@ -96,8 +95,8 @@ export const useStudiesStore = defineStore("StudiesStore", () => {
       title: "ERASMUS+ for Undergraduate studies",
       roles: [],
       period: {
-        start: "September 2014",
-        end: "January 2015",
+        start: "2014-09-01",
+        end: "2015-01-31",
       },
       description: "",
       tools: [],

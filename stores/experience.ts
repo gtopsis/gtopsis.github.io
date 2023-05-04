@@ -17,14 +17,14 @@ export const useJobsStore = defineStore("JobsStore", () => {
         {
           jobTitle: "Back-End Engineer",
           period: {
-            start: "September 2021",
-            end: "February 2023",
+            start: "2021-09-01",
+            end: "2023-02-24",
           },
         },
       ],
       period: {
-        start: "September 2021",
-        end: "February 2023",
+        start: "2021-09-01",
+        end: "2023-02-24",
       },
       description: "",
       tools: [
@@ -54,14 +54,14 @@ export const useJobsStore = defineStore("JobsStore", () => {
         {
           jobTitle: "Back-End Web Developer",
           period: {
-            start: "January 2021",
-            end: "June 2021",
+            start: "2021-01-01",
+            end: "2021-06-30",
           },
         },
       ],
       period: {
-        start: "January 2021",
-        end: "June 2021",
+        start: "2021-01-01",
+        end: "2021-06-30",
       },
       description: "",
       tools: [
@@ -90,21 +90,21 @@ export const useJobsStore = defineStore("JobsStore", () => {
         {
           jobTitle: "Back-End Web Developer",
           period: {
-            start: "July 2019",
-            end: "July 2020",
+            start: "2019-06-01",
+            end: "2020-07-31",
           },
         },
         {
           jobTitle: "Front-End Web Developer",
           period: {
-            start: "July 2019",
-            end: "July 2020",
+            start: "2019-07-01",
+            end: "2020-05-31",
           },
         },
       ],
       period: {
-        start: "July 2019",
-        end: "July 2020",
+        start: "2019-07-01",
+        end: "2020-07-31",
       },
       description: "",
       tools: [
@@ -135,14 +135,14 @@ export const useJobsStore = defineStore("JobsStore", () => {
         {
           jobTitle: "Back-End Web Developer",
           period: {
-            start: "Jun 2016",
-            end: "Jun 2019",
+            start: "2016-06-01",
+            end: "2019-06-30",
           },
         },
       ],
       period: {
-        start: "Jun 2016",
-        end: "Jun 2019",
+        start: "2016-06-01",
+        end: "2019-06-30",
       },
       description: "",
       tools: [

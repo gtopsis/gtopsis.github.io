@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
+import dayjs from "dayjs";
 import { useStudiesStore } from "~~/stores/education.js";
 import { useJobsStore } from "~~/stores/experience.js";
 
@@ -39,6 +40,18 @@ const timelineItems = computed(() => {
 
   return [];
 });
+
+function getDatePeriod({ start, end }: { start: string; end: string }) {
+  const startDate = dayjs(start).format("MMM YYYY");
+  const endDate = dayjs(end).format("MMM YYYY");
+  const monthsDiff = Math.round(dayjs(end).diff(dayjs(start), "month", true));
+
+  const datePeriodDuration = `${Math.floor(monthsDiff / 12)} yr ${
+    monthsDiff % 12
+  } mos`;
+
+  return `${startDate} - ${endDate}   (${datePeriodDuration})`;
+}
 </script>
 
 <template>
@@ -94,16 +107,14 @@ const timelineItems = computed(() => {
             <v-card class="timeline-item-card">
               <v-card-title>
                 <span
-                  class="timeline-item-title text-left text-subtitle text-md-body-1 text-bold text-wrap font-weight-bold"
+                  class="timeline-item-title text-left text-body-1 text-md-subtitle text-bold text-wrap font-weight-bold"
                 >
                   {{ item.title }}
                 </span>
               </v-card-title>
               <v-card-subtitle>
-                <span>
-                  {{ item.period.start }} -
-                  {{ item.period.end }}
-                </span>
+                <span> {{ getDatePeriod(item.period) }} </span>
+
                 <p class="mb-0">
                   <a
                     v-if="item.avatar.label.link"
