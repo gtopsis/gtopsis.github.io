@@ -37,7 +37,7 @@ const { aboutMe } = storeToRefs(useAboutMeStore());
             <v-col cols="auto" align-self="center">
               <p class="text-center text-h5 text-sm-h5 text-md-h4">
                 What You
-                <span class="text-white bg-primary">Read</span>
+                <mark class="text-white bg-primary">Read</mark>
                 is What you Get
               </p>
             </v-col>

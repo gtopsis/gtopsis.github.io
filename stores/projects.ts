@@ -34,7 +34,7 @@ export const useProjectsStore = defineStore("ProjectsStore", () => {
     },
     {
       src: "/images/website-uoc-radio-showcase.webp",
-      title: "Website for the UoC radio station",
+      title: "Website for radio station RASTAPANK",
       imageDescription:
         "A browser window which contains a part of the website for the FM radio of University of Crete. This part is the logo, the navigation menu, a background image and an one-line music player.",
       description:
