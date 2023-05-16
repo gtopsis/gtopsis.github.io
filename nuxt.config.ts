@@ -186,4 +186,14 @@ export default defineNuxtConfig({
     treeShake: true,
     defaultAssets: false,
   },
+  $production: {
+    routeRules: {
+      "/img/**": {
+        headers: { "cache-control": `public,max-age=84600,s-maxage=84600` },
+      },
+      "/_nuxt/**": {
+        headers: { "cache-control": `public,max-age=84600,s-maxage=84600` },
+      },
+    },
+  },
 });
