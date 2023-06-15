@@ -56,11 +56,11 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
 
   let datePeriodDuration = "";
   if (monthsDurationText && yearsDurationText) {
-    datePeriodDuration = `${yearsDurationText} ${monthsDurationText}`;
+    datePeriodDuration = `${numYears}${yearsDurationText} ${numMonths}${monthsDurationText}`;
   } else if (monthsDurationText) {
-    datePeriodDuration = `${yearsDurationText}`;
+    datePeriodDuration = `${numMonths}${monthsDurationText}`;
   } else if (yearsDurationText) {
-    datePeriodDuration = `${monthsDurationText}`;
+    datePeriodDuration = `${numYears}${yearsDurationText}`;
   }
 
   return `${startDate} - ${endDate}   (${datePeriodDuration})`;
