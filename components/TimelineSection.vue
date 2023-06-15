@@ -51,8 +51,7 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
 
   const monthsDurationText =
     numMonths === 0 ? "" : numMonths === 1 ? "mo" : "mos";
-  const yearsDurationText =
-    numYears === 0 ? "" : numMonths === 1 ? "yr" : "yrs";
+  const yearsDurationText = numYears === 0 ? "" : numYears === 1 ? "yr" : "yrs";
 
   let datePeriodDuration = "";
   if (monthsDurationText && yearsDurationText) {
