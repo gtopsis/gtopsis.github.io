@@ -46,9 +46,22 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
   const endDate = dayjs(end).format("MMM YYYY");
   const monthsDiff = Math.round(dayjs(end).diff(dayjs(start), "month", true));
 
-  const datePeriodDuration = `${Math.floor(monthsDiff / 12)} yr ${
-    monthsDiff % 12
-  } mos`;
+  const numYears = Math.floor(monthsDiff / 12);
+  const numMonths = monthsDiff % 12;
+
+  const monthsDurationText =
+    numMonths === 0 ? "" : numMonths === 1 ? "mo" : "mos";
+  const yearsDurationText =
+    numYears === 0 ? "" : numMonths === 1 ? "yr" : "yrs";
+
+  let datePeriodDuration = "";
+  if (monthsDurationText && yearsDurationText) {
+    datePeriodDuration = `${yearsDurationText} ${monthsDurationText}`;
+  } else if (monthsDurationText) {
+    datePeriodDuration = `${yearsDurationText}`;
+  } else if (yearsDurationText) {
+    datePeriodDuration = `${monthsDurationText}`;
+  }
 
   return `${startDate} - ${endDate}   (${datePeriodDuration})`;
 }
