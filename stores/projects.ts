@@ -3,7 +3,7 @@ import { Project } from "~~/models";
 export const useProjectsStore = defineStore("ProjectsStore", () => {
   const projects: Project[] = reactive([
     {
-      src: "/images/pagni-health-exams-aggregator-preview.webp",
+      src: "/images/pagni-health-exams-aggregator-showcase.webp",
       imageDescription:
         "A browser window which contains a part of the desktop app. This part is the list of visual charts which indicate the progress of health data across the time.",
       title: "PAGNI health exams aggregator Desktop app",
