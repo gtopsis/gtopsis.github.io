@@ -3,6 +3,16 @@ import { Project } from "~~/models";
 export const useProjectsStore = defineStore("ProjectsStore", () => {
   const projects: Project[] = reactive([
     {
+      src: "/images/pagni-health-exams-aggregator-preview.webp",
+      imageDescription:
+        "A browser window which contains a part of the desktop app. This part is the list of visual charts which indicate the progress of health data across the time.",
+      title: "PAGNI health exams aggregator Desktop app",
+      description:
+        "Desktop app which aims to support patients to track the progress of their blood tests' data across time in an intuitive and usable way.",
+      demo: "",
+      code: "https://github.com/gtopsis/PAGNI-health-exams-aggregator",
+    },
+    {
       src: "/images/website-cs352-showcase.webp",
       imageDescription:
         "A browser window which contains a part of the website of the course cs352. This part is the the logo, navigation bar and some basic info of the course.",
