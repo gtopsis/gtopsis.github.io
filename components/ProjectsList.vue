@@ -40,6 +40,7 @@ function navigateToProjectAsset(url: string) {
 
           <v-card-actions>
             <v-btn
+              v-if="project.demo"
               color="secondary"
               @click="navigateToProjectAsset(project.demo)"
             >
@@ -47,6 +48,7 @@ function navigateToProjectAsset(url: string) {
             </v-btn>
 
             <v-btn
+              v-if="project.code"
               color="secondary"
               @click="navigateToProjectAsset(project.code)"
             >
