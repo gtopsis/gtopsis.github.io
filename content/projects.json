@@ -29,7 +29,7 @@
     "title": "Simple music app API",
     "imageDescription": "A browser window which contains a subset of the documented API endpoints about Artists, Recordings, etc. of the music app.",
     "description": "The backend side of a music app in which albums, artists and tracks are associated properly.",
-    "demo": "#",
+    "demo": "",
     "code": "https://github.com/gtopsis/music-app"
   },
   {
