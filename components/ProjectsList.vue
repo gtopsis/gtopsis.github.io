@@ -36,7 +36,7 @@ function navigateToProjectAsset(url: string) {
 
           <v-card-text>
             <p class="project-description">{{ project.description }}</p>
-            <ul class="project-building-tools">
+            <ul v-if="false" class="project-building-tools">
               <li>test</li>
               <li>test</li>
             </ul>
@@ -70,7 +70,7 @@ function navigateToProjectAsset(url: string) {
   min-height: 105px;
 }
 
-.project-building-tools li{
-    display: inline-block;
+.project-building-tools li {
+  display: inline-block;
 }
 </style>
