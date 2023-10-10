@@ -36,6 +36,10 @@ function navigateToProjectAsset(url: string) {
 
           <v-card-text>
             <p class="project-description">{{ project.description }}</p>
+            <ul class="project-building-tools">
+              <li>test</li>
+              <li>test</li>
+            </ul>
           </v-card-text>
 
           <v-card-actions>
@@ -66,8 +70,7 @@ function navigateToProjectAsset(url: string) {
   min-height: 105px;
 }
 
-.custom img {
-  object-fit: cover;
-  display: block;
+.project-building-tools li{
+    display: inline-block;
 }
 </style>
