@@ -11,7 +11,7 @@ const socials = [
     text: "Go to my GitHub profile",
   },
 ];
-const personalMessage = "Build playing with Nuxt.js";
+const personalMessage = "Build playing with Nuxt.js and Vuetify";
 const footerText = "Giorgos Topsis 2022";
 </script>
 
