@@ -36,9 +36,16 @@ function navigateToProjectAsset(url: string) {
 
           <v-card-text>
             <p class="project-description">{{ project.description }}</p>
-            <ul v-if="false" class="project-building-tools">
-              <li>test</li>
-              <li>test</li>
+            <ul
+              v-if="project.buildingTools.length"
+              class="project-building-tools"
+            >
+              <li
+                v-for="(buildingTool, index) in project.buildingTools"
+                :key="index"
+              >
+                {{ buildingTool }}
+              </li>
             </ul>
           </v-card-text>
 
@@ -71,6 +78,8 @@ function navigateToProjectAsset(url: string) {
 }
 
 .project-building-tools li {
-  display: inline-block;
+  /* display: inline-block; */
+  padding: 0;
+  margin-left: 16px;
 }
 </style>

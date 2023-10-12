@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   demo: string;
   code: string;
+  buildingTools: string[];
 }
 
 export interface Meetup {

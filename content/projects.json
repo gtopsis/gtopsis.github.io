@@ -6,7 +6,7 @@
     "description": "Desktop app which aims to support patients to track the progress of their blood tests' data across time in an intuitive and usable way.",
     "demo": "",
     "code": "https://github.com/gtopsis/PAGNI-health-exams-aggregator",
-    "buildingTools": ["Electron", "Vue.js 3", "Vite"]
+    "buildingTools": ["Electron", "Vue.js", "Vite", "Vuetify"]
   },
   {
     "src": "/images/website-cs352-showcase.webp",
@@ -14,7 +14,8 @@
     "title": "Website for course cs-352",
     "description": "Static website for the course cs352 (year 2017-2018) in Computer Science department at UOC. It was serving the content (lectures, tutorials, assignments and course project) of the course to the students.",
     "demo": "https://gtopsis.github.io/Course-cs352-website/",
-    "code": "https://github.com/gtopsis/Course-cs352-website"
+    "code": "https://github.com/gtopsis/Course-cs352-website",
+    "buildingTools": ["Bootstrap"]
   },
   {
     "src": "/images/loan-calculator-showcase.webp",
@@ -22,7 +23,8 @@
     "imageDescription": "A browser window which contains a small modal window with a form. This form represents the calculator of the monthly payment based on a loan's duration and payment-in-advance amount.",
     "description": "A simple calculator for the monthly payment of a loan, based on the payment-in-advance and its duration.",
     "demo": "https://gtopsis.github.io/loan-calculator/",
-    "code": "https://github.com/gtopsis/loan-calculator"
+    "code": "https://github.com/gtopsis/loan-calculator",
+    "buildingTools": ["Vue.js", "Bootstrap"]
   },
   {
     "src": "/images/music-app-api-showcase.webp",
@@ -30,7 +32,8 @@
     "imageDescription": "A browser window which contains a subset of the documented API endpoints about Artists, Recordings, etc. of the music app.",
     "description": "The backend side of a music app in which albums, artists and tracks are associated properly.",
     "demo": "",
-    "code": "https://github.com/gtopsis/music-app"
+    "code": "https://github.com/gtopsis/music-app",
+    "buildingTools": ["OpenAPI 3", "Vue.js", "Bootstrap"]
   },
   {
     "src": "/images/website-uoc-radio-showcase.webp",
@@ -38,6 +41,7 @@
     "imageDescription": "A browser window which contains a part of the website for the FM radio of University of Crete. This part is the logo, the navigation menu, a background image and an one-line music player.",
     "description": "A responsive and usable website (showcase - not the current one) of RASTAPANK, the team behind the FM radio station of university of Crete.",
     "demo": "https://gtopsis.github.io/Uoc-radio-website/index.html",
-    "code": "https://github.com/gtopsis/Uoc-radio-website"
+    "code": "https://github.com/gtopsis/Uoc-radio-website",
+    "buildingTools": ["Bootstrap", "JavaScript"]
   }
 ]
