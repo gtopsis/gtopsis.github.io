@@ -6,7 +6,7 @@ import { useJobsStore } from "~~/stores/experience.js";
 
 const { mobile } = useDisplay();
 const timelineDirection = computed(() =>
-  mobile.value ? "vertical" : "horizontal"
+  mobile.value ? "vertical" : "horizontal",
 );
 
 const avatarSize = 44;

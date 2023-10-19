@@ -3,7 +3,7 @@ import projects from "@/content/projects.json";
 
 export const useProjectsStore = defineStore("ProjectsStore", () => {
   const projectsList: ComputedRef<Project[]> = computed(
-    (): Project[] => projects
+    (): Project[] => projects,
   );
 
   return { projectsList };

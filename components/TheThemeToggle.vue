@@ -5,11 +5,11 @@ const theme = useTheme();
 const themesNames = ["customLight", "customDark"];
 
 const disabledTheme = computed(() =>
-  theme.global.current.value.dark ? "light" : "dark"
+  theme.global.current.value.dark ? "light" : "dark",
 );
 
 const themeToggleIcon = computed(() =>
-  disabledTheme.value === "light" ? "sun" : "moon"
+  disabledTheme.value === "light" ? "sun" : "moon",
 );
 
 function toggleDarkMode() {
