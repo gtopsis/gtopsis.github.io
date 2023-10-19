@@ -37,7 +37,9 @@ function navigateToMeetup(url: string) {
             sizes="xs:400px sm:450px md:350px lg:350px xl:400px"
           >
           </nuxt-picture>
-          <v-card-title v-text="meetup.title"></v-card-title>
+          <v-card-title >
+            <strong :title="meetup.title">{{ meetup.title }}</strong>
+          </v-card-title>
         </v-card>
       </v-col>
     </v-row>
