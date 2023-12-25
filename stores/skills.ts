@@ -1,4 +1,4 @@
-import { Skill } from "~/models";
+import type { Skill } from "~/models";
 import { getToolDescription } from "~~/utils/tootls-descriptions";
 
 export const useSkillsStore = defineStore("SkillsStore", () => {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useMeetupsStore } from "../stores/meetups";
-import { Meetup } from "~/models";
+import type { Meetup } from "~/models";
 
 const title = "Participation on several Meetups";
 

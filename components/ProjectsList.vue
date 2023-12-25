@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useProjectsStore } from "../stores/projects";
-import { Project } from "~/models";
+import type { Project } from "~/models";
 
 const title = "Personal Projects";
 const { projectsList } = storeToRefs(useProjectsStore());

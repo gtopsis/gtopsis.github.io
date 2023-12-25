@@ -1,4 +1,4 @@
-import { Project } from "~~/models";
+import type { Project } from "~~/models";
 import projects from "@/content/projects.json";
 
 export const useProjectsStore = defineStore("ProjectsStore", () => {

@@ -1,4 +1,4 @@
-import { Meetup } from "~~/models";
+import type { Meetup } from "~~/models";
 import meetups from "@/content/meetups.json";
 
 export const useMeetupsStore = defineStore("MeetupsStore", () => {
