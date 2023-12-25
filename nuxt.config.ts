@@ -134,9 +134,9 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "acceptHMRUpdate", "storeToRefs"],
       },
     ],
-    "@nuxtjs/google-fonts",
+    "@nuxtjs/google-fonts", // "nuxt-purgecss",
     "@nuxt/image-edge",
-    // "nuxt-purgecss",
+    "@nuxt/image",
   ],
 
   css: [
