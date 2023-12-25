@@ -17,7 +17,7 @@ const headline = {
           <span>
             {{ headline.pre }}
             <nuxt-link
-              :to="{ name: 'AboutPage' }"
+              :to="{ name: 'about' }"
               class="first-name text-secondary"
             >
               {{ headline.name.text }}

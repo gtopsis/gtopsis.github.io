@@ -7,6 +7,11 @@
 </template>
 
 <style>
+.page-container {
+  max-width: 1100px !important;
+  margin: 0 auto;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.25s;
