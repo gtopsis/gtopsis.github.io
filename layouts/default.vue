@@ -18,8 +18,8 @@ onMounted(() => {
 
 <template>
   <v-app>
-    <v-app-bar class="px-3" fixed app elevate-on-scroll>
-      <v-toolbar class="page-container">
+    <v-app-bar class="px-3" color="background" fixed app elevate-on-scroll>
+      <v-toolbar class="page-container" color="background">
         <v-toolbar-title class="ml-0 logo text-h6 text-md-h5 text-wrap">
           <nuxt-link to="/"> {{ title }} </nuxt-link>
         </v-toolbar-title>
