@@ -9,7 +9,7 @@
 <style>
 .page-container {
   max-width: 1100px !important;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 
 .page-enter-active,

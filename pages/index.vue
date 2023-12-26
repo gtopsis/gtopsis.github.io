@@ -33,8 +33,7 @@ useHead({
 </template>
 
 <style scoped>
-.page-container {
-  max-width: 1100px !important;
-  margin: 0 auto;
+.section {
+  overflow: auto;
 }
 </style>
