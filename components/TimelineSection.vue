@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify";
+// import { useDisplay } from "vuetify";
 import dayjs from "dayjs";
 import { useStudiesStore } from "~~/stores/education.js";
 import { useJobsStore } from "~~/stores/experience.js";
 
-const { mobile } = useDisplay();
-const timelineDirection = computed(() =>
-  mobile.value ? "vertical" : "horizontal",
+// const { mobile } = useDisplay();
+const timelineDirection = computed(
+  () => "vertical"
+  // mobile.value ? "vertical" : "horizontal",
 );
 
 const avatarSize = 44;
@@ -168,7 +169,7 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
 
 <style scoped>
 .timeline-item-card {
-  max-width: 300px;
+  max-width: 700px;
 }
 
 /* cheat to override vuetify style for timeline item */
