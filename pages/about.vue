@@ -49,7 +49,7 @@ const { aboutMe } = storeToRefs(useAboutMeStore());
       <v-col cols="12" class="section px-0 mb-16 mx-0">
         <v-container class="about-me-container" fluid full-width>
           <v-row full-width justify="center" align="center">
-            <v-col cols="12" md="10" lg="9" class="px-4">
+            <v-col cols="12" md="10" lg="9" class="px-0">
               <p
                 v-for="(paragraph, i) in aboutMe"
                 :key="i"

@@ -12,7 +12,7 @@ function navigateToProjectAsset(url: string) {
 </script>
 
 <template>
-  <v-container fluid full-width>
+  <v-container class="pa-0" fluid full-width>
     <v-row align="center" class="justify-md-center justify-sm-left">
       <v-col cols="auto" class="mb-8">
         <h1>{{ title }}</h1>
