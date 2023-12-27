@@ -26,7 +26,7 @@ onMounted(() => {
 
         <v-spacer></v-spacer>
 
-        <v-toolbar-items>
+        <v-toolbar-items class="d-flex align-center">
           <nav class="mr-0" role="navigation" aria-label="Primary">
             <v-list
               class="nav d-inline-flex flex-row justify-end"
