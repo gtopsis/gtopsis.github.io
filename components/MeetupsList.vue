@@ -23,7 +23,7 @@ function navigateToMeetup(url: string) {
     <v-row dense justify="center">
       <v-col v-for="(meetup, index) in meetups" :key="index" cols="12" md="4">
         <v-card
-          class="meetup-card mx-auto"
+          class="meetup-card mx-auto mb-3"
           max-width="400"
           @click="navigateToMeetup(meetup.link)"
         >

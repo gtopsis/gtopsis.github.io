@@ -34,6 +34,6 @@ useHead({
 
 <style scoped>
 .section {
-  overflow: auto;
+  overflow: hidden;
 }
 </style>

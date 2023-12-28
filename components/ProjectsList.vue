@@ -21,7 +21,7 @@ function navigateToProjectAsset(url: string) {
 
     <v-row dense>
       <v-col v-for="project in projects" :key="project.title" cols="12" md="4">
-        <v-card class="mx-auto" max-width="400">
+        <v-card class="mx-auto mb-3" max-width="400">
           <nuxt-picture
             :img-attrs="{ style: 'display:block; width:100%' }"
             :src="project.src"
