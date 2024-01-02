@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useAboutMeStore } from "../stores/aboutMe";
+
 useHead({
   title: "About",
   meta: [

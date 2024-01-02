@@ -125,7 +125,7 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
                   {{ item.title }}
                 </span>
               </v-card-title>
-              <v-card-subtitle>
+              <v-card-subtitle class="pb-3">
                 <span> {{ getDatePeriod(item.period) }} </span>
 
                 <p class="mb-0">
@@ -142,7 +142,10 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
                   }}</span>
                 </p>
               </v-card-subtitle>
-              <v-card-text>
+              <v-card-text
+                v-if="item.description && item.tools.length"
+                class="pt-0"
+              >
                 <p class="ma-0">
                   {{ item.description }}
                 </p>
