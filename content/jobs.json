@@ -2,6 +2,42 @@
   {
     "id": 1,
     "avatar": {
+      "img": "/images/prosperty_logo.webp",
+      "alt": "Logo of Prosperty",
+      "bgColor": "#603DF8",
+      "label": {
+        "text": "Prosperty",
+        "link": "https://theprosperty.com/"
+      }
+    },
+
+    "title": "Front-End Engineer",
+    "roles": [
+      {
+        "jobTitle": "Front-End Engineer",
+        "period": {
+          "start": "2023-12-11",
+          "end": "Present"
+        }
+      }
+    ],
+    "period": {
+      "start": "2023-12-11",
+      "end": "Present"
+    },
+    "description": "",
+    "tools": [
+      "TypeScript",
+      "Vue.js",
+      "Nuxt",
+      "Vitest",
+      "Taileind CSS"
+    ],
+    "readMore": ""
+  },
+  {
+    "id": 1,
+    "avatar": {
       "img": "/images/fairlo_logo.webp",
       "alt": "Logo of fintech Fairlo",
       "bgColor": "#fff",

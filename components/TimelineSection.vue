@@ -106,8 +106,8 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
                       :src="item.avatar.img"
                       :alt="item.avatar.alt"
                       fit="fill"
-                      width="31"
-                      height="31"
+                      width="30"
+                      height="30"
                     >
                     </nuxt-img>
                   </v-avatar>
