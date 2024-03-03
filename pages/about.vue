@@ -60,7 +60,6 @@ const { aboutMe } = storeToRefs(useAboutMeStore());
                 {{ paragraph }}
               </p>
             </v-col>
-            <v-col cols="12"> </v-col>
           </v-row>
         </v-container>
       </v-col>

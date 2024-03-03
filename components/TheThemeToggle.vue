@@ -30,8 +30,7 @@ function toggleDarkMode() {
             :icon="['fas', themeToggleIcon]"
             v-bind="props"
             @click="toggleDarkMode"
-          >
-          </font-awesome-icon>
+          />
         </template>
 
         <span id="themeTogglePromptText">Enable {{ disabledTheme }} mode</span>
@@ -44,6 +43,7 @@ function toggleDarkMode() {
 .theme-toggle-container {
   height: 100%;
 }
+
 .toggle {
   cursor: pointer;
 }

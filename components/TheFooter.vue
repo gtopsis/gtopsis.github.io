@@ -11,7 +11,9 @@ const socials = [
     text: "Go to my GitHub profile",
   },
 ];
+
 const personalMessage = "Build playing with Nuxt.js and Vuetify";
+
 const footerText = "Giorgos Topsis 2022";
 </script>
 
@@ -28,6 +30,7 @@ const footerText = "Giorgos Topsis 2022";
           >
             <a :href="social.link" :aria-label="social.text" target="_blank">
               <span class="visually-hidden">{{ social.text }}</span>
+
               <font-awesome-icon
                 class="social-link text-secondary"
                 :icon="['fab', social.icon]"
@@ -37,6 +40,7 @@ const footerText = "Giorgos Topsis 2022";
           </v-col>
         </v-row>
       </v-col>
+      
       <v-col cols="12" class="py-1">
         <p class="text-center ma-0">{{ personalMessage }}</p>
         <p class="text-center ma-0">&copy; {{ footerText }}</p>

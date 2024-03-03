@@ -27,16 +27,20 @@ const skills = skillsList.value;
             <v-col cols="12" class="text-center column__header">
               <h3 class="">{{ skill.title }}</h3>
             </v-col>
+
             <v-col cols="12" class="column__main text-center">
               {{ skill.desc }}
             </v-col>
+
             <v-col cols="12" class="column__footer">
               <h4 class="text-center secondary-text mb-2">
                 {{ skill.heading }}
               </h4>
+
               <ul class="ma-0 pa-0 tech-list text-center">
                 <li v-for="(tech, j) in skill.technologies" :key="j">
                   <span v-if="tech.desc == ''"> {{ tech.title }} </span>
+                  
                   <v-tooltip
                     v-else
                     top

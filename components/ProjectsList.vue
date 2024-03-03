@@ -32,6 +32,7 @@ function navigateToProjectAsset(url: string) {
             sizes="xs:400px sm:450px md:350px lg:350px xl:400px"
           >
           </nuxt-picture>
+          
           <v-card-title :title="project.title">
             <strong> {{ project.title }} </strong>
           </v-card-title>
