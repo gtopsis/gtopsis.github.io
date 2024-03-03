@@ -5,11 +5,12 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    // "eslint:recommended",
-    // "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "@nuxtjs/eslint-config-typescript",
     "plugin:prettier/recommended",
     "plugin:vue/vue3-essential",
+    "plugin:vuejs-accessibility/recommended"
   ],
   overrides: [],
   parser: "vue-eslint-parser",
@@ -18,6 +19,6 @@ module.exports = {
     sourceType: "module",
     parser: "@typescript-eslint/parser",
   },
-  plugins: ["vue", "@typescript-eslint", "vitest"],
+  plugins: ["vue", "@typescript-eslint", "vitest","vuejs-accessibility"],
   rules: {},
 };
