@@ -1,12 +1,18 @@
 <script lang="ts" setup>
 import type { IContactItem } from "~/types/interfaces";
 
-defineProps<{ meetup: IContactItem }>();
+interface Props {
+  meetup: IContactItem;
+}
+
+withDefaults(defineProps<Props>(), {
+  meetup: () => ({}) as IContactItem,
+});
 </script>
 
 <template>
   <v-card
-    class="mx-auto"
+    class="mx-auto meetup-card"
     :href="meetup.url"
     max-width="90%"
     rel="noopener"

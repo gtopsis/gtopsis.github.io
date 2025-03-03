@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import type { IContactItem } from "~/types/interfaces";
 
-defineProps<{
+interface Props {
   meetups: IContactItem[];
-}>();
+}
+
+defineProps<Props>();
 
 const runtimeConfig = useRuntimeConfig();
 

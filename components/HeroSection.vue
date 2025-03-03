@@ -1,5 +1,14 @@
 <script setup lang="ts">
-const headline = {
+interface Headline {
+  pre: string;
+  name: {
+    text: string;
+    phoneticTranscription: string;
+  };
+  post: string;
+}
+
+const headline: Headline = {
   pre: "I'm ",
   name: {
     text: "Giorgos",
