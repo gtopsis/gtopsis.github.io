@@ -36,7 +36,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "core-js": "^3.41.0",
     "dayjs": "^1.11.13",
-    "globals": "^15.15.0"
+    "globals": "^16.0.0"
   },
   "devDependencies": {
     "@vitest/eslint-plugin": "^1.1.40",
@@ -55,12 +55,12 @@
     "@vue/test-utils": "^2.4.6",
     "eslint": "^9.24.0",
     "eslint-plugin-security": "^3.0.1",
-    "eslint-plugin-vue": "^9.33.0",
+    "eslint-plugin-vue": "^10.0.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "happy-dom": "^17.4.4",
     "nuxi": "^3.24.1",
     "nuxt": "^3.16.2",
-    "pinia": "^2.3.1",
+    "pinia": "^3.0.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.29.1",
     "vite": "^6.2.5",
