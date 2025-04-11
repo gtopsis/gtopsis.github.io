@@ -130,6 +130,7 @@ export default defineNuxtConfig({
     // https://go.nuxtjs.dev/axios
     // '@nuxtjs/axios',
     // "nuxt-purgecss",
+    "@nuxt/eslint",
     "@nuxtjs/google-fonts",
     // "@nuxt/image-edge",
     "@nuxt/image",

@@ -9,52 +9,55 @@ import pluginVueA11y from "eslint-plugin-vuejs-accessibility";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 import pluginSecurity from "eslint-plugin-security";
+import withNuxt from "./.nuxt/eslint.config.mjs";
 
-export default ts.config(
-  {
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: "module",
-      globals: {
-        ...globals.browser,
-      },
-    },
-  },
-
-  js.configs.recommended,
-  ...ts.configs.recommended,
-  pluginSecurity.configs.recommended,
-  ...eslintPluginVue.configs["flat/recommended"],
-  {
-    files: ["*.vue", "**/*.vue"],
-    languageOptions: {
-      parserOptions: {
-        ecmaVersion: "latest",
+export default withNuxt(
+  ts.config(
+    {
+      languageOptions: {
+        ecmaVersion: 2022,
         sourceType: "module",
-        parser: "@typescript-eslint/parser",
+        globals: {
+          ...globals.browser,
+        },
       },
     },
-  },
-
-  eslintPluginPrettierRecommended,
-
-  ...pluginVueA11y.configs["flat/recommended"],
-  {
-    rules: {
-      // override/add rules settings here, such as:
-      // "vuejs-accessibility/alt-text": "error"
+  
+    js.configs.recommended,
+    ...ts.configs.recommended,
+    pluginSecurity.configs.recommended,
+    ...eslintPluginVue.configs["flat/recommended"],
+    {
+      files: ["*.vue", "**/*.vue"],
+      languageOptions: {
+        parserOptions: {
+          ecmaVersion: "latest",
+          sourceType: "module",
+          parser: "@typescript-eslint/parser",
+        },
+      },
     },
-  },
-
-  {
-    files: ["**/*.test.ts"],
-    plugins: {
-      vitest,
+  
+    eslintPluginPrettierRecommended,
+  
+    ...pluginVueA11y.configs["flat/recommended"],
+    {
+      rules: {
+        // override/add rules settings here, such as:
+        // "vuejs-accessibility/alt-text": "error"
+      },
     },
-    rules: {
-      ...vitest.configs.recommended.rules,
+  
+    {
+      files: ["**/*.test.ts"],
+      plugins: {
+        vitest,
+      },
+      rules: {
+        ...vitest.configs.recommended.rules,
+      },
     },
-  },
-
-  { ignores: ["**/node_modules/**", "**/dist/**", "old/**"] },
-);
+  
+    { ignores: ["**/node_modules/**", "**/dist/**", "old/**"] },
+  )
+)
