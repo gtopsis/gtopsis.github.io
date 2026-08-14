@@ -2,10 +2,10 @@
   {
     "src": "/images/pirate-thief-showcase.webp",
     "imageDescription": "A browser window which contains the home page of the app. This part is a list of job ads and their details, as well as several tools (filters etc.) to support their management.",
-    "title": "Pirate Thief app",
+    "title": "Greek Tech Jobs Map app",
     "description": "A web app to showcase, in a more intuitive way, the list of jobs that are available from Startup-Pirate guy.",
-    "demo": "https://gtopsis.github.io/pirate-thief/",
-    "code": "https://github.com/gtopsis/pirate-thief",
+    "demo": "https://gtopsis.github.io/greek-tech-jobs-map/",
+    "code": "https://gtopsis.github.io/greek-tech-jobs-map/",
     "buildingToolsIds": ["typescript", "nuxtjs", "vuejs", "vite", "tailwindCSS"]
   },
   {
