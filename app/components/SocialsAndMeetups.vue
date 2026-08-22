@@ -11,11 +11,6 @@ const runtimeConfig = useRuntimeConfig();
 
 const socials: IContactItem[] = [
   {
-    icon: ["fab", "linkedin"],
-    url: "https://www.linkedin.com/in/",
-    title: "LinkedIn",
-  },
-  {
     icon: ["fab", "github"],
     url: "https://github.com/",
     title: "GitHub",
