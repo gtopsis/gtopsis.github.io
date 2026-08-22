@@ -197,7 +197,15 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      SOCIAL_NETWORKS_USERNAME: process.env.SOCIAL_NETWORKS_USERNAME,
+      // Base64-encoded so the raw handle isn't a plain, greppable literal
+      // sitting in the shipped client bundle/payload. This isn't a secret
+      // (running atob() on it gets the value straight back) -- it only
+      // raises the bar against bots that statically scan the bundle for
+      // recognizable url/username substrings instead of rendering the page.
+      // See SocialsAndMeetups.vue for where/why this is decoded.
+      SOCIAL_NETWORKS_USERNAME_B64: process.env.SOCIAL_NETWORKS_USERNAME
+        ? Buffer.from(process.env.SOCIAL_NETWORKS_USERNAME).toString("base64")
+        : "",
     },
   },
 

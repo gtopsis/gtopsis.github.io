@@ -9,14 +9,6 @@ defineProps<Props>();
 
 const runtimeConfig = useRuntimeConfig();
 
-const getFullUrl = (contactItem: IContactItem) => {
-  const socialItem = socials.find(({ title }) => title === contactItem.title);
-
-  return socialItem
-    ? socialItem.url + runtimeConfig.public.SOCIAL_NETWORKS_USERNAME
-    : contactItem.url;
-};
-
 const socials: IContactItem[] = [
   {
     icon: ["fab", "linkedin"],
@@ -29,6 +21,42 @@ const socials: IContactItem[] = [
     title: "GitHub",
   },
 ];
+
+function buildUrl(contactItem: IContactItem) {
+  const socialItem = socials.find(({ title }) => title === contactItem.title);
+  if (!socialItem) return contactItem.url;
+
+  const username = atob(
+    runtimeConfig.public.SOCIAL_NETWORKS_USERNAME_B64 || "",
+  );
+  return socialItem.url + username;
+}
+
+// Real profile links (LinkedIn/GitHub) aren't written into the DOM until a
+// genuine user interaction happens (focus, hover, touch). This keeps the
+// link fully native and accessible for real visitors -- the href is
+// resolved well before a keyboard/mouse/touch user could actually activate
+// it -- while bots that just render a page and scrape every `<a href>` out
+// of the resulting DOM (the common approach for bulk contact/profile
+// harvesting) see an inert "#" placeholder instead of a usable destination.
+const resolvedHrefs = ref<Record<number, string>>({});
+
+function resolveHref(item: IContactItem, index: number) {
+  if (resolvedHrefs.value[index]) return;
+  resolvedHrefs.value[index] = buildUrl(item);
+}
+
+function onActivate(item: IContactItem, index: number, event: MouseEvent) {
+  if (resolvedHrefs.value[index]) return;
+
+  // Fallback for activation paths that skip focus/hover/touchstart (e.g.
+  // some assistive tech or programmatic clicks): resolve and navigate
+  // manually instead of following the still-unresolved "#" href.
+  event.preventDefault();
+  const url = buildUrl(item);
+  resolvedHrefs.value[index] = url;
+  window.open(url, "_blank", "noopener,noreferrer");
+}
 </script>
 
 <template>
@@ -43,10 +71,15 @@ const socials: IContactItem[] = [
             class="pa-1"
           >
             <a
-              :href="getFullUrl(social)"
+              :href="resolvedHrefs[index] || '#'"
               :aria-label="social.title"
               target="_blank"
+              rel="nofollow noopener noreferrer"
               class="d-flex align-center text-decoration-none"
+              @focus="resolveHref(social, index)"
+              @pointerenter="resolveHref(social, index)"
+              @touchstart="resolveHref(social, index)"
+              @click="onActivate(social, index, $event)"
             >
               <font-awesome-icon
                 class="text-secondary me-2"

@@ -8,6 +8,31 @@ const visibleProjects = computed(() =>
   projectsList.value.filter(({ visible }) => visible !== false),
 );
 
+const runtimeConfig = useRuntimeConfig();
+
+// Same lazy-resolution approach as SocialsAndMeetups.vue: the GitHub
+// profile URL isn't written into the DOM until a genuine interaction
+// (focus/hover/touch) signals a real visitor, so bulk DOM-scraping bots
+// see an inert "#" instead of a usable profile link.
+const githubProfileHref = ref("");
+
+function resolveGithubProfileHref() {
+  if (githubProfileHref.value) return;
+
+  const username = atob(
+    runtimeConfig.public.SOCIAL_NETWORKS_USERNAME_B64 || "",
+  );
+  githubProfileHref.value = `https://github.com/${username}`;
+}
+
+function onActivateGithubProfile(event: MouseEvent) {
+  if (githubProfileHref.value) return;
+
+  event.preventDefault();
+  resolveGithubProfileHref();
+  window.open(githubProfileHref.value, "_blank", "noopener,noreferrer");
+}
+
 function navigateToProjectAsset(url: string) {
   window.open(url, "_blank");
 }
@@ -23,10 +48,14 @@ function navigateToProjectAsset(url: string) {
       <v-col class="mb-8 text-center">
         <h2>
           <a
-            href="http://github.com/gtopsis"
+            :href="githubProfileHref || '#'"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             class="text-secondary"
+            @focus="resolveGithubProfileHref"
+            @pointerenter="resolveGithubProfileHref"
+            @touchstart="resolveGithubProfileHref"
+            @click="onActivateGithubProfile"
             >See all projects</a
           >
         </h2>
