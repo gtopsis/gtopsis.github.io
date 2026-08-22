@@ -82,7 +82,8 @@
       "express",
       "postgresql",
       "typescript"
-    ]
+    ],
+    "visible": false
   },
   {
     "src": "/images/website-uoc-radio-showcase.webp",
