@@ -94,6 +94,7 @@ function onActivate(item: IContactItem, index: number, event: MouseEvent) {
 .contact-card {
   max-width: 400px;
   min-width: 300px;
+  margin: 0 auto;
   border: none;
   box-shadow: none;
   background-color: transparent;
