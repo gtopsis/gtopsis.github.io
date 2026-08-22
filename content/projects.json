@@ -2,7 +2,7 @@
   {
     "src": "/images/pirate-thief-showcase.webp",
     "imageDescription": "A browser window which contains the home page of the app. This part is a list of job ads and their details, as well as several tools (filters etc.) to support their management.",
-    "title": "Greek Tech Jobs Map app",
+    "title": "Greek Tech Jobs Map",
     "description": "A web app to showcase, in a more intuitive way, the list of jobs that are available from Startup-Pirate guy.",
     "demo": "https://gtopsis.github.io/greek-tech-jobs-map/",
     "code": "https://gtopsis.github.io/greek-tech-jobs-map/",
@@ -11,7 +11,7 @@
   {
     "src": "/images/brokery-showcase.webp",
     "imageDescription": "A browser window which contains the home page of the app. This part is a list of real estate assets with pictures and details, as well as several tools (filters etc.) to support their management.",
-    "title": "Brokery app",
+    "title": "Brokery",
     "description": "A web app to support real estate agents and brokers to manage their portfolios of property assets.",
     "demo": "https://brokery.pages.dev/property-listing",
     "code": "",
@@ -27,7 +27,7 @@
   {
     "src": "/images/pagni-health-exams-aggregator-showcase.webp",
     "imageDescription": "A browser window which contains a part of the desktop app. This part is the list of visual charts which indicate the progress of health data across the time.",
-    "title": "PAGNI health exams aggregator Desktop app",
+    "title": "PAGNI health exams aggregator",
     "description": "Desktop app which aims to support patients to track the progress of their blood tests' data across time in an intuitive and usable way.",
     "demo": "",
     "code": "https://github.com/gtopsis/PAGNI-health-exams-aggregator",
