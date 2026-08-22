@@ -1,50 +1,86 @@
 <script setup lang="ts">
-import { useTheme } from "vuetify";
+import { useColorTheme } from "~/composables/useColorTheme";
 
-const theme = useTheme();
-const themesNames = ["customLight", "customDark"];
+defineProps<{
+  /** Style as a floating, elevated circular button (used on mobile). */
+  fab?: boolean;
+}>();
 
-const disabledTheme = computed(() =>
-  theme.global.current.value.dark ? "light" : "dark",
-);
+const { isDark, disabledTheme, themeToggleIcon, toggle } = useColorTheme();
 
-const themeToggleIcon = computed(() =>
-  disabledTheme.value === "light" ? "sun" : "moon",
-);
+// v-tooltip's default `open-on-hover` opens the tooltip on the
+// "mouseenter" event. On touch devices, browsers fire a synthetic
+// "mouseenter" to emulate hover as soon as you tap the button, which
+// opens the tooltip and mutates the DOM mid-gesture. That can swallow
+// the tap's "click" event, so the theme toggle only reacted on the
+// *second* tap. Only enable hover-opening on devices that have real
+// hover/pointer support; keyboard focus keeps working regardless.
+const supportsHover = ref(false);
 
-function toggleDarkMode() {
-  const isDarkTheme = theme.global.current.value.dark;
-  theme.global.name.value = isDarkTheme ? themesNames[0] : themesNames[1];
-
-  localStorage.setItem("dark_theme", isDarkTheme.toString());
-}
+onMounted(() => {
+  supportsHover.value = window.matchMedia(
+    "(hover: hover) and (pointer: fine)",
+  ).matches;
+});
 </script>
 
 <template>
-  <v-row class="theme-toggle-container mx-0" align="center" justify="center">
-    <v-col class="px-2 py-1">
-      <v-tooltip location="bottom end" aria-labelledby="themeTogglePromptText">
-        <template #activator="{ props }">
-          <font-awesome-icon
-            class="toggle"
-            :icon="['fas', themeToggleIcon]"
-            v-bind="props"
-            @click="toggleDarkMode"
-          />
-        </template>
+  <v-tooltip
+    location="bottom end"
+    :open-on-hover="supportsHover"
+    :open-on-focus="true"
+  >
+    <template #activator="{ props: tooltipProps }">
+      <button
+        type="button"
+        class="theme-toggle"
+        :class="{ 'theme-toggle--fab': fab }"
+        v-bind="tooltipProps"
+        :aria-pressed="isDark"
+        :aria-label="`Enable ${disabledTheme} mode`"
+        @click="toggle"
+      >
+        <font-awesome-icon
+          :icon="['fas', themeToggleIcon]"
+          aria-hidden="true"
+        />
+      </button>
+    </template>
 
-        <span id="themeTogglePromptText">Enable {{ disabledTheme }} mode</span>
-      </v-tooltip>
-    </v-col>
-  </v-row>
+    <span>Enable {{ disabledTheme }} mode</span>
+  </v-tooltip>
 </template>
 
 <style scoped>
-.theme-toggle-container {
-  height: 100%;
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
-.toggle {
-  cursor: pointer;
+.theme-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.theme-toggle--fab {
+  position: fixed;
+  top: 72px;
+  right: 16px;
+  z-index: 1006;
+  width: 40px;
+  height: 40px;
+  background: rgb(var(--v-theme-surface));
+  box-shadow:
+    0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 </style>

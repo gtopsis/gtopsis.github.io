@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { useColorTheme } from "~/composables/useColorTheme";
+
+const { initFromStorage } = useColorTheme();
+
+onMounted(() => {
+  initFromStorage();
+});
+</script>
+
 <template>
   <div>
     <NuxtLayout>

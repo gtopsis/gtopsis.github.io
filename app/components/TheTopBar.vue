@@ -1,19 +1,9 @@
 <script setup lang="ts">
-import { useTheme } from "vuetify";
+import { useDisplay } from "vuetify";
 
 const title = "Giorgos Topsis";
 
-const theme = useTheme();
-const themesNames = ["customLight", "customDark"];
-
-onMounted(() => {
-  const isDarkThemeEnabled = localStorage.getItem("dark_theme");
-
-  theme.global.name.value =
-    !isDarkThemeEnabled || isDarkThemeEnabled === "false"
-      ? themesNames[0]
-      : themesNames[1];
-});
+const { mdAndUp } = useDisplay();
 </script>
 
 <template>
@@ -54,7 +44,7 @@ onMounted(() => {
         </v-list>
       </nav>
 
-      <TheThemeToggle class="ml-1 hidden-sm-and-down" />
+      <TheThemeToggle v-if="mdAndUp" class="ml-1" />
     </v-toolbar-items>
   </v-toolbar>
 </template>

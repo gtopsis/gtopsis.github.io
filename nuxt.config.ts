@@ -25,7 +25,6 @@ export default defineNuxtConfig({
           content: "width=device-width, initial-scale=1",
         },
         {
-          hid: "description",
           name: "description",
           content:
             "Everything about my work experience, education, personal projects and hobbies.",
@@ -38,28 +37,23 @@ export default defineNuxtConfig({
         // Twitter
         // Test on: https://cards-dev.twitter.com/validator
         {
-          hid: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image",
         },
         {
-          hid: "twitter:url",
           name: "twitter:url",
           content: "https://gtopsis.github.io",
         },
         {
-          hid: "twitter:title",
           name: "twitter:title",
           content: "Giorgos Topsis - My personal website!",
         },
         {
-          hid: "twitter:description",
           name: "twitter:description",
           content:
             "Everything about my work experience, education, personal projects and hobbies.",
         },
         {
-          hid: "twitter:image",
           name: "twitter:image",
           content: websitePreviewImage,
         },
@@ -67,44 +61,36 @@ export default defineNuxtConfig({
         // Open Graph
         // Test on: https://developers.facebook.com/tools/debug/
         {
-          hid: "og:site_name",
           property: "og:site_name",
           content: "Giorgos Topsis - My personal website!",
         },
         {
-          hid: "og:type",
           property: "og:type",
           content: "website",
         },
         {
-          hid: "og:url",
           property: "og:url",
           content: "https://gtopsis.github.io",
         },
         {
-          hid: "og:title",
           property: "og:title",
           content: "Giorgos Topsis - My personal website!",
         },
         {
-          hid: "og:description",
           property: "og:description",
           content:
             "Everything about my work experience, education, personal projects and hobbies.",
         },
 
         {
-          hid: "og:image",
           property: "og:image",
           content: websitePreviewImage,
         },
         {
-          hid: "og:image:secure_url",
           property: "og:image:secure_url",
           content: websitePreviewImage,
         },
         {
-          hid: "og:image:alt",
           property: "og:image:alt",
           content:
             "Picture of the hero sections of the website. It contains a logo, menu bar and a big heading introducing myself as a software engineer.",
@@ -165,10 +151,6 @@ export default defineNuxtConfig({
       "@fortawesome/fontawesome-svg-core",
       "@fortawesome/free-brands-svg-icons",
     ],
-  },
-
-  imports: {
-    dirs: ["~~/stores"],
   },
 
   typescript: {

@@ -1,31 +1,12 @@
 <script setup lang="ts">
-import { useTheme } from "vuetify";
+import { useDisplay } from "vuetify";
 
-const theme = useTheme();
-const themesNames = ["customLight", "customDark"];
-
-onMounted(() => {
-  const isDarkThemeEnabled = localStorage.getItem("dark_theme");
-
-  theme.global.name.value =
-    !isDarkThemeEnabled || isDarkThemeEnabled === "false"
-      ? themesNames[0]
-      : themesNames[1];
-});
+const { mdAndUp } = useDisplay();
 </script>
 
 <template>
   <v-app>
-    <v-fab
-      app
-      icon
-      location="top end"
-      class="mt-16 hidden-md-and-up"
-      size="small"
-      aria-labelledby="toggleThemeMobileButton"
-    >
-      <TheThemeToggle id="toggleThemeMobileButton" />
-    </v-fab>
+    <TheThemeToggle v-if="!mdAndUp" fab />
 
     <v-app-bar
       class="px-3"
