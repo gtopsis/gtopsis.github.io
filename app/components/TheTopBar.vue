@@ -18,7 +18,7 @@ const { mdAndUp } = useDisplay();
           class="nav w-full d-inline-flex flex-row justify-space-between text-center"
           nav
         >
-          <v-list-item class="nav-item mb-0 mr-1" role="option">
+          <v-list-item class="nav-item mb-0 mr-1">
             <nuxt-link
               :to="{ name: 'index' }"
               class="text-subtitle-1 text-secondary"
@@ -27,13 +27,13 @@ const { mdAndUp } = useDisplay();
             </nuxt-link>
           </v-list-item>
 
-          <v-list-item class="logo mx-2 text-wrap" role="option">
+          <v-list-item class="logo mx-2 text-wrap">
             <span class="text-md-h5 font-weight-semibold">
               {{ title }}
             </span>
           </v-list-item>
 
-          <v-list-item class="nav-item mb-0 ml-1" role="option">
+          <v-list-item class="nav-item mb-0 ml-1">
             <nuxt-link
               :to="{ name: 'about' }"
               class="text-subtitle-1 text-secondary"
