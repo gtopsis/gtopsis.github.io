@@ -5,7 +5,7 @@ const footerText = "Giorgos Topsis 2022";
 </script>
 
 <template>
-  <div class="pa-2 py-1">
+  <div class="w-100 pa-2 py-1">
     <p class="text-center ma-0">{{ personalMessage }}</p>
     <p class="text-center ma-0">&copy; {{ footerText }}</p>
   </div>
