@@ -1,4 +1,4 @@
-import jobs from "@/content/jobs.json";
+import jobs from "~~/content/jobs.json";
 
 export const useJobsStore = defineStore("JobsStore", () => {
   const jobsList = computed(() => jobs);

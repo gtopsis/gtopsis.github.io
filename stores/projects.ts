@@ -1,4 +1,4 @@
-import projects from "@/content/projects.json";
+import projects from "~~/content/projects.json";
 import type { IProject } from "~/types/interfaces";
 
 export const useProjectsStore = defineStore("ProjectsStore", () => {

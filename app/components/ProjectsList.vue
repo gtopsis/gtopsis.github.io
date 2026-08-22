@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useProjectsStore } from "../stores/projects";
+import { useProjectsStore } from "~~/stores/projects";
 import TechToolList from "./TechToolList.vue";
 
 const title = "Personal Projects";

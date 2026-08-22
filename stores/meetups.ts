@@ -1,4 +1,4 @@
-import meetups from "@/content/meetups.json";
+import meetups from "~~/content/meetups.json";
 import type { IContactItem } from "~/types/interfaces";
 
 export const useMeetupsStore = defineStore("MeetupsStore", () => {

@@ -1,5 +1,5 @@
 import type { ISkill } from "~/types/interfaces";
-import { getToolDescription } from "~~/utils/tootls-descriptions";
+import { getToolDescription } from "~/utils/tootls-descriptions";
 
 export const useSkillsStore = defineStore("SkillsStore", () => {
   const skills: ISkill[] = reactive([

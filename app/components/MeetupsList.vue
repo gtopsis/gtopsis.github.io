@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useMeetupsStore } from "../stores/meetups";
+import { useMeetupsStore } from "~~/stores/meetups";
 
 const title = "Join Me Here";
 

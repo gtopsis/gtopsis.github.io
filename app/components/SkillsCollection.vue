@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSkillsStore } from "../stores/skills";
+import { useSkillsStore } from "~~/stores/skills";
 
 const title = "Technical Skills";
 

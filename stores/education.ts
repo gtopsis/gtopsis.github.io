@@ -1,4 +1,4 @@
-import studies from "@/content/studies.json";
+import studies from "~~/content/studies.json";
 
 export const useStudiesStore = defineStore("StudiesStore", () => {
   const studiesList = computed(() => studies);
