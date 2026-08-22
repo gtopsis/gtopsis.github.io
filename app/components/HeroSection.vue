@@ -19,30 +19,23 @@ const headline: Headline = {
 </script>
 
 <template>
-  <v-container class="hero-container pa-0 d-flex" fluid>
-    <v-row no-gutters>
-      <v-col class="px-0" cols="12" align-self="center">
-        <h1 class="headline text-h5 text-md-h4 font-weight-regular text-break">
-          <span class="d-block" data-testid="headline-1">
-            {{ headline.pre }}
+  <div class="hero-container pa-0 d-flex align-center">
+    <h1 class="headline text-h5 text-md-h4 font-weight-regular text-break">
+      <span class="d-block" data-testid="headline-1">
+        {{ headline.pre }}
 
-            <nuxt-link
-              :to="{ name: 'about' }"
-              class="first-name text-secondary"
-            >
-              {{ headline.name.text }}
-            </nuxt-link>
+        <nuxt-link :to="{ name: 'about' }" class="first-name text-secondary">
+          {{ headline.name.text }}
+        </nuxt-link>
 
-            {{ headline.name.phoneticTranscription }},
-          </span>
+        {{ headline.name.phoneticTranscription }},
+      </span>
 
-          <span class="d-block" data-testid="headline-2">
-            {{ headline.post }}
-          </span>
-        </h1>
-      </v-col>
-    </v-row>
-  </v-container>
+      <span class="d-block" data-testid="headline-2">
+        {{ headline.post }}
+      </span>
+    </h1>
+  </div>
 </template>
 
 <style scoped>

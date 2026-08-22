@@ -8,15 +8,9 @@ const { meetupsList } = storeToRefs(useMeetupsStore());
 
 <template>
   <v-container class="pa-0" fluid full-width>
-    <v-row align="center" class="justify-center">
-      <v-col cols="auto" class="mb-8">
-        <h1>{{ title }}</h1>
-      </v-col>
-    </v-row>
+    <SectionHeading :title="title" justify="justify-center" class="mb-8" />
 
-    <v-row dense justify="center">
-      <SocialsAndMeetups :meetups="meetupsList" />
-    </v-row>
+    <SocialsAndMeetups :meetups="meetupsList" />
   </v-container>
 </template>
 

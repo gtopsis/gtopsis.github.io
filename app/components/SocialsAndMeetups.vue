@@ -58,11 +58,10 @@ function onActivate(item: IContactItem, index: number, event: MouseEvent) {
   <section>
     <v-card class="pa-2 contact-card">
       <v-card-text>
-        <v-row class="socials-list ma-0" justify="center">
-          <v-col
+        <ul class="socials-list ma-0 pa-0">
+          <li
             v-for="(social, index) in [...socials, ...meetups]"
             :key="index"
-            cols="12"
             class="pa-1"
           >
             <a
@@ -84,8 +83,8 @@ function onActivate(item: IContactItem, index: number, event: MouseEvent) {
               />
               <span class="text-secondary">{{ social.title }}</span>
             </a>
-          </v-col>
-        </v-row>
+          </li>
+        </ul>
       </v-card-text>
     </v-card>
   </section>
@@ -98,5 +97,10 @@ function onActivate(item: IContactItem, index: number, event: MouseEvent) {
   border: none;
   box-shadow: none;
   background-color: transparent;
+}
+
+.socials-list {
+  list-style-type: none;
+  text-align: center;
 }
 </style>
