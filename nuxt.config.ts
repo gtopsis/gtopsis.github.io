@@ -136,6 +136,10 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {
+    provider: "none",
+  },
+
   css: [
     "vuetify/styles",
     // "vuetify/lib/styles/main.sass",
