@@ -83,14 +83,9 @@ const aboutMe = [
         </span>
       </v-col>
 
-      <!-- timeline section -->
-      <v-col md="6" sm="12" class="section px-0 mb-16 mx-0">
-        <TimelineSection content="experience" />
-      </v-col>
-
-      <!-- timeline section -->
-      <v-col md="6" sm="12" class="section px-0 mb-16 mx-0">
-        <TimelineSection content="education" />
+      <!-- experience section -->
+      <v-col cols="12" md="10" lg="9" class="section px-0 mb-16 mx-0">
+        <ExperienceList />
       </v-col>
     </v-row>
   </v-container>

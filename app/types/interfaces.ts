@@ -16,16 +16,6 @@ export interface IContactItem {
   description?: string;
 }
 
-export interface IAvatarDetails {
-  img: string;
-  alt: string;
-  bgColor: string;
-  label: {
-    text: string;
-    link: string;
-  };
-}
-
 interface ITechnology {
   desc: string;
   key: string;
