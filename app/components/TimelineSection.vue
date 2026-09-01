@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import dayjs from "dayjs";
-import { useStudiesStore } from "~~/stores/education.js";
-import { useJobsStore } from "~~/stores/experience.js";
+import studies from "~~/content/studies.json";
+import jobs from "~~/content/jobs.json";
 
 const props = defineProps({
   content: {
@@ -24,11 +24,9 @@ const timelineTitle = computed(() => {
 
 const timelineItems = computed(() => {
   if (props.content === "experience") {
-    const { jobsList } = storeToRefs(useJobsStore());
-    return jobsList.value;
+    return jobs;
   } else if (props.content === "education") {
-    const { studiesList } = storeToRefs(useStudiesStore());
-    return studiesList.value;
+    return studies;
   }
 
   return [];

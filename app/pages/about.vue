@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useAboutMeStore } from "~~/stores/aboutMe";
+import aboutMeDescription from "~~/content/about.json";
 
 useHead({
   title: "About",
@@ -19,7 +19,19 @@ const head = {
   image: "./images/Twitter-card.png",
 };
 
-const { aboutMe } = storeToRefs(useAboutMeStore());
+const {
+  studies: intro,
+  workExperience,
+  values: personal1,
+  hobbies: personal2,
+} = aboutMeDescription;
+
+const aboutMe = [
+  { order: 1, text: intro },
+  { order: 2, text: workExperience },
+  { order: 3, text: personal1 },
+  { order: 4, text: personal2 },
+];
 </script>
 
 <template>

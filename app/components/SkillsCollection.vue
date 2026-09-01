@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { useSkillsStore } from "~~/stores/skills";
+import { skillsList } from "~/utils/skills";
 
 const title = "Technical Skills";
-
-const { skillsList } = storeToRefs(useSkillsStore());
 </script>
 
 <template>
