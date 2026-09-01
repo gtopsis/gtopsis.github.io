@@ -24,12 +24,13 @@ const tooltipId = computed(
         v-bind="tooltipProps"
         :aria-describedby="tooltipId"
       >
-        <v-img
+        <nuxt-img
           :src="avatar.img"
           :alt="avatar.alt"
           fit="fill"
           width="30"
           height="30"
+          loading="lazy"
         />
       </v-avatar>
     </template>
