@@ -12,9 +12,9 @@ withDefaults(defineProps<Props>(), {
 <template>
   <v-row align="center" :class="justify">
     <v-col cols="auto">
-      <h1>
+      <h2>
         <slot>{{ title }}</slot>
-      </h1>
+      </h2>
     </v-col>
   </v-row>
 </template>

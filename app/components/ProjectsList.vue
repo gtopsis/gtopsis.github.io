@@ -42,11 +42,11 @@ function navigateToProjectAsset(url: string) {
   <v-container class="pa-0" fluid full-width>
     <v-row class="align-center justify-md-center justify-sm-left">
       <v-col cols="12" class="mb-2">
-        <h1 class="text-center">{{ title }}</h1>
+        <h2 class="text-center text-h4">{{ title }}</h2>
       </v-col>
 
       <v-col class="mb-8 text-center">
-        <h2>
+        <p class="text-h6">
           <a
             :href="githubProfileHref || '#'"
             target="_blank"
@@ -58,7 +58,7 @@ function navigateToProjectAsset(url: string) {
             @click="onActivateGithubProfile"
             >See all projects</a
           >
-        </h2>
+        </p>
       </v-col>
     </v-row>
 
@@ -139,13 +139,13 @@ function navigateToProjectAsset(url: string) {
 
     <v-row>
       <v-col cols="12" class="text-center">
-        <h4>
+        <p class="mb-0">
           Tool used for app previews/mockups is
           <a href="https://www.shots.so/" target="_blank" class="text-secondary"
             >Shots</a
           >
           ❤️
-        </h4>
+        </p>
       </v-col>
     </v-row>
   </v-container>
