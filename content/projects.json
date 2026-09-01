@@ -9,6 +9,15 @@
     "buildingToolsIds": ["typescript", "nuxtjs", "vuejs", "vite", "tailwindCSS"]
   },
   {
+    "src": "/images/agentic-config-explorer-showcase.webp",
+    "imageDescription": "A browser window which contains a part of the web app. This part is the list of agentic skills.",
+    "title": "Agentic Config Visualizer",
+    "description": "A local, no-backend tool that scans a project folder and visualizes its per-editor agentic coding configuration — skills, commands, agents, hooks, rules, MCP servers, and more — side by side across Claude Code, GitHub Copilot, OpenCode, and Cursor.",
+    "demo": "",
+    "code": "https://gtopsis.github.io/repo-agent-config-scanner",
+    "buildingToolsIds": ["typescript", "react.js", "vite"]
+  },
+  {
     "src": "/images/brokery-showcase.webp",
     "imageDescription": "A browser window which contains the home page of the app. This part is a list of real estate assets with pictures and details, as well as several tools (filters etc.) to support their management.",
     "title": "Brokery",
