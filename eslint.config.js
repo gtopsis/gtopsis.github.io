@@ -36,6 +36,14 @@ export default withNuxt(
           parser: "@typescript-eslint/parser",
         },
       },
+      rules: {
+        // Nuxt pages/layouts are routed by filename, so single-word
+        // names like about.vue/index.vue/default.vue are intentional.
+        "vue/multi-word-component-names": [
+          "error",
+          { ignores: ["about", "index", "default"] },
+        ],
+      },
     },
   
     eslintPluginPrettierRecommended,
