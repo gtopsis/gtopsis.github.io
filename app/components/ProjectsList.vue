@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { useProjectsStore } from "~~/stores/projects";
+import projects from "~~/content/projects.json";
 import TechToolList from "./TechToolList.vue";
 
 const title = "Personal Projects";
-const { projectsList } = storeToRefs(useProjectsStore());
 const visibleProjects = computed(() =>
-  projectsList.value.filter(({ visible }) => visible !== false),
+  projects.filter(({ visible }) => visible !== false),
 );
 
 const runtimeConfig = useRuntimeConfig();
