@@ -8,13 +8,23 @@ const props = defineProps<{
 const sortedList = computed(() => {
   return [...props.tools].sort((a, b) => (a > b ? 1 : -1));
 });
+
+const getToolOrWarn = (toolId: string) => {
+  const tool = getTool(toolId);
+  if (!tool) {
+    console.warn(`Unknown tool id: "${toolId}"`);
+  }
+  return tool;
+};
 </script>
 
 <template>
   <ul class="tool-list d-flex justify-center width-100">
-    <li v-for="toolId in sortedList" :key="toolId" class="mr-2 shrink">
-      <TechToolListItem :tool="getTool(toolId)" />
-    </li>
+    <template v-for="toolId in sortedList" :key="toolId">
+      <li v-if="getToolOrWarn(toolId)" class="mr-2 shrink">
+        <TechToolListItem :tool="getToolOrWarn(toolId)!" />
+      </li>
+    </template>
   </ul>
 </template>
 
