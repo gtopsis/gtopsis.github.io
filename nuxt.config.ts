@@ -120,7 +120,6 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     // "@nuxt/image-edge",
     "@nuxt/image",
-    "@pinia/nuxt",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error
