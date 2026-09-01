@@ -39,7 +39,11 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
 
 <template>
   <v-container class="pa-0">
-    <SectionHeading :title="sectionTitle" class="mb-8" />
+    <SectionHeading
+      :title="sectionTitle"
+      justify="justify-start"
+      class="mb-8"
+    />
 
     <v-row
       v-for="item in items"
@@ -52,9 +56,9 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
       </v-col>
 
       <v-col cols="12" md="9">
-        <h3 class="text-h6 mb-2">
-          {{ item.title }}
-          <span class="text-medium-emphasis font-weight-regular">·</span>
+        <h3 class="text-h6 mb-1">{{ item.title }}</h3>
+
+        <div class="employer d-flex align-center mb-2">
           <nuxt-img
             v-if="item.avatar.img"
             :src="item.avatar.img"
@@ -62,7 +66,7 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
             width="20"
             height="20"
             loading="lazy"
-            class="employer-logo mx-1"
+            class="employer-logo mr-2"
           />
           <a
             v-if="item.avatar.label.link"
@@ -75,7 +79,7 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
           <span v-else class="text-secondary">{{
             item.avatar.label.text
           }}</span>
-        </h3>
+        </div>
 
         <p v-if="item.description" class="text-body-1 mb-2">
           {{ item.description }}
@@ -101,7 +105,6 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
 }
 
 .employer-logo {
-  vertical-align: text-bottom;
   border-radius: 4px;
 }
 
