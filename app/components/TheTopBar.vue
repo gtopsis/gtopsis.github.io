@@ -34,9 +34,9 @@ const title = "Giorgos Topsis";
 .nav-pill {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.5rem;
   max-width: calc(100vw - 32px);
-  padding: 0.375rem 1.25rem;
+  padding: 0.375rem 1.75rem;
   border: 1px solid var(--v-accent-darken2);
   border-radius: 999px;
   background-color: rgb(var(--v-theme-background));
@@ -66,8 +66,8 @@ const title = "Giorgos Topsis";
   }
 
   .nav-pill {
-    gap: 0.5rem;
-    padding: 0.25rem 0.75rem;
+    gap: 0.9rem;
+    padding: 0.25rem 1rem;
   }
 }
 </style>
