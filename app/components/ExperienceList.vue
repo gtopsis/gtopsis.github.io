@@ -45,57 +45,49 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
       class="mb-8"
     />
 
-    <v-row
-      v-for="item in items"
-      :key="item.id"
-      class="experience-row py-6"
-      dense
-    >
-      <v-col cols="12" md="3" class="period text-body-2 text-medium-emphasis">
-        {{ getDatePeriod(item.period) }}
-      </v-col>
+    <div v-for="item in items" :key="item.id" class="experience-row py-6">
+      <div class="d-flex flex-wrap align-baseline justify-space-between ga-2">
+        <h3 class="text-h6">{{ item.title }}</h3>
+        <span class="period text-body-2 text-medium-emphasis">
+          {{ getDatePeriod(item.period) }}
+        </span>
+      </div>
 
-      <v-col cols="12" md="9">
-        <h3 class="text-h6 mb-1">{{ item.title }}</h3>
+      <div class="employer d-flex align-center mt-1 mb-2">
+        <nuxt-img
+          v-if="item.avatar.img"
+          :src="item.avatar.img"
+          :alt="item.avatar.alt"
+          width="20"
+          height="20"
+          loading="lazy"
+          class="employer-logo mr-2"
+        />
+        <a
+          v-if="item.avatar.label.link"
+          :href="item.avatar.label.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-secondary"
+          >{{ item.avatar.label.text }}</a
+        >
+        <span v-else class="text-secondary">{{ item.avatar.label.text }}</span>
+      </div>
 
-        <div class="employer d-flex align-center mb-2">
-          <nuxt-img
-            v-if="item.avatar.img"
-            :src="item.avatar.img"
-            :alt="item.avatar.alt"
-            width="20"
-            height="20"
-            loading="lazy"
-            class="employer-logo mr-2"
-          />
-          <a
-            v-if="item.avatar.label.link"
-            :href="item.avatar.label.link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-secondary"
-            >{{ item.avatar.label.text }}</a
-          >
-          <span v-else class="text-secondary">{{
-            item.avatar.label.text
-          }}</span>
-        </div>
+      <p v-if="item.description" class="text-body-1 mb-2">
+        {{ item.description }}
+      </p>
 
-        <p v-if="item.description" class="text-body-1 mb-2">
-          {{ item.description }}
-        </p>
-
-        <ul v-if="item.tools.length" class="tools ma-0 pa-0">
-          <li
-            v-for="(tool, j) in item.tools"
-            :key="j"
-            class="text-body-2 text-medium-emphasis"
-          >
-            {{ tool }}
-          </li>
-        </ul>
-      </v-col>
-    </v-row>
+      <ul v-if="item.tools.length" class="tools ma-0 pa-0">
+        <li
+          v-for="(tool, j) in item.tools"
+          :key="j"
+          class="text-body-2 text-medium-emphasis"
+        >
+          {{ tool }}
+        </li>
+      </ul>
+    </div>
   </v-container>
 </template>
 
