@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { useColorTheme } from "~/composables/useColorTheme";
 
-defineProps<{
-  /** Style as a floating, elevated circular button (used on mobile). */
-  fab?: boolean;
-}>();
-
 const { isDark, disabledTheme, themeToggleIcon, toggle } = useColorTheme();
 
 // v-tooltip's default `open-on-hover` opens the tooltip on the
@@ -34,7 +29,6 @@ onMounted(() => {
       <button
         type="button"
         class="theme-toggle"
-        :class="{ 'theme-toggle--fab': fab }"
         v-bind="tooltipProps"
         :aria-pressed="isDark"
         :aria-label="`Enable ${disabledTheme} mode`"
@@ -68,19 +62,5 @@ onMounted(() => {
 .theme-toggle:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
-}
-
-.theme-toggle--fab {
-  position: fixed;
-  top: 72px;
-  right: 16px;
-  z-index: 1006;
-  width: 40px;
-  height: 40px;
-  background: rgb(var(--v-theme-surface));
-  box-shadow:
-    0 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0 6px 10px 0 rgba(0, 0, 0, 0.14),
-    0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 </style>
