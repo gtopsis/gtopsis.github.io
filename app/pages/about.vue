@@ -74,7 +74,7 @@ const aboutMe = [
         <span class="mt-8 text-left">
           A look at my tech stack:
           <a
-            href="https://stackshare.io/gforerasmus/my-stack#stack"
+            href="https://stackshare.io/gforerasmus/familiar-with-the-following-stack"
             target="_blank"
             rel="noopener noreferrer"
             class="text-secondary"
