@@ -50,8 +50,14 @@ function onActivateGithubProfile(event: MouseEvent) {
             @pointerenter="resolveGithubProfileHref"
             @touchstart="resolveGithubProfileHref"
             @click="onActivateGithubProfile"
-            >See all projects</a
           >
+            <font-awesome-icon
+              :icon="['fa-brands', 'fa-github']"
+              size="lg"
+              aria-hidden="true"
+            />
+            <span class="ml-2">See all projects</span>
+          </a>
         </p>
       </v-col>
     </v-row>
