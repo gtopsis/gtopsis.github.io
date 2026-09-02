@@ -29,22 +29,22 @@ function buildUrl(contactItem: IContactItem) {
 // it -- while bots that just render a page and scrape every `<a href>` out
 // of the resulting DOM (the common approach for bulk contact/profile
 // harvesting) see an inert "#" placeholder instead of a usable destination.
-const resolvedHrefs = ref<Record<number, string>>({});
+const resolvedHrefs = ref(new Map<number, string>());
 
 function resolveHref(item: IContactItem, index: number) {
-  if (resolvedHrefs.value[index]) return;
-  resolvedHrefs.value[index] = buildUrl(item);
+  if (resolvedHrefs.value.has(index)) return;
+  resolvedHrefs.value.set(index, buildUrl(item));
 }
 
 function onActivate(item: IContactItem, index: number, event: MouseEvent) {
-  if (resolvedHrefs.value[index]) return;
+  if (resolvedHrefs.value.has(index)) return;
 
   // Fallback for activation paths that skip focus/hover/touchstart (e.g.
   // some assistive tech or programmatic clicks): resolve and navigate
   // manually instead of following the still-unresolved "#" href.
   event.preventDefault();
   const url = buildUrl(item);
-  resolvedHrefs.value[index] = url;
+  resolvedHrefs.value.set(index, url);
   window.open(url, "_blank", "noopener,noreferrer");
 }
 </script>
@@ -60,7 +60,7 @@ function onActivate(item: IContactItem, index: number, event: MouseEvent) {
             class="pa-1"
           >
             <a
-              :href="resolvedHrefs[index] || '#'"
+              :href="resolvedHrefs.get(index) || '#'"
               :aria-label="social.title"
               target="_blank"
               rel="nofollow noopener noreferrer"
