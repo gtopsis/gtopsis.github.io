@@ -34,13 +34,13 @@ function onActivateGithubProfile(event: MouseEvent) {
 
 <template>
   <v-container class="pa-0" fluid full-width>
-    <v-row class="align-center justify-md-center justify-sm-left">
-      <v-col cols="12" class="mb-2">
+    <v-row class="align-center justify-md-center justify-sm-left mb-8">
+      <v-col cols="12" class="pb-1">
         <h2 class="text-center text-h4">{{ title }}</h2>
       </v-col>
 
-      <v-col class="mb-8 text-center">
-        <p class="text-h6">
+      <v-col cols="12" class="pt-0 text-center">
+        <p class="text-h6 mb-0">
           <a
             :href="githubProfileHref || '#'"
             target="_blank"
