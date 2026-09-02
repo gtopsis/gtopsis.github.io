@@ -102,6 +102,25 @@ export default defineNuxtConfig({
           type: "image/x-icon",
           href: "/favicon.ico",
         },
+        // Preload the critical font subsets so they fetch in parallel
+        // with the CSS instead of after @font-face is parsed, breaking
+        // the HTML -> CSS -> font chain (the longest critical-path leg).
+        // Hrefs must match the content-hashed urls emitted in the CSS
+        // @font-face src, otherwise the browser double-downloads them.
+        {
+          rel: "preload",
+          as: "font",
+          type: "font/woff2",
+          href: "/_nuxt/Bellota-normal-400-latin.DmQglO9h.woff2",
+          crossorigin: "anonymous",
+        },
+        {
+          rel: "preload",
+          as: "font",
+          type: "font/woff2",
+          href: "/_nuxt/Bellota-normal-400-latin-ext.B5y8Glwr.woff2",
+          crossorigin: "anonymous",
+        },
       ],
     },
   },
