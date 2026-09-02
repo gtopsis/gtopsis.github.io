@@ -22,7 +22,13 @@ export function useColorTheme() {
   function initFromStorage() {
     if (!import.meta.client) return;
 
-    applyTheme(localStorage.getItem(STORAGE_KEY) === "true");
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const dark =
+      stored === null
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
+        : stored === "true";
+
+    applyTheme(dark);
   }
 
   function toggle() {
