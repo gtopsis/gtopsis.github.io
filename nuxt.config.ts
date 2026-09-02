@@ -189,11 +189,15 @@ export default defineNuxtConfig({
 
   $production: {
     routeRules: {
-      "/img/**": {
-        headers: { "cache-control": `public,max-age=84600,s-maxage=84600` },
+      "/images/**": {
+        headers: {
+          "cache-control": "public,max-age=31536000,immutable",
+        },
       },
       "/_nuxt/**": {
-        headers: { "cache-control": `public,max-age=84600,s-maxage=84600` },
+        headers: {
+          "cache-control": "public,max-age=31536000,immutable",
+        },
       },
     },
   },
