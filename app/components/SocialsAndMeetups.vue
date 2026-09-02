@@ -7,8 +7,6 @@ interface Props {
 
 defineProps<Props>();
 
-const runtimeConfig = useRuntimeConfig();
-
 const socials: IContactItem[] = [
   {
     icon: ["fab", "github"],
@@ -21,10 +19,7 @@ function buildUrl(contactItem: IContactItem) {
   const socialItem = socials.find(({ title }) => title === contactItem.title);
   if (!socialItem) return contactItem.url;
 
-  const username = atob(
-    runtimeConfig.public.SOCIAL_NETWORKS_USERNAME_B64 || "",
-  );
-  return socialItem.url + username;
+  return socialItem.url + useSocialUsername();
 }
 
 // Real profile links (LinkedIn/GitHub) aren't written into the DOM until a
