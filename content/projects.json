@@ -18,6 +18,15 @@
     "buildingToolsIds": ["typescript", "react-js",  "vite"]
   },
   {
+    "src": "/images/pagni-health-exams-aggregator-showcase.webp",
+    "imageDescription": "A browser window which contains a part of the desktop app. This part is the list of visual charts which indicate the progress of health data across the time.",
+    "title": "PAGNI health exams aggregator",
+    "description": "Desktop app which aims to support patients to track the progress of their blood tests' data across time in an intuitive and usable way.",
+    "demo": "",
+    "code": "https://github.com/gtopsis/PAGNI-health-exams-aggregator",
+    "buildingToolsIds": ["typescript", "electron", "vuejs", "vite", "vuetify"]
+  },
+  {
     "src": "/images/brokery-showcase.webp",
     "imageDescription": "A browser window which contains the home page of the app. This part is a list of real estate assets with pictures and details, as well as several tools (filters etc.) to support their management.",
     "title": "Brokery",
@@ -33,15 +42,6 @@
       "vuetify",
       "pinia"
     ]
-  },
-  {
-    "src": "/images/pagni-health-exams-aggregator-showcase.webp",
-    "imageDescription": "A browser window which contains a part of the desktop app. This part is the list of visual charts which indicate the progress of health data across the time.",
-    "title": "PAGNI health exams aggregator",
-    "description": "Desktop app which aims to support patients to track the progress of their blood tests' data across time in an intuitive and usable way.",
-    "demo": "",
-    "code": "https://github.com/gtopsis/PAGNI-health-exams-aggregator",
-    "buildingToolsIds": ["typescript", "electron", "vuejs", "vite", "vuetify"]
   },
   {
     "src": "",
