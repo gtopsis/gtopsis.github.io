@@ -1,6 +1,38 @@
 [
   {
+    "id": 0,
+    "domain": "GameTech",
+    "avatar": {
+      "img": "/images/kaizen_logo.svg",
+      "alt": "Logo of Kaizen Gaming",
+      "bgColor": "#fff",
+      "label": {
+        "text": "Kaizen Gaming",
+        "link": "https://kaizengaming.com/"
+      }
+    },
+
+    "title": "Front-End Software Engineer",
+    "roles": [
+      {
+        "jobTitle": "Front-End Software Engineer",
+        "period": {
+          "start": "2025-01-01",
+          "end": ""
+        }
+      }
+    ],
+    "period": {
+      "start": "2025-01-01",
+      "end": ""
+    },
+    "description": "",
+    "tools": [],
+    "readMore": ""
+  },
+  {
     "id": 1,
+    "domain": "PropertyTech",
     "avatar": {
       "img": "/images/prosperty_logo.webp",
       "alt": "Logo of Prosperty",
@@ -31,6 +63,7 @@
   },
   {
     "id": 1,
+    "domain": "FinTech",
     "avatar": {
       "img": "/images/fairlo_logo.webp",
       "alt": "Logo of fintech Fairlo",
@@ -68,6 +101,7 @@
   },
   {
     "id": 2,
+    "domain": "Software House",
     "avatar": {
       "img": "/images/conveos_logo.webp",
       "alt": "Logo of software agency Conveos",
@@ -104,6 +138,7 @@
   },
   {
     "id": 3,
+    "domain": "Software House",
     "avatar": {
       "img": "/images/conveos_logo.webp",
       "alt": "Logo of software agency Conveos",
@@ -148,6 +183,7 @@
   },
   {
     "id": 4,
+    "domain": "Research & Academia",
     "avatar": {
       "img": "/images/forth_logo.webp",
 
