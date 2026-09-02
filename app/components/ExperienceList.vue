@@ -87,6 +87,11 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
             height="20"
             loading="lazy"
             class="employer-logo mr-2"
+            :style="
+              item.avatar.bgColor
+                ? { backgroundColor: item.avatar.bgColor }
+                : undefined
+            "
           />
           <a
             v-if="item.avatar.label.link"
@@ -126,6 +131,8 @@ function getDatePeriod({ start, end }: { start: string; end: string }) {
 
 .employer-logo {
   border-radius: 4px;
+  padding: 1px;
+  box-sizing: content-box;
 }
 
 ul.tools {
