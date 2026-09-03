@@ -43,7 +43,6 @@ const aboutMe = [
     />
 
     <v-row class="page-container" no-gutters justify="center">
-      <!-- hero section -->
       <v-col
         cols="12"
         class="section hero-container pa-0 mx-0 d-flex align-center justify-center"
@@ -55,7 +54,6 @@ const aboutMe = [
         </h1>
       </v-col>
 
-      <!-- about me section -->
       <v-col
         cols="12"
         md="10"
@@ -83,7 +81,6 @@ const aboutMe = [
         </span>
       </v-col>
 
-      <!-- experience section -->
       <v-col cols="12" md="10" lg="9" class="section px-0 mb-16 mx-0">
         <ExperienceList />
       </v-col>

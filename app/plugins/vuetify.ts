@@ -1,4 +1,3 @@
-// plugins/vuetify.js
 import type { ThemeDefinition } from "vuetify";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";

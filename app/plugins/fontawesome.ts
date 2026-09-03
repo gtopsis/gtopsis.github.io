@@ -20,7 +20,6 @@ library.add(
   faMeetup,
 );
 
-// This is important, we are going to let Nuxt worry about the CSS
 config.autoAddCss = false;
 
 export default defineNuxtPlugin((nuxtApp) => {

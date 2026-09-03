@@ -39,4 +39,8 @@ withDefaults(defineProps<Props>(), {
   </v-card>
 </template>
 
-<style lang="css" scoped></style>
+<style scoped>
+.meetup-card:hover {
+  cursor: pointer;
+}
+</style>

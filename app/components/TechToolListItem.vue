@@ -24,9 +24,3 @@ const altText = computed(() => `Logo of tool ${props.tool.name}`);
     </template>
   </v-tooltip>
 </template>
-
-<style scoped>
-ul.tool-list {
-  list-style-type: none;
-}
-</style>

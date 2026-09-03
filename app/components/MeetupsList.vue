@@ -11,9 +11,3 @@ const title = "Join Me Here";
     <SocialsAndMeetups :meetups="meetups" />
   </v-container>
 </template>
-
-<style scoped>
-.meetup-card:hover {
-  cursor: pointer;
-}
-</style>

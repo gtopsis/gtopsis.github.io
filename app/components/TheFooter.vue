@@ -15,5 +15,3 @@ const footerText = `Giorgos Topsis ${yearRange}`;
     <p class="text-center ma-0">&copy; {{ footerText }}</p>
   </div>
 </template>
-
-<style scoped></style>
