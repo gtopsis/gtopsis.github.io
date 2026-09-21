@@ -143,6 +143,29 @@ export default defineNuxtConfig({
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error -- vite-plugin-vuetify plugin type is not compatible with Nuxt's vite config plugin type
         config.plugins.push(vuetify({ autoImport: true }));
+
+        // Keep projects flagged `visible: false` out of the shipped client
+        // bundle. The runtime filter in ProjectsList.vue stays as a backup,
+        // but this transform is what actually stops the hidden projects'
+        // details from being greppable in the built JS.
+        config.plugins.push({
+          name: "strip-hidden-projects",
+          enforce: "pre",
+          transform(code: string, id: string) {
+            if (!id.endsWith("content/projects.json")) return null;
+
+            const visibleOnly = JSON.parse(code)
+              .filter(
+                (project: { visible?: boolean }) => project.visible !== false,
+              )
+              .map(
+                ({ visible: _visible, ...rest }: Record<string, unknown>) =>
+                  rest,
+              );
+
+            return { code: JSON.stringify(visibleOnly), map: null };
+          },
+        });
       });
     },
   ],
