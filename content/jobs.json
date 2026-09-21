@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "domain": "GameTech",
+    "domain": "iGaming",
     "avatar": {
       "img": "/images/kaizen_logo.svg",
       "alt": "Logo of Kaizen Gaming",
@@ -32,7 +32,7 @@
   },
   {
     "id": 1,
-    "domain": "PropertyTech",
+    "domain": "PropTech",
     "avatar": {
       "img": "/images/prosperty_logo.webp",
       "alt": "Logo of Prosperty",
