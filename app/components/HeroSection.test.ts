@@ -11,7 +11,7 @@ describe("HeroSection", () => {
 
     expect(wrapper.vm).toBeTruthy();
     expect(element.isVisible()).toBe(true);
-    expect(element.text()).toBe(`I'm  Giorgos (/ɡi.ɔ̌ːr.ɡ.os/),`);
+    expect(element.text()).toBe(`I'm  Giorgos /ˈjɔr.ɡos/,`);
   });
 
   it("will show correct text in second line of the headline", () => {
@@ -22,7 +22,7 @@ describe("HeroSection", () => {
     expect(wrapper.vm).toBeTruthy();
     expect(element.isVisible()).toBe(true);
     expect(element.text()).toBe(
-      "a Full-Stack Web Developer based in Heraklion of Crete.",
+      "a Full-Stack Web Engineer based in Heraklion of Crete.",
     );
   });
 });

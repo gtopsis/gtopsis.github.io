@@ -141,7 +141,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
-        // @ts-expect-error
+        // @ts-expect-error -- vite-plugin-vuetify plugin type is not compatible with Nuxt's vite config plugin type
         config.plugins.push(vuetify({ autoImport: true }));
       });
     },

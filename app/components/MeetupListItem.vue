@@ -2,7 +2,7 @@
 import type { IContactItem } from "~/types/interfaces";
 
 interface Props {
-  meetup: IContactItem;
+  meetup?: IContactItem;
 }
 
 withDefaults(defineProps<Props>(), {

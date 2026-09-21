@@ -22,7 +22,7 @@ export default withNuxt(
         },
       },
     },
-  
+
     js.configs.recommended,
     ...ts.configs.recommended,
     pluginSecurity.configs.recommended,
@@ -45,9 +45,9 @@ export default withNuxt(
         ],
       },
     },
-  
+
     eslintPluginPrettierRecommended,
-  
+
     ...pluginVueA11y.configs["flat/recommended"],
     {
       rules: {
@@ -55,7 +55,7 @@ export default withNuxt(
         // "vuejs-accessibility/alt-text": "error"
       },
     },
-  
+
     {
       files: ["**/*.test.ts"],
       plugins: {
@@ -65,7 +65,7 @@ export default withNuxt(
         ...vitest.configs.recommended.rules,
       },
     },
-  
+
     { ignores: ["**/node_modules/**", "**/dist/**", "old/**"] },
-  )
-)
+  ),
+);

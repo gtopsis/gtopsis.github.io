@@ -1,20 +1,20 @@
 [
   {
-    "icon": ["fa-brands","fa-meetup"],
+    "icon": ["fa-brands", "fa-meetup"],
     "src": "/images/devstaff-meetup.webp",
     "title": "DevStaff: A developer community in Crete",
     "url": "https://www.meetup.com/devstaff/",
     "description": "A meetup which is called DevStaff and it is a developer community in Crete."
   },
   {
-    "icon": ["fa-brands","fa-meetup"],
+    "icon": ["fa-brands", "fa-meetup"],
     "src": "/images/opencoffe-meetup.webp",
     "title": "Open Coffee Heraklion",
     "url": "https://www.meetup.com/opencoffeeher/",
     "description": "A meetup which is called Open Coffee Heraklion and it gathers motivated youngsters & professionals from Crete, who have as common ground the urge of sharing business ideas"
   },
   {
-    "icon": ["fa-brands","fa-meetup"],
+    "icon": ["fa-brands", "fa-meetup"],
     "src": "/images/vuejs-athens-meetups.webp",
     "title": "VueJS Athens",
     "url": "https://www.meetup.com/vuejsathens/",
