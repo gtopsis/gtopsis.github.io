@@ -11,7 +11,7 @@
   {
     "src": "/images/agentic-config-explorer-showcase.webp",
     "imageDescription": "A browser window which contains a part of the web app. This part is the list of agentic skills.",
-    "title": "Agentic Config Visualizer",
+    "title": "Agentic Tooling Scanner",
     "description": "A local, no-backend tool that scans a project folder and visualizes its per-editor agentic coding configuration — skills, commands, agents, hooks, rules, MCP servers, and more — side by side across Claude Code, GitHub Copilot, OpenCode, and Cursor.",
     "demo": "https://gtopsis.github.io/repo-agent-config-scanner",
     "code": "https://github.com/gtopsis/repo-agent-config-scanner",
@@ -41,7 +41,8 @@
       "vite",
       "vuetify",
       "pinia"
-    ]
+    ],
+    "visible": false
   },
   {
     "src": "",
